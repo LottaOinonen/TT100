@@ -1,0 +1,68 @@
+\documentclass[a4paper,11pt,openany]{book}
+
+\usepackage{tt100}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\pagestyle{plain}
+
+%Linkit sisällysluetteloon
+\usepackage{color}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks, urlcolor = blue, linkcolor = black, citecolor = black}%allcolors=black}
+
+\hyphenation{o-sa-jouk-ko sisä-tulo-ava-ruu-den o-sa-jou-kot o-sa-jou-kok-si o-sa-jouk-ko-ja al-ku-as-ke-lees-sa}
+
+%\includeonly{15_vektoriavaruus,16_aliavaruus,17_vapaus,18_kanta,19_lineaarikuvaus,20_ydinJaKuva,21_isomorfismi,22_kantaJaLineaarikuvaukset,23_lineaarikuvauksienOminaisarvot,24_sisatulo}
+
+\begin{document}
+
+\frontmatter
+\begin{titlepage}
+
+\begin{center}
+
+\mbox{ }
+
+\vspace{5.0cm}
+
+{\bf \Huge Vektorit }
+
+
+%\vspace{0.4cm}
+
+%{\bf \Huge yliopistomatematiikkaan}
+
+\vspace{2.0cm}
+
+{\large Juulia Lahdenperä ja Lotta Oinonen}
+
+\vspace{2.0cm}
+
+\today \\
+
+\end{center}
+
+%\vfill
+%\begin{flushright}
+%Helsingin yliopisto\\
+%Matematiikan ja tilastotieteen laitos
+%\end{flushright}
+
+\end{titlepage}
+
+\thispagestyle{empty}
+\cleardoublepage
+
+\setcounter{page}{0}
+%\pagestyle{empty}
+
+%\thispagestyle{empty}
+\tableofcontents
+
+\setcounter{page}{0}
+\mainmatter
+\include{luku01}
+
+
+\end{document}
