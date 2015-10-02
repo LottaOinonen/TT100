@@ -1,9 +1,4 @@
 \select@language {finnish}
-\contentsline {section}{\numberline {1}Eka luku}{1}{section.0.1}
-\contentsline {subsection}{\numberline {1.1}Eka kappale}{1}{subsection.0.1.1}
-\contentsline {subsection}{\numberline {1.2}Yksinkertainen korkolaskenta}{2}{subsection.0.1.2}
-\contentsline {subsection}{\numberline {1.3}Koronkorkolaskenta}{5}{subsection.0.1.3}
-\contentsline {subsubsection}{Korkotekij\"a}{6}{section*.4}
-\contentsline {subsubsection}{Kasvanut p\"a\"aoma koronkoron tapauksessa}{6}{section*.5}
-\contentsline {subsection}{\numberline {1.4}Investointilaskelmia nykyarvomenetelm\"all\"a}{8}{subsection.0.1.4}
-\contentsline {subsection}{\numberline {1.5}Teht\"avi\"a}{9}{subsection.0.1.5}
+\contentsline {section}{\numberline {1}Vektori}{1}{section.0.1}
+\contentsline {subsection}{\numberline {1.1}xy-koordinaatisto}{1}{subsection.0.1.1}
+\contentsline {subsection}{\numberline {1.2}Vektorin komponentit}{1}{subsection.0.1.2}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  11 SEP 2015 15:48
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  25 SEP 2015 18:37
 entering extended mode
 **materiaali.tex
-(C:\Users\Juulia\Documents\TT100\materiaali.tex
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\materiaali.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -31,7 +31,7 @@ File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\Juulia\Documents\TT100\tt100.sty
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\tt100.sty
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
@@ -1029,8 +1029,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 12.
 
-(C:\Users\Juulia\Documents\TT100\materiaali.aux
-(C:\Users\Juulia\Documents\TT100\luku01.aux))
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\materiaali.aux
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\luku01.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -1122,8 +1122,8 @@ LaTeX Info: Redefining \ref on input line 18.
 LaTeX Info: Redefining \pageref on input line 18.
 LaTeX Info: Redefining \nameref on input line 18.
 
-(C:\Users\Juulia\Documents\TT100\materiaali.out)
-(C:\Users\Juulia\Documents\TT100\materiaali.out)
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\materiaali.out)
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\materiaali.out)
 \@outlinefile=\write5
  [1
 
@@ -1132,70 +1132,65 @@ LaTeX Info: Redefining \nameref on input line 18.
 {C:/Users/Juulia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
-(C:\Users\Juulia\Documents\TT100\materiaali.toc)
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\materiaali.toc)
 \tf@toc=\write6
  [0
 
 ]
-(C:\Users\Juulia\Documents\TT100\luku01.tex
-Overfull \hbox (9.04372pt too wide) in paragraph at lines 33--34
-\T1/kurierc/m/n/10.95 kurs-sis-sa l‰-hin-n‰ sil-loin, kun ko-ron las-ke-mi-nen 
-vaa-tii \T1/kurierc/b/n/10.95 kor-ko-p‰i-vien lu-ku-m‰‰-r‰n \T1/kurierc/m/n/10.
-95 selvitt‰misen.
- []
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\luku01.tex
 
-[1
+LaTeX Warning: Reference `koordinaatisto ja piste P' on page 1 undefined on inp
+ut line 10.
 
 
-] [2]
-LaTeX Font Info:    Try loading font information for OT1+kurierc on input line 
-90.
+LaTeX Warning: Reference `koordinaatisto ja piste P' on page 1 undefined on inp
+ut line 18.
 
-(C:\Users\Juulia\AppData\Roaming\MiKTeX\2.9\tex\latex\kurier\ot1kurierc.fd
-File: ot1kurierc.fd 2008/07/22 v0.995 font definition file for OT1/kurierc (MW)
 
-)
-[3] [4] [5] [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `koordinaatiston nelj\"a osaa' on page 1 undefined on 
+input line 20.
 
- [7]
-[8] [9] [10]) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
- (C:\Users\Juulia\Documents\TT100\materiaali.aux
-(C:\Users\Juulia\Documents\TT100\luku01.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+
+LaTeX Warning: Reference `koordinaatiston nelj\"a osaa' on page 1 undefined on 
+input line 24.
+
+) [1
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+ (C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\materiaali.aux
+(C:\Users\Juulia\Documents\Kis√§lliprojekti\TT100\luku01.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `materiaali.out' has not changed.
-(rerunfilecheck)             Checksum: F22280A171280445A205AE37C5D1C07D;434.
+(rerunfilecheck)             Checksum: 870CEF54D0DBBB03DF3C6863CA6038BD;190.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 21206 strings out of 494045
- 383926 string characters out of 3145966
- 478773 words of memory out of 3000000
- 23983 multiletter control sequences out of 15000+200000
- 95169 words of font info for 87 fonts, out of 3000000 for 9000
+ 21047 strings out of 494045
+ 381918 string characters out of 3145966
+ 467364 words of memory out of 3000000
+ 23878 multiletter control sequences out of 15000+200000
+ 44321 words of font info for 51 fonts, out of 3000000 for 9000
  724 hyphenation exceptions out of 8191
- 48i,18n,65p,3293b,582s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/ex-kurier.
+ 48i,5n,65p,3293b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/sy-kurier.
 enc}{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/rm-kurie
 r.enc}{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/mi-kur
 ier.enc}{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/ec-k
-urier.enc}{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/sy
--kurier.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/eurosym/feymr
-10.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki/kurier/k
-urierb.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki/kuri
-er/kuriercb.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki
-/kurier/kuriercr.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/no
-wacki/kurier/kuriercri.pfb>
-Output written on materiaali.pdf (14 pages, 139553 bytes).
+urier.enc}<C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki/kurie
+r/kuriercb.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki/
+kurier/kuriercr.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/now
+acki/kurier/kuriercri.pfb>
+Output written on materiaali.pdf (4 pages, 74875 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 77 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
