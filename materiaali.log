@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  25 SEP 2015 18:37
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.2.19)  2 OCT 2015 14:58
 entering extended mode
 **materiaali.tex
 (C:\Users\Juulia\Documents\Kisälliprojekti\TT100\materiaali.tex
@@ -1140,24 +1140,33 @@ LaTeX Info: Redefining \nameref on input line 18.
 (C:\Users\Juulia\Documents\Kisälliprojekti\TT100\luku01.tex
 
 LaTeX Warning: Reference `koordinaatisto ja piste P' on page 1 undefined on inp
-ut line 10.
+ut line 11.
 
 
 LaTeX Warning: Reference `koordinaatisto ja piste P' on page 1 undefined on inp
-ut line 18.
+ut line 19.
 
 
 LaTeX Warning: Reference `koordinaatiston nelj\"a osaa' on page 1 undefined on 
-input line 20.
+input line 21.
 
 
 LaTeX Warning: Reference `koordinaatiston nelj\"a osaa' on page 1 undefined on 
-input line 24.
+input line 25.
 
-) [1
+
+LaTeX Warning: Reference `vektorin komponentit' on page 1 undefined on input li
+ne 47.
+
+[1
 
 
 ]
+
+LaTeX Warning: Reference `vektorin komponentit samat erit vektorit' on page 2 u
+ndefined on input line 56.
+
+[2]) [3]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
  (C:\Users\Juulia\Documents\Kisälliprojekti\TT100\materiaali.aux
@@ -1165,7 +1174,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `materiaali.out' has not changed.
-(rerunfilecheck)             Checksum: 870CEF54D0DBBB03DF3C6863CA6038BD;190.
+(rerunfilecheck)             Checksum: BBEB46EF0F7F4806EC6B521F7A8BAE64;277.
 
 
 LaTeX Warning: There were undefined references.
@@ -1173,13 +1182,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
  ) 
 Here is how much of TeX's memory you used:
- 21047 strings out of 494045
- 381918 string characters out of 3145966
- 467364 words of memory out of 3000000
- 23878 multiletter control sequences out of 15000+200000
+ 21067 strings out of 494045
+ 382136 string characters out of 3145966
+ 473365 words of memory out of 3000000
+ 23881 multiletter control sequences out of 15000+200000
  44321 words of font info for 51 fonts, out of 3000000 for 9000
  724 hyphenation exceptions out of 8191
- 48i,5n,65p,3293b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,6n,65p,3293b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/sy-kurier.
 enc}{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/rm-kurie
 r.enc}{C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kurier/mi-kur
@@ -1188,9 +1197,9 @@ urier.enc}<C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki/kurie
 r/kuriercb.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/nowacki/
 kurier/kuriercr.pfb><C:/Users/Juulia/AppData/Roaming/MiKTeX/2.9/fonts/type1/now
 acki/kurier/kuriercri.pfb>
-Output written on materiaali.pdf (4 pages, 74875 bytes).
+Output written on materiaali.pdf (6 pages, 81946 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
