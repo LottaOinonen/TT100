@@ -1,18 +1,18 @@
 \usepackage[finnish]{babel}    % suomalaiset babel-makrot
-\usepackage[latin1]{inputenc}  % Unixin merkistö
+\usepackage[latin1]{inputenc}  % Unixin merkistï¿½
 \usepackage[T1]{fontenc}       % kirjaimet, joissa aksentteja
 \usepackage{lmodern}           % paremmat fontit
 \usepackage{amsmath}           % AMS-paketteja
 \usepackage{amsthm}
-\usepackage{amsfonts}         % eivät toimi yhdessä mathdesignin kanssa
+\usepackage{amsfonts}         % eivï¿½t toimi yhdessï¿½ mathdesignin kanssa
 \usepackage{amssymb}          %
-\usepackage{verbatim}          % comment-ympäristöjä varten
-\usepackage{calc}              % tarvitaan mittojen välisiin laskutoimituksiin
+\usepackage{verbatim}          % comment-ympï¿½ristï¿½jï¿½ varten
+\usepackage{calc}              % tarvitaan mittojen vï¿½lisiin laskutoimituksiin
 \usepackage{graphicx}          % kuvia varten
 \usepackage[all]{xy}           % kaavioita varten
-%\usepackage{mparhack}          % korjaa marginaalihuomiot oikeaan (ei väärään) reunaan
+%\usepackage{mparhack}          % korjaa marginaalihuomiot oikeaan (ei vï¿½ï¿½rï¿½ï¿½n) reunaan
 %\usepackage{perpage}           % alaviitteet sivuittain
-%\usepackage{chngcntr}          % voi lisätä tai poistaa numeroinnin riippuvuuden toisesta
+%\usepackage{chngcntr}          % voi lisï¿½tï¿½ tai poistaa numeroinnin riippuvuuden toisesta
 \usepackage{booktabs}          % paremmat taulukot
 \usepackage{pbox}
 \usepackage{eurosym}		%euro
@@ -43,10 +43,10 @@
 %\setlength{\textwidth}{388pt}
 
 % vain sectionin numero esiintyy luvun otsikossa (ei chapterin numeroa mukana)
-% (tähti ilmoittaa, että komento ei sisällä kappaleenvaihtoa)
+% (tï¿½hti ilmoittaa, ettï¿½ komento ei sisï¿½llï¿½ kappaleenvaihtoa)
 \renewcommand*\thesection{\arabic{section}}
 
-% vain yhtälön numero esiintyy yhtälörivillä (ei chapterin numeroa mukana)
+% vain yhtï¿½lï¿½n numero esiintyy yhtï¿½lï¿½rivillï¿½ (ei chapterin numeroa mukana)
 \renewcommand*\theequation{\arabic{equation}}
 
 % sectionien numerointi jatkuu, vaikka tulisi uusi chapterin numero
@@ -71,6 +71,9 @@
 
 \hyphenation{osa-jouk-ko sisä-tulo-ava-ruu-den vek-tori-ava-ruu-den rivi-ekvi-va-lent-ti kor-ke-ampi-ulot-tei-siin}
 
+
+\usepackage{xcolor}
+\definecolor{darkgray}{gray}{0.3}
 %\swapnumbers
 
 \theoremstyle{plain}
@@ -144,7 +147,7 @@
 \newcommand{\pv}{\overline}
 \newcommand{\tp}[1]{#1^{\top}}
 
-%täydennetyt matriisit
+%tï¿½ydennetyt matriisit
 \makeatletter
 \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
   \hskip -\arraycolsep
@@ -158,7 +161,7 @@
 %KP sans serif:
 %\usepackage[sfmath]{kpfonts} 
 %(Sfmath option only to make math in sans serif. Probablye only for use when base font is sans serif.)
-%\renewcommand*\familydefault{\sfdefault} %Käytetään KP sans serifin kanssa 
+%\renewcommand*\familydefault{\sfdefault} %Kï¿½ytetï¿½ï¿½n KP sans serifin kanssa 
 %(Only if the base font of the document is to be sans serif)
 
 %Kurier (condensed on hiukan "kapeampi" versio):
@@ -298,7 +301,7 @@
 %\setlength{\parsep}{0cm}
     \setlength{\labelwidth}{3em}
     \setlength{\leftmargin}{\labelwidth+\labelsep}
-  % sisäistä itemizeä tai aakkostamista varten
+  % sisï¿½istï¿½ itemizeï¿½ tai aakkostamista varten
 %  \renewcommand{\theenumii}{\alph{enumii})}
 %  \renewcommand{\labelenumii}{\theenumii}
   }
@@ -342,8 +345,8 @@
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\pa}{\mathopen]}		%avoin väli
-\newcommand{\pe}{\mathclose[}		%suljettu väli
+\newcommand{\pa}{\mathopen]}		%avoin vï¿½li
+\newcommand{\pe}{\mathclose[}		%suljettu vï¿½li
 \newcommand{\isby}[1]{\stackrel{\textrm{\scriptsize #1}}{=} }
 \newcommand{\funktio}[1]{\stackrel{\scriptstyle #1}{\to} }
 \newcommand{\allev}[2]{\underline{\phantom{#2}}\llap{#1}}
