@@ -12,62 +12,54 @@
 	
 
 % KUVA
-	
-\begin{center}
-	\begin{figurehere}
+		\begin{center}
+		\begin{figurehere}
 	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
 
-%x-akseli:
-\draw[->,color=gray] (-5.5,0) -- (5.5,0);
-%tiksut ja viivat
-\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
-{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
-\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
-}
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
 
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
 
-%y-akseli
-\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
 
-%tiksut ja viivat
-\foreach \y in {-3,-2,-1,1,2,3}
-{
-\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
-\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
-}
+		% Varsinainen kuva
 
+		\draw[fill, color = black] (3,2) circle [radius = 1.5pt];
+		\node[above right] at (3,2) {$S$};
 
+		\draw[fill, color = black] (-3,1) circle [radius = 1.5pt];
+		\node[above right] at (-3,1) {$P$};
 
-% Varsinainen kuva
+		\draw[fill, color = black] (4,-2) circle [radius = 1.5pt];
+		\node[above right] at (4, -2) {$Q$};
 
-\draw[fill, color = black] (3,2) circle [radius = 1.5pt];
-\node[above right] at (3,2) {$S$};
+		% Kaarisulku alasp.
+		\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},yshift=0pt,rotate around={90:(3,0)},=90]
+		(3,0) -- (3,3) node [black,midway,yshift=-0.7cm]{};
 
-\draw[fill, color = black] (-3,1) circle [radius = 1.5pt];
-\node[above right] at (-3,1) {$P$};
-
-\draw[fill, color = black] (4,-2) circle [radius = 1.5pt];
-\node[above right] at (4, -2) {$Q$};
-
-
-% Kaarisulku alasp.
-\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},yshift=0pt,rotate around={90:(3,0)},=90]
-(3,0) -- (3,3) node [black,midway,yshift=-0.7cm]{};
-
-% Kaarisulku oikeanp.
-\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=2pt},xshift=0pt]
-(3,0) -- (3,2) node [black,midway,xshift=0.7cm] {};
-
+		% Kaarisulku oikeanp.
+		\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=2pt},xshift=0pt]
+		(3,0) -- (3,2) node [black,midway,xshift=0.7cm] {};
 
 	\end{tikzpicture}
-	
 	\caption{}
 	\label{kuva:kolme pistetta koordinaatistossa}
-	
-	\end{figurehere}
-\end{center}
+		\end{figurehere}
+		\end{center}
 	
 	
 		\begin{aakkosta*}
@@ -85,51 +77,45 @@ Koordinaattiakselit jakavat tason neljään osaan. Osat nimetään yleensä järjestys
 
 % KUVA
 
-\begin{center}
-	\begin{figurehere}
+		\begin{center}
+		\begin{figurehere}
 	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
 
-%x-akseli:
-\draw[->,color=gray] (-5.5,0) -- (5.5,0);
-%tiksut ja viivat
-\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
-{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
-\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
-}
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
 
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
 
-%y-akseli
-\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
 
-%tiksut ja viivat
-\foreach \y in {-3,-2,-1,1,2,3}
-{
-\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
-\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
-}
+		% Varsinainen kuva
 
+		\node[below left] at (3,2) {\huge{$I$}};
 
-% Varsinainen kuva
+		\node[below right] at (-3,2) {\huge{$II$}};
 
-\node[below left] at (3,2) {\huge{$I$}};
+		\node[above right] at (-3,-2) {\huge{$III$}};
 
-\node[below right] at (-3,2) {\huge{$II$}};
-
-\node[above right] at (-3,-2) {\huge{$III$}};
-
-\node[above left] at (3, -2) {\huge{$IV$}};
-
-
+		\node[above left] at (3, -2) {\huge{$IV$}};
 
 	\end{tikzpicture}
-	
 	\caption{Koordinaatiston neljännekset.}
 	\label{kuva:koordinaatiston neljännekset}
-	
-	\end{figurehere}
-\end{center}
+		\end{figurehere}
+		\end{center}
 
 
 
@@ -253,8 +239,9 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:vektorin muodostaminen}. Kuvassa on nuol
 
 Huomataan, että nuolen $\vv$ päästä on sen kärkeen kolme x-akselin suuntaista askelta positiiviseen suuntaan ja kaksi y-akselin suuntaista askelta positiiviseen suuntaan. Tällainen nuoli $\vv$ voidaan ilmoittaa nuolien $\vi$ ja $\vj$ avulla muodossa $\vv = 3\vi + 2\vj.$
 
-Koordinaatistossa olevia nuolia kutsutaan \textbf{vektoreiksi}. Edellisen kuvan nuoli $\vv$ on siis vektori $\vv$, joka voidaan ilmaista vektorien $\vi$ ja $\vj$ avulla. Vektorit $\vi$ ja $\vj$ ovat käteviä, sillä niiden avulla voidaan ilmaista kaikki mahdolliset xy-koordinaatiston vektorit.
+Koordinaatistossa olevia nuolia kutsutaan \textbf{vektoreiksi}. Edellisen kuvan nuoli $\vv$ on siis vektori $\vv$, joka voidaan ilmaista vektorien $\vi$ ja $\vj$ avulla. Vektoreita $\vi$ ja $\vj$ sanotaan komponenttivektoreiksi, ja summattavia $3\vi$ ja $2\vj$ vektorin $\vv$ \textbf{komponenteiksi}. Vektorin komponenttiesityksellä tarkoitetaan vektorin esittämistä vektorien $\vi$ ja $\vj$ avulla. Vektorit $\vi$ ja $\vj$ ovat käteviä, sillä niiden avulla voidaan ilmaista kaikki mahdolliset xy-koordinaatiston vektorit. 
 
+\maaritelma[Vektorin komponenttiesitys]{Vektorin ilmaisemista komponenttivektorien $\vi$ ja $\vj$ avulla sanotaan vektorin \textbf{komponenttiesitykseksi}.}
 
 	\begin{teht} Tarkastellaan seuraavaa kuvaa \ref{kuva:samat erit vektorit}.
 
@@ -456,7 +443,9 @@ Vektorit $\pv{AB}$ ja $\pv{BA}$ ovat eri vektorit, sillä niitä ei voida esittää 
 \maaritelma[Vastavektorit]{Kahden pisteen välillä eri suuntiin kulkevat vektorit ovat toistensa \textbf{vastavektoreita.} Vektorin $\vv$ vastavektoria merkitään $-\vv$.}
 
 
-Edellisen tehtävän vektorit $\pv{AB}$ ja $\pv{BA}$ ovat siis toistensa vastavektoreita, ja $\pv{BA}=-\pv{AB}$ .
+Edellisen tehtävän vektorit $\pv{AB}$ ja $\pv{BA}$ ovat siis toistensa vastavektoreita, ja $\pv{BA}=-\pv{AB}$ . 
+
+\textsc{Huomaa, että vektorin ja sen vastavektorin ei tarvitse olla samassa paikassa koordinaatistossa.}
 
 
 
@@ -469,24 +458,24 @@ Edellisen tehtävän vektorit $\pv{AB}$ ja $\pv{BA}$ ovat siis toistensa vastavekt
 	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
 
 		%x-akseli:
-		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		\draw[->,color=gray] (-7.5,0) -- (7.5,0);
 		%tiksut ja viivat
-		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
-		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\foreach \x in {-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7}
+		{
+		\draw[dashed, color= lightgray] (\x,-5.5)--(\x,5.5);
 		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		\node [below] at (7.5,0) {\textcolor{darkgray}{$x$}};
 		}
 
-
 		%y-akseli
-		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		\draw[->,color=gray] (0,-5.5) -- (0,5.5);
 
 		%tiksut ja viivat
-		\foreach \y in {-3,-2,-1,1,2,3}
+		\foreach \y in {-5,-4,-3,-2,-1,1,2,3,4,5}
 		{
-		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[dashed, color=lightgray] (-7.5,\y)--(7.5,\y);
 		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		\node [left] at (0,5.5) {\textcolor{darkgray}{$y$}};
 		}
 
 		% Varsinainen kuva
@@ -499,8 +488,24 @@ Edellisen tehtävän vektorit $\pv{AB}$ ja $\pv{BA}$ ovat siis toistensa vastavekt
 		\node[left] at (-0.2, 0.4) {$\vj$};
 
 		% vektorit
-		\draw[->] (-3,-2)--(-2,2);
-		\node[left] at (-3, 0.5) {$\vv$};
+		\draw[->] (-6,4)--(4,4);
+		%\node[left] at (-3, 0.5) {$\vv$};
+		
+		\draw[->] (-6,0)--(-6,-2);
+		
+		\draw[->] (-3,-2)--(-2,3);
+		
+		\draw[->] (-3,-2)--(-2,3);
+		
+		\draw[->] (-3,-5)--(-5,-4);
+		
+		\draw[->] (-1,2)--(1,1);
+		
+		\draw[->] (1,-3)--(-1,0);
+		
+		\draw[->] (4,-1)--(4,2);
+		
+		\draw[->] (6,0)--(5,-5);
 
 	\end{tikzpicture}
 	\caption{Vektoreita}
@@ -508,45 +513,26 @@ Edellisen tehtävän vektorit $\pv{AB}$ ja $\pv{BA}$ ovat siis toistensa vastavekt
 		\end{figurehere}
 		\end{center}
 	
-	
-	
-	Mitkä vektoreista ovat toistensa vastavektoreita?
-	\end{teht}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{comment}
-Vektoreita $\vi$ ja $\vj$ sanotaan komponenttivektoreiksi, ja summattavia $3\vi$ ja $2\vj$ vektorin $\vv$ \textbf{komponenteiksi}.
-
-
-komponenttiesitys on yksikäsitteinen - mainitse, että intuitiivisesti x- ja y-akseleiden suuntaisten askeleiden tulee olla samat samoille vektoreille.
-
-
-
-\begin{teht} ...
 		\begin{aakkosta*}
-		\item
-		\item 
+		\item Ilmoita kaikki kuvan vektorit vektorien $\vi$ ja $\vj$ avulla.
+		\item Mitkä vektoreista ovat toistensa vastavektoreita?
+		\item Mitä huomaat vastavektorien komponenttiesityksistä?
 		\end{aakkosta*}
+
 	\end{teht}
 
 
-\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

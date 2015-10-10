@@ -1,6 +1,10 @@
 \select@language {finnish}
 \contentsline {section}{\numberline {1}Vektori}{1}{section.0.1}
 \contentsline {subsection}{\numberline {1.1}xy-koordinaatisto}{1}{subsection.0.1.1}
-\contentsline {subsection}{\numberline {1.2}Vektorin komponentit}{1}{subsection.0.1.2}
-\contentsline {subsection}{\numberline {1.3}Kahden pisteen v\"alinen vektori}{2}{subsection.0.1.3}
-\contentsline {subsection}{\numberline {1.4}Vektorin pituus}{3}{subsection.0.1.4}
+\contentsline {subsection}{\numberline {1.2}Vektorin muodostaminen}{2}{subsection.0.1.2}
+\contentsline {subsection}{\numberline {1.3}Kahden pisteen v\"alinen vektori}{4}{subsection.0.1.3}
+\contentsline {section}{\numberline {2}Vektorien laskutoimituksia}{7}{section.0.2}
+\contentsline {subsection}{\numberline {2.1}Summa}{7}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {2.2}Erotus}{8}{subsection.0.2.2}
+\contentsline {subsection}{\numberline {2.3}Vektorin kertominen reaaliluvulla}{9}{subsection.0.2.3}
+\contentsline {subsection}{\numberline {2.4}Vektorin pituus}{10}{subsection.0.2.4}
