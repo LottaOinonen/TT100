@@ -4,7 +4,62 @@
 
 \subsection{Summa}
 
-Edellisess‰ kappaleessa opittiin muodostamaan vektoreita x- ja y-akselien suuntaisten yhden askeleen pituisten vektorien $\vi$ ja $\vj$ avulla. Kahden vektorin yhteenlasku toimii samalla tavalla.
+Edellisess‰ kappaleessa opittiin muodostamaan vektoreita x- ja y-akselien suuntaisten yhden askeleen pituisten vektorien $\vi$ ja $\vj$ avulla. Kuvan \ref{kuva:vektorien yhteenlasku intro} vektori $\vv$ saadaan laskemalla yhteen vektorit $2\vi$ ja $4\vj$.
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		% Komponenttivektorit		
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+		
+		% Vektorit
+		\draw[->] (-3,-2)--(-1,2);
+		\node[above] at (-2.5, 0.2) {$\vv$};
+		
+		\draw[->, color=gray] (-3,-2)--(-1,-2);
+		%\draw[->, color=lightgray] (-2,-2)--(-1,-2);
+		\node[below] at (-2, -2.2) {{\textcolor{gray}{$2\vi$}}};
+		
+		\draw[->, color=gray] (-1,-2)--(-1,2);
+		%\draw[->, color=lightgray] (-1,-1)--(-1,0);
+		%\draw[->, color=lightgray] (-1,0)--(-1,1);
+		%\draw[->, color=lightgray] (-1,1)--(-1,2);
+		\node[right] at (-1, -0.5) {{\textcolor{gray}{$4\vj$}}};
+
+	\end{tikzpicture}
+	\caption{Vektori $\vv = 2\vi + 4\vj$.}
+	\label{kuva:vektorien yhteenlasku intro}
+		\end{figurehere}
+		\end{center}
+
+
 
 	\begin{teht} Tutkitaan vektoreita $\vv=2i+2j$ ja $\vw=i+3j$.
 		\begin{aakkosta*}
@@ -60,21 +115,26 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:summavektori}.
 		\draw[->] (4,0)--(-4,-2);
 		\node[below right] at (0.1,-1.4) {$\vb$};
 		
-		\draw[->] (-1,3)--(-4,-2);
-		\node[above left] at (-3,1) {$\va+\vb$};
-	
+		\draw[->, color=red] (-1,3)--(-4,-2);
+		\node[above left] at (-2,1) {\textcolor{red}{$\va+\vb$}};
+		
+		\draw[->, color=gray] (-1,3)--(-4,3);
+		\node[above] at (-2,3) {\textcolor{gray}{$-3\vi$}};
+		
+		\draw[->, color=gray] (-4,3)--(-4,-2);
+		\node[left] at (-4,1) {\textcolor{gray}{$-5\vj$}};
+		
 	\end{tikzpicture}
-	\caption{Vektorien $\va$ ja $vb$ summa.}
+	\caption{Vektorien $\va$ ja $\vb$ summa.}
 	\label{kuva:summavektori}
 		\end{figurehere}
 		\end{center}
 
 
-Summavektori $\va + \vb$ l‰htee vektorin $\va$ kanssa samasta pisteest‰ ja p‰‰ttyy vektorin $\vb$ k‰rkeen. Summavektori $\va + \vb$ voidaan laskea suoraan vektorien $\va$ ja $\vb$ avulla seuraavasti:
+Summavektori $\va + \vb$ l‰htee vektorin $\va$ kanssa samasta pisteest‰ ja p‰‰ttyy vektorin $\vb$ k‰rkeen. Summavektori $\va + \vb$ saadaan suoraan laskemalla vektorit $\va$ ja $\vb$ yhteen komponenteittain:
 
 	\begin{align*}
 	\va + \vb
-	&=(5\vi+(-3)\vj)+ (-8\vi + (-2)\vj)\\
 	&= (5\vi - 3\vj)+(-8\vi-2\vj) \\
 	&= 5\vi - 3\vj -8\vi -2\vj \\
 	&= 5\vi -8\vi - 3 \vj-2\vj \\
@@ -85,9 +145,9 @@ Summavektori $\va + \vb$ l‰htee vektorin $\va$ kanssa samasta pisteest‰ ja p‰‰tt
 
 
 
-	\begin{teht} Tutkitaan vektoreita $\vv=$ ja $\vw=$
+	\begin{teht} Tutkitaan vektoreita $\vv=-2i+j$ ja $\vw=4i+4j$.
 		\begin{aakkosta*}
-		\item Laske summavektori $\vv + \vw$.
+		\item M‰‰rit‰ summavektori $\vv + \vw$ laskemalla yhteen vektorit $\vv$ ja $\vw$ komponenteittain.
 		\item Piirr‰ vektori $\vv+\vw$ koordinaatistoon vektorien $\vv$ ja $\vw$ avulla. 
 		\end{aakkosta*}
 	\end{teht}
@@ -110,12 +170,14 @@ Summavektori $\va + \vb$ l‰htee vektorin $\va$ kanssa samasta pisteest‰ ja p‰‰tt
 	
 	\begin{teht} Tutkitaan vektoreita $\vv=-2\vi+3\vj$ ja $\vw=2\vi-3\vj$.
 		\begin{aakkosta*}
-		\item Laske summavektori $\vv+\vw$. 
+		\item M‰‰rit‰ summavektori $\vv+\vw$ laskemalla yhteen vektorit $\vv$ ja $\vw$ komponenteittain. 
 		\item Piirr‰ vektori $\vv+\vw$ koordinaatistoon vektorien $\vv$ ja $\vw$ avulla. 
 		\end{aakkosta*}
 	\end{teht}
 
 Edellisen teht‰v‰n vektorit $\vv$ ja $\vw$ ovat toistensa vastavektoreita. N‰in ollen voidaan merkit‰ $\vw=-\vv$, ja summavektori $\vv+\vw$ saadaan muotoon $\vv+\vw=\vv +(-\vv)=\vv-\vv=0$. 
+
+
 
 	\begin{teht} Tutkitaan vektoreita $\vv=$ ja $\vw=$
 		\begin{aakkosta*}
@@ -164,7 +226,7 @@ Teht‰v‰, jossa piirret‰‰n vektori v ja vektoreita rv, $r \in \R$
 
 \maaritelma[Yhdensuuntaisuus]{Vektorit $\vv$ ja $\vw$ ovat \textbf{yhdensuuntaiset}, jos $\vv=r\vw$ jollakin reaaliluvulla $r$.}
 
-\maaritelma[Vektorien suunta]{Vektorit ovat \textbf{samansuuntaiset}, jos ne kulkevat samaan suuntaan. Vektorit ovat \textbf{vastakkaissuuntaiset}, jos ne kulkevat vastakkaisiin suuntiin. Vektoreita kutsutaan joskus myˆs \textbf{yhdensuuntaisiksi}, jos ne ovat joko saman- tai vastakkaissuuntaiset.}
+%\maaritelma[Vektorien suunta]{Vektorit ovat \textbf{samansuuntaiset}, jos ne kulkevat samaan suuntaan. Vektorit ovat \textbf{vastakkaissuuntaiset}, jos ne kulkevat vastakkaisiin suuntiin. Vektoreita kutsutaan joskus myˆs \textbf{yhdensuuntaisiksi}, jos ne ovat joko saman- tai vastakkaissuuntaiset.}
 
 
 	\begin{teht} Tarkastellaan alla olevaa kuvaa (paljon erilaisia vektoreita, joista osa kulkee samaan ja osa vastakkaissuuntiin)

@@ -5,7 +5,7 @@
 \subsection{xy-koordinaatisto}
 
 
-\textsc{koodrinaattiakselien suunnat?}
+Kuvassa \ref{kuva:kolme pistetta koordinaatistossa} on koordinaatisto, johon on piirretty x- ja y-akselit. 
 
 
 	\begin{teht} Tutki alla olevaa kuvaa \ref{kuva:kolme pistetta koordinaatistossa}. 
@@ -63,10 +63,10 @@
 	
 	
 		\begin{aakkosta*}
-		\item Kuinka monta askelta siirrytään x-akselin suuntaan, jotta päästään pisteeseen $P$? 
-		\item Kuinka monta askelta siirrytään y-akselin suuntaan, jotta päästään pisteeseen $P$? 
-		\item Kuinka monta askelta siirrytään x-akselin suuntaan, jotta päästään pisteeseen $Q$? 
-		\item Kuinka monta askelta siirrytään y-akselin suuntaan, jotta päästään pisteeseen $Q$? 
+		\item Kuinka monta askelta siirrytään x-akselin suunnassa, jotta päästään pisteeseen $P$? 
+		\item Kuinka monta askelta siirrytään y-akselin suunnassa, jotta päästään pisteeseen $P$? 
+		\item Kuinka monta askelta siirrytään x-akselin suunnassa, jotta päästään pisteeseen $Q$? 
+		\item Kuinka monta askelta siirrytään y-akselin suunnassa, jotta päästään pisteeseen $Q$? 
 		\end{aakkosta*}
 	\end{teht}
 
@@ -120,7 +120,7 @@ Koordinaattiakselit jakavat tason neljään osaan. Osat nimetään yleensä järjestys
 
 
 
-	\begin{teht} Valitse kuvasta \ref{kuva:koordinaatiston neljännekset} jokaiselta koordinaatiston neljänneksellä jokin piste ja ilmoita 	sen koordinaatit. Miten eri neljännekset vaikuttavat koordinaattien etumerkkeihin? 
+	\begin{teht} Valitse kuvasta \ref{kuva:koordinaatiston neljännekset} jokaiselta koordinaatiston neljänneksellä jokin piste ja ilmoita sen koordinaatit. Miten eri neljännekset vaikuttavat x- ja y-koordinaattien koordinaattien etumerkkeihin? 
 	\end{teht}	
 	
 	\begin{teht} ...
@@ -239,6 +239,12 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:vektorin muodostaminen}. Kuvassa on nuol
 
 Huomataan, että nuolen $\vv$ päästä on sen kärkeen kolme x-akselin suuntaista askelta positiiviseen suuntaan ja kaksi y-akselin suuntaista askelta positiiviseen suuntaan. Tällainen nuoli $\vv$ voidaan ilmoittaa nuolien $\vi$ ja $\vj$ avulla muodossa $\vv = 3\vi + 2\vj.$
 
+
+	\begin{teht} Ilmoita kuvassa \ref{kuva:vektorin muodostaminen} oleva nuoli $\vu$ nuolien $\vi$ ja $\vj$ avulla. 
+	\end{teht}
+
+
+
 Koordinaatistossa olevia nuolia kutsutaan \textbf{vektoreiksi}. Edellisen kuvan nuoli $\vv$ on siis vektori $\vv$, joka voidaan ilmaista vektorien $\vi$ ja $\vj$ avulla. Vektoreita $\vi$ ja $\vj$ sanotaan komponenttivektoreiksi, ja summattavia $3\vi$ ja $2\vj$ vektorin $\vv$ \textbf{komponenteiksi}. Vektorin komponenttiesityksellä tarkoitetaan vektorin esittämistä vektorien $\vi$ ja $\vj$ avulla. Vektorit $\vi$ ja $\vj$ ovat käteviä, sillä niiden avulla voidaan ilmaista kaikki mahdolliset xy-koordinaatiston vektorit. 
 
 \maaritelma[Vektorin komponenttiesitys]{Vektorin ilmaisemista komponenttivektorien $\vi$ ja $\vj$ avulla sanotaan vektorin \textbf{komponenttiesitykseksi}.}
@@ -298,16 +304,40 @@ Koordinaatistossa olevia nuolia kutsutaan \textbf{vektoreiksi}. Edellisen kuvan 
 		\end{center}
 
 
-		\begin{aakkosta*}
-		\item Ilmoita kaikki kuvassa olevat vektorit vektorien $\vi$ ja $\vj$ avulla. Mitä huomaat?
-		\item Vertaa origosta lähtevää vektoria sen kärkipisteen koordinaatteihin. Mitä huomaat?
-		\end{aakkosta*}
+		Ilmoita kaikki kuvassa olevat vektorit vektorien $\vi$ ja $\vj$ avulla. Mitä huomaat?
 	\end{teht}
+
+
+\maaritelma[Samat vektorit]{Kaksi vektoria ovat \textbf{samat}, jos ne voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla.} 
+
+Vektorien samuus tarkoittaa siis sitä, että vektorit ovat saman pituisia ja osoittavat samaan suuntaan $-$ niiden paikalla koordinaatistossa ei ole merkitystä.
+
+
+	\begin{teht} Tarkastellaan edelleen kuvaa \ref{kuva:samat erit vektorit}. Vertaa origosta lähtevää vektoria sen kärkipisteen koordinaatteihin. Mitä huomaat?
+	\end{teht}
+
+
+
 
 \maaritelma[Paikkavektori]{Origosta lähtevän vektorin $\vv = x\vi + y\vj$ kärki on pisteessä $(x,y)$. Kyseistä vektoria $\vv$ kutsutaan pisteen $(x,y)$ \textbf{paikkavektoriksi}.} 
 
+
+
 	\begin{teht} Piirrä vektorit $\vi$ ja $\vj$ koordinaatistoon siten, että ne lähtevät origosta. Minkä pisteiden paikkavektoreita ne ovat?
 	\end{teht}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -330,10 +360,8 @@ Koordinaatistossa olevia nuolia kutsutaan \textbf{vektoreiksi}. Edellisen kuvan 
 		\end{aakkosta*}
 	\end{teht}
 	
-Kahden pisteen välinen vektori saadaan vähentämällä pisteiden x- ja y-koordinaatit keskenään. Esimerkiksi pisteestä $A=(4,1)$ lähtevä ja pisteeseen $(B=-1,3)$ päättyvä vektori $\vv$ on $\vv=((-1)-4)\vi+(3-1)\vj=-5\vi+2\vj$. 
-
 	
-	\begin{teht} ...
+	\begin{teht} \textsc{tämä tehtävä pois?}
 		\begin{aakkosta*}
 		\item Piirrä kaksi pistettä koordinaatiston toiselle, kolmannelle tai neljännelle neljännekselle. Merkitse pisteiden koordinaatit.
 		\item Piirrä pisteiden väliin vektori $\vv$.
@@ -343,90 +371,7 @@ Kahden pisteen välinen vektori saadaan vähentämällä pisteiden x- ja y-koordinaat
 
 
 
-
-	\begin{teht} Tarkastellaan alla olevaa kuvaa \ref{kuva:kaksi samaa vektoria}.
-	
-% KUVA
-		\begin{center}
-		\begin{figurehere}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
-
-		%x-akseli:
-		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
-		%tiksut ja viivat
-		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
-		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
-		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
-		}
-
-
-		%y-akseli
-		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
-
-		%tiksut ja viivat
-		\foreach \y in {-3,-2,-1,1,2,3}
-		{
-		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
-		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
-		}
-
-		% Varsinainen kuva
-
-		% KOMPONENTTIVEKTORIT
-		\draw[->] (0,0)--(1,0);
-		\node[below] at (0.4, -0.2) {$\vi$};
-
-		\draw[->] (0,0)--(0,1);
-		\node[left] at (-0.2, 0.4) {$\vj$};
-		
-		% pisteet
-		\draw[fill, color = black] (-3,-2) circle [radius = 1.5pt];
-		\node[below right] at (-3,-2) {$(-3,-2)$};		
-		
-		\draw[fill, color = black] (-2,2) circle [radius = 1.5pt];
-		\node[above right] at (-2,2) {$(-2,2)$};
-
-		\draw[fill, color = black] (2,1) circle [radius = 1.5pt];
-		\node[above right] at (2,1) {$(2,1)$};
-
-		\draw[fill, color = black] (1,-3) circle [radius = 1.5pt];
-		\node[right] at (1,-3) {$(-1,3)$};
-
-		% vektorit
-		\draw[->] (-3,-2)--(-2,2);
-		\node[left] at (-3, 0.5) {$\vv$};
-
-		\draw[->] (1,-3)--(2,1);
-		\node[right] at (2, -0.5) {$\vw$};
-		
-
-	\end{tikzpicture}
-	\caption{Vektoreita}
-	\label{kuva:kaksi samaa vektoria}	
-		\end{figurehere}
-		\end{center}
-	
-	
-		\begin{aakkosta*}
-		\item Ilmoita vektori $\vv$ vektorien $\vi$ ja $\vj$ avulla. 
-		\item Ilmoita vektori $\vw$ vektorien $\vi$ ja $\vj$ avulla.
-		\item Mitä huomaat?
-		\end{aakkosta*}
-	\end{teht}
-	
-
-
-
-
-
-\maaritelma[Samat vektorit]{Kaksi vektoria ovat \textbf{samat}, jos ne voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla.} 
-
-
-\textsc{tähän intuitioon nojaava selvitys siitä, että komponenttiesitys on yksikäsitteinen.}
-
-Kahden pisteen välinen vektori voi kulkea kahteen eri suuntaan. Pisteestä $A$ pisteeseen $B$ kulkevaa vektoria merkitään $\pv{AB}$, ja pisteestä $B$ pisteeseen $A$ kulkevaa vektoria merkitään $\pv{BA}$. 
+Vektori voi kulkea pisteiden välillä kahteen eri suuntaan. Pisteestä $A$ pisteeseen $B$ kulkevaa vektoria merkitään $\pv{AB}$, ja pisteestä $B$ pisteeseen $A$ kulkevaa vektoria merkitään $\pv{BA}$. 
 
 
 
@@ -444,9 +389,6 @@ Vektorit $\pv{AB}$ ja $\pv{BA}$ ovat eri vektorit, sillä niitä ei voida esittää 
 
 
 Edellisen tehtävän vektorit $\pv{AB}$ ja $\pv{BA}$ ovat siis toistensa vastavektoreita, ja $\pv{BA}=-\pv{AB}$ . 
-
-\textsc{Huomaa, että vektorin ja sen vastavektorin ei tarvitse olla samassa paikassa koordinaatistossa.}
-
 
 
 	\begin{teht} Tarkastellaan alla olevaa kuvaa \ref{kuva:etsitaan vastavektoreita}. 
@@ -528,6 +470,108 @@ Edellisen tehtävän vektorit $\pv{AB}$ ja $\pv{BA}$ ovat siis toistensa vastavekt
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\begin{teht} Tarkastellaan alla olevaa kuvaa \ref{kuva:kaksi samaa vektoria}.
+	
+% KUVA
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+
+
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+		% KOMPONENTTIVEKTORIT
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+		
+		% pisteet
+		\draw[fill, color = black] (-3,-2) circle [radius = 1.5pt];
+		\node[below right] at (-3,-2) {$(-3,-2)$};		
+		
+		\draw[fill, color = black] (-2,2) circle [radius = 1.5pt];
+		\node[above right] at (-2,2) {$(-2,2)$};
+
+		\draw[fill, color = black] (2,1) circle [radius = 1.5pt];
+		\node[above right] at (2,1) {$(2,1)$};
+
+		\draw[fill, color = black] (1,-3) circle [radius = 1.5pt];
+		\node[right] at (1,-3) {$(-1,3)$};
+
+		% vektorit
+		\draw[->] (-3,-2)--(-2,2);
+		\node[left] at (-3, 0.5) {$\vv$};
+
+		\draw[->] (1,-3)--(2,1);
+		\node[right] at (2, -0.5) {$\vw$};
+		
+
+	\end{tikzpicture}
+	\caption{Vektoreita}
+	\label{kuva:kaksi samaa vektoria}	
+		\end{figurehere}
+		\end{center}
+	
+	
+		\begin{aakkosta*}
+		\item Ilmoita vektori $\vv$ vektorien $\vi$ ja $\vj$ avulla. 
+		\item Ilmoita vektori $\vw$ vektorien $\vi$ ja $\vj$ avulla.
+		\item Mitä huomaat?
+		\end{aakkosta*}
+	\end{teht}
+\end{comment}
 
 
 
