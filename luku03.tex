@@ -1,0 +1,58 @@
+\section{Vektoreiden geometrisia sovelluksia}
+
+
+
+\subsection{Yleinen vektori}
+
+Tutkitaan alla olevaa kuvaa \ref{kuva:yleinen vektori intro}. Huomataan, että vektori $\vv$ voidaan ilmaista vektoreiden $\va$ ja $\vb$ avulla muodossa $\va=\va+2\vb$. 
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		}
+		
+		\foreach \y in {-3,-2,-1,0,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[->] (-5,0)--(-1,1);
+		\node[above] at (-3,1) {$\va$};
+		
+		\draw[->] (-5,1)--(-4,3);
+		\node[above left] at (-5,2) {$\vb$};
+		
+		\draw[->] (-2,-2)--(4,3);
+		\node[above] at (1,1) {$\vv$};
+		
+		\draw[->, color=gray] (-2,-2)--(2,-1);
+		\node[below] at (0,-1.5) {\textcolor{gray}{$\va$}};
+		
+		\draw[->, color=gray] (2,-1)--(3,1);
+		\node[below right] at (3,1) {\textcolor{gray}{$\vb$}};
+		
+		\draw[->, color=gray] (3,1)--(4,3);
+		\node[below right] at (3.5,2.5) {\textcolor{gray}{$\vb$}};		
+		
+
+	\end{tikzpicture}
+	\caption{Vektori $\vv = \va + 2\vb$.}
+	\label{kuva:yleinen vektori intro}
+		\end{figurehere}
+		\end{center}
+
+
+	\begin{teht} Tutkitaan edelleen kuvaa \ref{kuva:yleinen vektori intro}.
+		\begin{aakkosta*}
+		\item Ilmoita vektori $\vv$ vektorien $\va$ ja $\vb$ avulla.
+		\end{aakkosta*}
+	\end{teht}

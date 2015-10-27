@@ -4,7 +4,7 @@
 
 \subsection{Summa}
 
-Edellisess‰ kappaleessa opittiin muodostamaan vektoreita x- ja y-akselien suuntaisten yhden askeleen pituisten vektorien $\vi$ ja $\vj$ avulla. Kuvan \ref{kuva:vektorien yhteenlasku intro} vektori $\vv$ saadaan laskemalla yhteen vektorit $2\vi$ ja $4\vj$.
+Edellisess‰ kappaleessa opittiin muodostamaan vektoreita x- ja y-akselien suuntaisten yhden askeleen pituisten vektorien $\vi$ ja $\vj$ avulla. Esimerkiksi kuvan \ref{kuva:vektorien yhteenlasku intro} vektori $\vv$ saadaan laskemalla yhteen vektorit $2\vi$ ja $4\vj$. Seuraavaksi tutkitaan, kuinka lasketaan yhteen mit‰ tahansa vektoreita.
 
 		\begin{center}
 		\begin{figurehere}
@@ -40,18 +40,18 @@ Edellisess‰ kappaleessa opittiin muodostamaan vektoreita x- ja y-akselien suunta
 		\node[left] at (-0.2, 0.4) {$\vj$};
 		
 		% Vektorit
-		\draw[->] (-3,-2)--(-1,2);
-		\node[above] at (-2.5, 0.2) {$\vv$};
+		\draw[->, color=blue] (-3,-2)--(-1,2);
+		\node[above] at (-2.5, 0.2) {\textcolor{blue}{$\vv$}};
 		
-		\draw[->, color=gray] (-3,-2)--(-1,-2);
+		\draw[->] (-3,-2)--(-1,-2);
 		%\draw[->, color=lightgray] (-2,-2)--(-1,-2);
-		\node[below] at (-2, -2.2) {{\textcolor{gray}{$2\vi$}}};
+		\node[below] at (-2, -2.2) {$2\vi$};
 		
-		\draw[->, color=gray] (-1,-2)--(-1,2);
+		\draw[->] (-1,-2)--(-1,2);
 		%\draw[->, color=lightgray] (-1,-1)--(-1,0);
 		%\draw[->, color=lightgray] (-1,0)--(-1,1);
 		%\draw[->, color=lightgray] (-1,1)--(-1,2);
-		\node[right] at (-1, -0.5) {{\textcolor{gray}{$4\vj$}}};
+		\node[right] at (-1, -0.5) {$4\vj$};
 
 	\end{tikzpicture}
 	\caption{Vektori $\vv = 2\vi + 4\vj$.}
@@ -64,8 +64,8 @@ Edellisess‰ kappaleessa opittiin muodostamaan vektoreita x- ja y-akselien suunta
 	\begin{teht} Tutkitaan vektoreita $\vv=2i+2j$ ja $\vw=i+3j$.
 		\begin{aakkosta*}
 		\item Piirr‰ vektori $\vv$ koordinaatistoon. 
-		\item Piirr‰ vektori $\vw$ koordinaatistoon siten, ett‰ se alkaa vektorin $\vv$ k‰rjest‰. 
-		\item Piirr‰ vektori, joka alkaa vektorin $\vv$ alkupisteest‰ ja p‰‰ttyy vektorin $\vw$ k‰rkeen. Merkitse t‰t‰ vektoria $\vv + \vw$.
+		\item Piirr‰ vektori $\vw$ koordinaatistoon siten, ett‰ se alkaa vektorin $\vv$ k‰rkipisteest‰. 
+		\item Piirr‰ vektori, joka alkaa vektorin $\vv$ alkupisteest‰ ja p‰‰ttyy vektorin $\vw$ k‰rkipisteeseen. Merkitse t‰t‰ vektoria $\vv + \vw$.
 		\item Ilmoita vektori $\vv + \vw$ vektorien $\vi$ ja $\vj$ avulla. 
 		\item Miten vektorin $\vv + \vw$ komponentit voitaisiin muodostaa vektorien $\vv$ ja $\vw$ komponenttien avulla?
 		\end{aakkosta*}
@@ -109,20 +109,20 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:summavektori}.
 		\node[left] at (-0.2, 0.4) {$\vj$};
 
 		% Vektorit
-		\draw[->] (-1,3)--(4,0);
-		\node[above right] at (2,2) {$\va$};
+		\draw[->, color=blue] (4,0)--(-1,3);
+		\node[above right] at (1.5,1.5) {\textcolor{blue}{$\vb$}};
 
-		\draw[->] (4,0)--(-4,-2);
-		\node[below right] at (0.1,-1.4) {$\vb$};
+		\draw[->, color=blue] (-4,-2)--(4,0);
+		\node[below right] at (0.2,-1.1) {\textcolor{blue}{$\va$}};
 		
-		\draw[->, color=red] (-1,3)--(-4,-2);
+		\draw[->, color=red] (-4,-2)--(-1,3);
 		\node[above left] at (-2,1) {\textcolor{red}{$\va+\vb$}};
 		
-		\draw[->, color=gray] (-1,3)--(-4,3);
-		\node[above] at (-2,3) {\textcolor{gray}{$-3\vi$}};
+		\draw[->] (-4,3)--(-1,3);
+		\node[above] at (-2,3) {$3\vi$};
 		
-		\draw[->, color=gray] (-4,3)--(-4,-2);
-		\node[left] at (-4,1) {\textcolor{gray}{$-5\vj$}};
+		\draw[->] (-4,-2)--(-4,3);
+		\node[left] at (-4,1) {$5\vj$};
 		
 	\end{tikzpicture}
 	\caption{Vektorien $\va$ ja $\vb$ summa.}
@@ -131,14 +131,16 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:summavektori}.
 		\end{center}
 
 
+
+
 Summavektori $\va + \vb$ l‰htee vektorin $\va$ kanssa samasta pisteest‰ ja p‰‰ttyy vektorin $\vb$ k‰rkeen. Summavektori $\va + \vb$ saadaan suoraan laskemalla vektorit $\va$ ja $\vb$ yhteen komponenteittain:
 
 	\begin{align*}
 	\va + \vb
-	&= (5\vi - 3\vj)+(-8\vi-2\vj) \\
-	&= 5\vi - 3\vj -8\vi -2\vj \\
-	&= 5\vi -8\vi - 3 \vj-2\vj \\
-	&= -3\vi - 5\vj. 
+	&= (8\vi +2\vj)+(-5\vi+3\vj) \\
+	&= 8\vi +2\vj -5\vi +3\vj \\
+	&= 8\vi -5\vi +2 \vj+3\vj \\
+	&= 3\vi + 5\vj. 
 	\end{align*}
 	
 \maaritelma[Summavektori]{Vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ \textbf{summavektori} on vektori $\vv+\vw=(x_1+x_2)\vi+(y_1+y_2)\vj$.}
@@ -147,10 +149,509 @@ Summavektori $\va + \vb$ l‰htee vektorin $\va$ kanssa samasta pisteest‰ ja p‰‰tt
 
 	\begin{teht} Tutkitaan vektoreita $\vv=-2i+j$ ja $\vw=4i+4j$.
 		\begin{aakkosta*}
-		\item M‰‰rit‰ summavektori $\vv + \vw$ laskemalla yhteen vektorit $\vv$ ja $\vw$ komponenteittain.
-		\item Piirr‰ vektori $\vv+\vw$ koordinaatistoon vektorien $\vv$ ja $\vw$ avulla. 
+		\item Piirr‰ summavektori $\vv+\vw$ koordinaatistoon vektorien $\vv$ ja $\vw$ avulla. 
+		\item Ilmoita vektori $\vv+\vw$ vektorien $\vi$ ja $\vj$ avulla.
+		\item Tarkista tuloksesi laskemalla yhteen vektorit $\vv$ ja $\vw$ komponenteittain.
 		\end{aakkosta*}
 	\end{teht}
+
+
+
+
+
+	\begin{teht} Tutkitaan vektoreita $\vu=i+2\vj$, $\vv=-3i+j$ ja $\vw=3i+-5j$.
+		\begin{aakkosta*}
+		\item Piirr‰ vektori $\vu+\vv+\vw$ koordinaatistoon vektorien $\vu, \vv$ ja $\vw$ avulla. 
+		\item Piirr‰ vektori $\vv+\vu+\vw$ koordinaatistoon vektorien $\vu, \vv$ ja $\vw$ avulla. 
+		\item Piirr‰ vektori $\vw+\vu+\vv$ koordinaatistoon vektorien $\vu, \vv$ ja $\vw$ avulla. 
+		\item Mit‰ huomaat?
+		\end{aakkosta*}
+	\end{teht}
+
+
+Edellisen teht‰v‰n tulos tarkoittaa sit‰, ett‰ vektorien yhteenlaskun j‰rjestyksell‰ ei ole merkityst‰. Vektorien yhteenlasku on siis \textbf{vaihdannainen} operaatio. T‰m‰ n‰kyy selv‰sti kuvasta \ref{kuva:vektorien yhteenlasku on vaihdannainen}: vektori $4\vj+2\vi$ on sama kuin vektori $2\vi+4\vj$.
+
+
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		% Komponenttivektorit		
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+		
+		% Vektorit
+		\draw[->, color=blue] (-3,-2)--(-1,2);
+		\node[above] at (-2.5, 0.2) {\textcolor{blue}{$\vv$}};
+		
+		\draw[->] (-3,-2)--(-1,-2);
+		\node[below] at (-2, -2.2) {$2\vi$};
+		
+		\draw[->] (-1,-2)--(-1,2);
+		\node[right] at (-1, -0.5) {$4\vj$};
+		
+		\draw[->] (-3,2)--(-1,2);
+		\node[above] at (-2, 2.2) {$2\vi$};
+		
+		\draw[->] (-3,-2)--(-3,2);
+		\node[left] at (-3, -0.5) {$4\vj$};
+
+	\end{tikzpicture}
+	\caption{Vektori $\vv = 2\vi + 4\vj=4\vj+2\vi$.}
+	\label{kuva:vektorien yhteenlasku on vaihdannainen}
+		\end{figurehere}
+		\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Vektorin kertominen reaaliluvulla}\label{subsebtion:vektorien kertominen reaaliluvulla}
+
+Tarkastellaan seuraavaa kuvaa \ref{kuva:vektorin skalaarimonikerta}. Kuvassa oleva vektori $\va$ voidaan ilmaista vektorin $\vj$ avulla muodossa $5\vj$. Vektori $\va$ saadaan siis kertomalla vektoria $\vj$ luvulla $5$.
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->, color=blue] (-3.1,-2)--(-3.1,3);
+		\node[left] at (-3.2,1) {\textcolor{blue}{$\va$}};
+		
+		\draw[->, color=gray] (-2.9,-2)--(-2.9,-1);
+		\node[right] at (-2.7,-1.6) {$\vj$};
+		
+		\draw[->, color=gray] (-2.9,-1)--(-2.9,0);
+		\node[right] at (-2.7,-0.6) {$\vj$};
+		
+		\draw[->, color=gray] (-2.9,0)--(-2.9,1);
+		\node[right] at (-2.7,0.6) {$\vj$};
+		
+		\draw[->, color=gray] (-2.9,1)--(-2.9,2);
+		\node[right] at (-2.7,1.6) {$\vj$};
+		
+		\draw[->, color=gray] (-2.9,2)--(-2.9,3);
+		\node[right] at (-2.7,2.6) {$\vj$};
+		
+		
+	\end{tikzpicture}
+	\caption{Vektori $\va=5\vj$.}
+	\label{kuva:vektorin skalaarimonikerta}
+		\end{figurehere}
+		\end{center}
+
+
+ 
+ 
+  	\begin{teht} Tutkitaan vektoria $\va=-\vi+2\vj$.
+		\begin{aakkosta*}
+		\item Piirr‰ vektori $\va$ koordinaatistoon.
+		\item Piirr‰ koordinaatistoon myˆs vektorit $2\va$, $3\va$ ja $5\va$.
+		\end{aakkosta*}
+	\end{teht} 
+ 
+	\begin{teht} ...
+		\begin{aakkosta*}
+		\item Piirr‰ koordinaatistoon vektorit $\va=\vi+2\vj$ ja $\vb=2\vi+4\vj$.
+		\item Miten voisit ilmaista vektorin $\vb$ vektorin $\va$ avulla?
+		\end{aakkosta*}
+	\end{teht} 
+ 
+	\begin{teht} ...
+		\begin{aakkosta*}
+		\item Piirr‰ koordinaatistoon vektorit $\va=\vi+\vj$ ja $3\va$.
+		\item Ilmoita vektori $3\va$ vektorien $\vi$ ja $\vj$ avulla. 
+		\item Vertaa vektorien $\va$ ja $3\va$ komponenttiesityksi‰ toisiinsa. Mit‰ huomaat?
+		\end{aakkosta*}
+	\end{teht} 
+ 
+
+
+
+\maaritelma[Vektorin kertominen reaaliluvulla]{Kun vektoria $\vv=x\vi+y\vj$ kerrotaan reaaliluvulla $r$, saadaan vektori $r\vv=r(x\vi+y\vj)=(rx)\vi+(ry)\vj$.}
+
+
+Kun siis esimerkiksi vektoria $\vv=-4\vi+3\vj$ kerrotaan luvulla $2$, saadaan vektori 
+
+\begin{align*}
+2\vv
+=2 \cdot (-4\vi+3\vj)
+= 2\cdot (-4) \vi + 2\cdot 3 \vj
+= -8\vi + 6 \vj.
+\end{align*}
+
+
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		% Komponenttivektorit		
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+		
+		% Vektorit
+		\draw[->, color=blue] (4,-2.9)--(0,0.1);
+		\node[above] at (2,-1) {\textcolor{blue}{$\vv$}};
+		
+		\draw[->, color=blue] (0,0.1)--(-4,3.1);
+		\node[above] at (-1,1) {\textcolor{blue}{$\vv$}};
+		
+		\draw[->, color=darkgreen] (4,-3.1)--(-4,2.9);
+		\node[above] at (-1,-1) {\textcolor{darkgreen}{$2\vv$}};
+		
+		\draw[->] (4,-3)--(-4,-3);
+		\node[below] at (-0.3,-3) {$8\vi$};
+		
+		\draw[->] (-4,-3)--(-4,3);
+		\node[left] at (-4, -0.3) {$6\vj$};
+		
+
+	\end{tikzpicture}
+	\caption{Vektorin $\vv = -4\vi + 3\vj$ kertominen luvulla $2$.}
+	\label{kuva:vektorin kertominen reaaliluvulla}
+		\end{figurehere}
+		\end{center}
+
+
+
+
+	\begin{teht} Tutkitaan vektoria $\va=-3\vi + 2\vj$. 
+		\begin{aakkosta*}
+		\item Piirr‰ vektori $\va$ koordinaatistoon.
+		\item Laske vektori $-1 \cdot \va$ ja piirr‰ se koordinaatistoon.
+		\item Vertaa piirt‰mi‰si vektoreita sek‰ niiden komponenttiesityksi‰ kesken‰‰n. Mit‰ huomaat?
+		\end{aakkosta*}
+	\end{teht}
+	
+
+
+\maaritelma[Vastavektorit]{Vektori $-1 \cdot \vv$ on vektorin $\vv$ vastavektori, ja sit‰ merkit‰‰n $-\vv$.}
+
+% KUVA
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+
+		% Vektorit
+
+		\draw[->, color=blue] (-3,1)--(3,3);
+		\node[above left] at (-.1,2) {\textcolor{blue}{$\vv$}};
+		
+		\draw[->, color=darkgreen] (3,2)--(-3,0);
+		\node[below right] at (.6,1) {\textcolor{darkgreen}{$-\vv$}};
+		
+	\end{tikzpicture}
+	\caption{Vektori $\vv$ ja sen vastavektori $-\vv$.}
+	\label{kuva:vastavektorit}
+		\end{figurehere}
+		\end{center}
+
+
+
+	\begin{teht} Tarkastellaan alla olevaa kuvaa \ref{kuva:etsitaan vastavektoreita}. 
+	
+	
+		% KUVA
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-7.5,0) -- (7.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7}
+		{
+		\draw[dashed, color= lightgray] (\x,-5.5)--(\x,5.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (7.5,0) {\textcolor{darkgray}{$x$}};
+		}
+
+		%y-akseli
+		\draw[->,color=gray] (0,-5.5) -- (0,5.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color=lightgray] (-7.5,\y)--(7.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,5.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+		% KOMPONENTTIVEKTORIT
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% vektorit
+		\draw[->] (-6,4)--(4,4);
+		%\node[left] at (-3, 0.5) {$\vv$};
+		
+		\draw[->] (-6,0)--(-6,-2);
+		
+		\draw[->] (-3,-2)--(-2,3);
+		
+		\draw[->] (-3,-2)--(-2,3);
+		
+		\draw[->] (-3,-5)--(-5,-4);
+		
+		\draw[->] (-1,2)--(1,1);
+		
+		\draw[->] (1,-3)--(-1,0);
+		
+		\draw[->] (4,-1)--(4,2);
+		
+		\draw[->] (6,0)--(5,-5);
+
+	\end{tikzpicture}
+	\caption{Vektoreita}
+	\label{kuva:etsitaan vastavektoreita}	
+		\end{figurehere}
+		\end{center}
+	
+		\begin{aakkosta*}
+		\item Ilmoita kaikki kuvan vektorit vektorien $\vi$ ja $\vj$ avulla.
+		\item Mitk‰ vektoreista ovat toistensa vastavektoreita?
+		\end{aakkosta*}
+
+	\end{teht}
+
+Tutkitaan seuraavaksi vektorien suuntia. Esimerkiksi kuvasta \ref{kuva:vektorin kertominen reaaliluvulla} huomataan, ett‰ vektori $2\vv$ kulkee samaan suuntaan vektorin $\vv$ kanssa. N‰m‰ vektorit ovat siis \textbf{samansuuntaisia}. Lis‰ksi kuvasta \ref{kuva:vastavektorit} huomataan, ett‰ vektori $-\va$ kulkee vastakkaiseen suuntaan kuin vektori $\va$. T‰llaisia vektoreita kutsutaan \textbf{vastakkaissuuntaisiksi} vektoreiksi. 
+
+	\begin{teht} ...
+		\begin{aakkosta*}
+		\item Millaisella luvulla vektoria tulee kertoa, jotta sen suunta muuttuu vastakkaiseksi? 
+		\item Millaisella luvulla kertominen s‰ilytt‰‰ vektorin suunnan? 
+		\end{aakkosta*}
+	\end{teht}
+
+\maaritelma[Yhdensuuntaisuus]{Vektorit $\vv$ ja $\vw$ ovat \textbf{yhdensuuntaiset}, jos $\vv=r\vw$ jollakin reaaliluvulla $r$.}
+
+Toisin sanoen vektorit ovat yhdensuuntaiset, jos ne ovat joko saman- tai vastakkaisuuntaiset.
+
+	\begin{teht} Tarkastellaan alla olevaa kuvaa \ref{kuva:etsitaan samansuuntaisia vektoreita}
+	
+			% KUVA
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-7.5,0) -- (7.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-7,-6,-5,-4,-3,-2,-1,1,2,3,4,5,6,7}
+		{
+		\draw[dashed, color= lightgray] (\x,-5.5)--(\x,5.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (7.5,0) {\textcolor{darkgray}{$x$}};
+		}
+
+		%y-akseli
+		\draw[->,color=gray] (0,-5.5) -- (0,5.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color=lightgray] (-7.5,\y)--(7.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,5.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+		% KOMPONENTTIVEKTORIT
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% vektorit
+		\draw[->] (-6,4)--(4,4);
+		%\node[left] at (-3, 0.5) {$\vv$};
+		
+		\draw[->] (-6,0)--(-6,-2);
+		
+		\draw[->] (-3,-2)--(-2,3);
+		
+		\draw[->] (-3,-2)--(-2,3);
+		
+		\draw[->] (-3,-5)--(-5,-4);
+		
+		\draw[->] (-1,2)--(1,1);
+		
+		\draw[->] (1,-3)--(-1,0);
+		
+		\draw[->] (4,-1)--(4,2);
+		
+		\draw[->] (6,0)--(5,-5);
+		
+
+	\end{tikzpicture}
+	\caption{Vektoreita.}
+	\label{kuva:etsitaan samansuuntaisia vektoreita}	
+		\end{figurehere}
+		\end{center}
+	
+	
+	
+		\begin{aakkosta*}
+		\item Mitk‰ kuvan vektoreista ovat samansuuntaisia?
+		\item Mitk‰ kuvan vektoreista ovat vastakkaissuuntaisia?
+		\item Mitk‰ kuvan vektoreista ei ole yhdensuuntainen mink‰‰n muun kuvan vektorin kanssa?
+		\end{aakkosta*}
+	\end{teht}
+
+	\begin{teht} Tutkitaan vektoreita $\va=2\vi+3\vj$, $\vb=-3\vi+\vj$ ja $\vc=\vi-4\vj$. 
+		\begin{aakkosta*}
+		\item Piirr‰ koordinaatistoon vektori $\va +\vb +\vc $.
+		\item Mit‰ huomaat?
+		\end{aakkosta*}
+	\end{teht}
+
+Vektoria, joka alkaa ja p‰‰ttyy samaan pisteeseen, sanotaan \textbf{nollavektoriksi}. Sen komponenttiesitys on muotoa $0\cdot \vi + 0 \cdot \vj$. Jos mit‰ tahansa vektoria $\vv=x\vi +y\vj$ kerrotaan luvulla nolla, saadaan nollavektori, sill‰ 
+\begin{align*}
+0 \cdot \vv 
+= 0 \cdot(x \vi + y \vj) 
+= (0 \cdot x) \vi+(0 \cdot y)\vj
+= 0 \cdot \vi + 0 \cdot \vj 
+= 0.
+\end{align*}
+
+
+
+\maaritelma[Nollavektori]{Vektoria $0\cdot \vi + 0 \cdot \vj =0$ sanotaan \textbf{nollavektoriksi}.}
+
+
+
+
+
+
 
 
 
@@ -194,6 +695,58 @@ Vektori $\vv+(-\vw)=\vv-\vw$. Se on siis vektorien $\vv$ ja $\vw$ erotusvektori.
 
 \maaritelma[Erotusvektori]{Vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ \textbf{erotusvektori} on vektori $\vv-\vw=(x_1-x_2)\vi+(y_1-y_2)\vj$.}
 
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+		% Vektorit
+
+		\draw[->] (-2,-1)--(0,1);
+		\node[below right] at (-1.8, 0.8) {$\va$};
+		
+		\draw[->] (0,1)--(2,-2);
+		\node[above right] at (1.5,-1) {$\vb$};
+		
+		\draw[->] (0,1)--(-2,4);
+		\node[above right] at (-1, 2) {$-\vb$};
+		
+		\draw[->, color=darkgreen] (-2,-1)--(-2,4);
+		\node[left] at (-2.2, 1.6) {\textcolor{darkgreen}{$\va-\vb$}};
+		
+		\draw[->, color=blue] (-2,-1)--(2,-2);
+		\node[below left] at (-0.3, -1.4) {\textcolor{blue}{$\va+\vb$}};
+		
+		
+	\end{tikzpicture}
+	\caption{Vektorit $\va+\vb$ ja $\va-\vb$.}
+	\label{kuva:erotusvektorit}
+		\end{figurehere}
+		\end{center}
+		
+		
+
 	\begin{teht} Tutkitaan vektoreita $\va$ ja $\vb$.
 		\begin{aakkosta*}
 		\item M‰‰rit‰ vektorin $\vb$ vastavektori $-\vb$. 
@@ -216,42 +769,72 @@ Vektori $\vv+(-\vw)=\vv-\vw$. Se on siis vektorien $\vv$ ja $\vw$ erotusvektori.
 
 
 
-
-\subsection{Vektorin kertominen reaaliluvulla}
-
-
-Vektori $\vi$ ja vektori $3\vi$.
-
-Teht‰v‰, jossa piirret‰‰n vektori v ja vektoreita rv, $r \in \R$
-
-\maaritelma[Yhdensuuntaisuus]{Vektorit $\vv$ ja $\vw$ ovat \textbf{yhdensuuntaiset}, jos $\vv=r\vw$ jollakin reaaliluvulla $r$.}
-
-%\maaritelma[Vektorien suunta]{Vektorit ovat \textbf{samansuuntaiset}, jos ne kulkevat samaan suuntaan. Vektorit ovat \textbf{vastakkaissuuntaiset}, jos ne kulkevat vastakkaisiin suuntiin. Vektoreita kutsutaan joskus myˆs \textbf{yhdensuuntaisiksi}, jos ne ovat joko saman- tai vastakkaissuuntaiset.}
-
-
-	\begin{teht} Tarkastellaan alla olevaa kuvaa (paljon erilaisia vektoreita, joista osa kulkee samaan ja osa vastakkaissuuntiin)
-		\begin{aakkosta*}
-		\item Mitk‰ kuvan vektoreista ovat samansuuntaisia?
-		\item Mitk‰ kuvan vektoreista ovat vastakkaissuuntaisia?
-		\item Mik‰ kuvan vektoreista ei ole yhdensuuntainen mink‰‰n muun kuvan vektorin kanssa?
-		\end{aakkosta*}
-	\end{teht}
-
-
-nollavektori ja kertominen luvulla 1
-
-
-
-
 \subsection{Vektorin pituus}
 
 
 
-Vektorin pituus saadaan laskettua Pythagoraan lauseen avulla.  (KUVA) Esimerkiksi vektorin $\va = -2\vi + 3\vj$ pituus saadaan yht‰lˆst‰
+Vektorin pituus saadaan laskettua Pythagoraan lauseen avulla.  
+
+
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->] (4,1)--(2,4);
+		\node[above right] at (4,3) {$\va$};
+
+		\draw[->, color=gray] (4,1)--(2,1);
+		\node[below] at (3, 1) {\textcolor{gray}{$-2\vi$}};
+		
+		\draw[->, color=gray] (2,1)--(2,4);
+		\node[left] at (1.5,2) {\textcolor{gray}{$3\vj$}};
+		
+		
+	\end{tikzpicture}
+	\caption{Vektorin $\va$ pituus.}
+	\label{kuva:vektorin pituus}
+		\end{figurehere}
+		\end{center}
+
+
+
+Esimerkiksi vektorin $\va = -2\vi + 3\vj$ pituus saadaan yht‰lˆst‰
 \[
 |\va|^2 = 2^2 + 3^2.
 \]
-Vektorin $\va$ pituudeksi saadaan $|\va| = \sqrt{2^2 + 3^2}?\sqrt{4+9}=\sqrt{13}$.
+Vektorin $\va$ pituudeksi saadaan $|\va| = \sqrt{2^2 + 3^2}=\sqrt{4+9}=\sqrt{13}$.
 
 	\begin{teht}\label{tehtava:yksikkovektori1} Tutkitaan vektoria $\vb = 3\vi - 4\vj$. 
 		\begin{aakkosta*}
@@ -262,19 +845,80 @@ Vektorin $\va$ pituudeksi saadaan $|\va| = \sqrt{2^2 + 3^2}?\sqrt{4+9}=\sqrt{13}
 	\end{teht}
 
 
-\textsc{t‰h‰n v‰liin lasketaan vektorien i ja j pituudet.}
+	\begin{teht} 
+	Millaisella luvulla vektoria tulee kertoa, jotta sen pituus kasvaa? Ent‰ lyhenee? 	
+	\end{teht}
+
+	\begin{teht} 
+	Laske vektorien $\vi$ ja $\vj$ pituudet.		
+	\end{teht}
+
+
 
 
 \maaritelma[Yksikkˆvektori]{Vektoria, jonka pituus on $1$, sanotaan \textbf{yksikkˆvektoriksi}.} 
 
+Komponenttivektorit $\vi$ ja $\vj$ ovat siis yksikkˆvektoreita.
 
-
-Esimerkiksi vektorin $\vv = 8\vi + 6\vj$ pituudeksi saadaan $|\vv| = \sqrt{8^2+6^2} = \sqrt{100} = 10$. Sen kanssa samansuuntainen yksikkˆvektori saadaan ottamalla vektorista $\vv$ kymmenesosa eli 
+Vektorin $\vv = 8\vi + 6\vj$ pituudeksi saadaan $|\vv| = \sqrt{8^2+6^2} = \sqrt{100} = 10$. Sen kanssa samansuuntainen yksikkˆvektori saadaan ottamalla vektorista $\vv$ kymmenesosa eli 
 \[\frac{1}{10}\vv =  \frac{1}{10}(8\vi + 6\vj) = 0{,}8\vi + 0{,}6\vj\]
 
 
 
-(KUVA)
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->] (4,1)--(2,4);
+		\node[above right] at (4,3) {$\va$};
+
+		\draw[->, color=gray] (4,1)--(2,1);
+		\node[below] at (3, 1) {\textcolor{gray}{$-2\vi$}};
+		
+		\draw[->, color=gray] (2,1)--(2,4);
+		\node[left] at (1.5,2) {\textcolor{gray}{$3\vj$}};
+		
+
+		
+	\end{tikzpicture}
+	\caption{Vektorin $\vv$ pituus. \textsc{v‰‰r‰ kuva}}
+		\end{figurehere}
+		\end{center}
+
+
+
 
 	\begin{teht} Jatkoa teht‰v‰‰n \ref{tehtava:yksikkovektori1}. Tutkitaan edelleen vektoria $\vb = 3\vi - 4\vj$. 
 		\begin{aakkosta*}
@@ -286,4 +930,31 @@ Esimerkiksi vektorin $\vv = 8\vi + 6\vj$ pituudeksi saadaan $|\vv| = \sqrt{8^2+6
 
 
 
-\maaritelma[Nollavektori]{Vektoria, jonka pituus on nolla, sanotaan \textbf{nollavektoriksi}.}
+
+\maaritelma[Samat vektorit (toinen m‰‰ritelm‰)]{Kaksi vektoria ovat samat, jos ne ovat saman suuntaiset ja yht‰ pitk‰t.}
+
+
+
+
+
+
+
+\subsection{Vektorien v‰linen kulma}
+
+
+pienempi kulma
+
+cosinilauseen kertaus
+
+pistetulo 
+
+pistetulon graafinen tulkinta
+
+	\begin{teht} Tutkitaan vektoreita ...
+		\begin{aakkosta*}
+		\item Laske pistetulot ...
+		\item Mitk‰ vektoreista ovat kohtisuorassa toisiaan vasten?
+		\item Tarkista edellisen kohdan vastauksesi piirt‰m‰ll‰ vektorit koordinaatistoon.
+		\end{aakkosta*}
+	\end{teht}
+
