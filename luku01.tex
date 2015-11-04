@@ -234,7 +234,7 @@ Huomataan, että nuolen $\vu$ päästä on sen kärkeen kaksi $x$-akselin suuntaista 
 	\begin{teht} Ilmoita kuvassa \ref{kuva:vektorin muodostaminen} oleva nuoli $\vv$ nuolien $\vi$ ja $\vj$ avulla. 
 	\end{teht}
 
-Koordinaatistossa olevia nuolia kutsutaan \textbf{vektoreiksi}. Edellisen kuvan nuoli $\vv$ on siis vektori $\vv$, joka voidaan ilmaista vektorien $\vi$ ja $\vj$ avulla. Vektorit $\vi$ ja $\vj$ ovat erityisiä, sillä ne ovat koordinaattiakselien suuntaisia ja yhden askeleen pituisia.
+Koordinaatistossa olevia nuolia kutsutaan \textbf{vektoreiksi}. Edellisen kuvan nuoli $\vv$ on siis vektori $\vv$, joka voidaan ilmaista vektorien $\vi$ ja $\vj$ avulla. Vektorit $\vi$ ja $\vj$ ovat erityisiä, sillä ne ovat koordinaattiakselien suuntaisia ja yhden askeleen pituisia. Niiden avulla voidaan ilmaista kaikki mahdolliset xy-koordinaatiston vektorit.
 
 	\begin{teht} Tarkastellaan seuraavaa kuvaa \ref{kuva:samat erit vektorit}.
 	
@@ -410,26 +410,80 @@ Kuvassa \ref{kuva:paikkavektori} oleva vektori $\vv=4\vi+3\vj$ on siis pisteen $
 
 Vektoria pisteestä $A$ pisteeseen $B$ kulkevaa vektoria merkitään $\pv{AB}$, ja pisteestä $B$ pisteeseen $A$ kulkevaa vektoria merkitään $\pv{BA}$. 
 
-		\begin{center}
-		\begin{figurehere}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+%		\begin{center}
+%		\begin{figurehere}
+%	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+%
+%		%x-akseli:
+%		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+%		%tiksut ja viivat
+%		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+%		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+%		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+%		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+%		}
+%		
+%		%y-akseli
+%		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+%
+%		%tiksut ja viivat
+%		\foreach \y in {-3,-2,-1,1,2,3}
+%		{
+%		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+%		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+%		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+%		}
+%
+%		% Varsinainen kuva
+%
+%		% Komponenttivektorit
+%		\draw[->] (0,0)--(1,0);
+%		\node[below] at (0.4, -0.2) {$\vi$};
+%
+%		\draw[->] (0,0)--(0,1);
+%		\node[left] at (-0.2, 0.4) {$\vj$};
+%
+%		% Vektorit
+%
+%%		\draw[fill, color = black] (-3,1) circle [radius = 1.5pt];
+	%	\node[above left] at (-3,1) {$A$};
+	%	
+	%	\draw[fill, color = black] (3,3) circle [radius = 1.5pt];
+	%	\node[above right] at (3,3) {$B$};
+%
+%		\draw[->, color=blue] (-3,1.1)--(3,3.1);
+%		\node[above left] at (0,2) {\textcolor{blue}{$\pv{AB}$}};
+%		
+%		\draw[->, color=darkgreen] (3,2.9)--(-3,0.9);
+%		\node[below right] at (.8,2) {\textcolor{darkgreen}{$\pv{BA}$}};
+%%%		
+	%\end{tikzpicture}
+	%\caption{Kahden pisteen väliset vektorit.}
+	%\label{kuva:kahden pisteen välinen vektori}
+	%	\end{figurehere}
+	%	\end{center}
 
-		%x-akseli:
-		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		\begin{figurehere}
+		\begin{center}
+		\begin{minipage}{.45\textwidth}
+	\begin{tikzpicture}[scale=0.8] %[x={10.0pt},y={10.0pt}]
+	
+	%x-akseli:
+		\draw[->,color=gray] (-1.5,0) -- (5.5,0);
 		%tiksut ja viivat
-		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
-		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\foreach \x in {-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-1.5)--(\x,3.5);
 		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
 		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
 		}
 		
 		%y-akseli
-		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		\draw[->,color=gray] (0,-1.5) -- (0,3.5);
 
 		%tiksut ja viivat
-		\foreach \y in {-3,-2,-1,1,2,3}
+		\foreach \y in {-1,1,2,3}
 		{
-		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[dashed, color=lightgray] (-1.5,\y)--(5.5,\y);
 		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
 		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
 		}
@@ -445,23 +499,74 @@ Vektoria pisteestä $A$ pisteeseen $B$ kulkevaa vektoria merkitään $\pv{AB}$, ja 
 
 		% Vektorit
 
-		\draw[fill, color = black] (-3,1) circle [radius = 1.5pt];
-		\node[above left] at (-3,1) {$A$};
+		\draw[fill, color = black] (1,1) circle [radius = 1.5pt];
+		\node[above left] at (1,1) {$A$};
 		
-		\draw[fill, color = black] (3,3) circle [radius = 1.5pt];
-		\node[above right] at (3,3) {$B$};
+		\draw[fill, color = black] (5,3) circle [radius = 1.5pt];
+		\node[above right] at (4.5,3) {$B$};
 
-		\draw[->, color=blue] (-3,1.1)--(3,3.1);
-		\node[above left] at (0,2) {\textcolor{blue}{$\pv{AB}$}};
+		\draw[->, thick, color=blue] (1,1)--(5,3);
+		\node[above left] at (3,2) {\textcolor{blue}{$\pv{AB}$}};
 		
-		\draw[->, color=darkgreen] (3,2.9)--(-3,0.9);
-		\node[below right] at (.8,2) {\textcolor{darkgreen}{$\pv{BA}$}};
+		%\draw[->, color=darkgreen] (3,2.9)--(-3,0.9);
+		%\node[below right] at (.8,2) {\textcolor{darkgreen}{$\pv{BA}$}};
+
+	\end{tikzpicture} % pic 1
+	\end{minipage}
+	\begin{minipage}{.45\textwidth}
+	\begin{tikzpicture}[scale=0.8] %[x={10.0pt},y={10.0pt}]
+	
+		%x-akseli:
+		\draw[->,color=gray] (-1.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-1.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
 		
+		%y-akseli
+		\draw[->,color=gray] (0,-1.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-1.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+		% Komponenttivektorit
+		\draw[->] (0,0)--(1,0);
+		\node[below] at (0.4, -0.2) {$\vi$};
+
+		\draw[->] (0,0)--(0,1);
+		\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+
+		\draw[fill, color = black] (1,1) circle [radius = 1.5pt];
+		\node[above left] at (1,1) {$A$};
+		
+		\draw[fill, color = black] (5,3) circle [radius = 1.5pt];
+		\node[above right] at (4.5,3) {$B$};
+
+		%\draw[->, color=blue] (1,1)--(5,3);
+		%\node[above left] at (3,2) {\textcolor{blue}{$\pv{AB}$}};
+		
+		\draw[->, thick,color=darkgreen] (5,3)--(1,1);
+		\node[below right] at (2.5,2) {\textcolor{darkgreen}{$\pv{BA}$}};
+
 	\end{tikzpicture}
-	\caption{Kahden pisteen väliset vektorit.}
-	\label{kuva:kahden pisteen välinen vektori}
-		\end{figurehere}
+		\end{minipage}
 		\end{center}
+		\caption{Kahden pisteen väliset vektorit.}
+		\label{kuva:kahden pisteen välinen vektori}
+	\end{figurehere}
+
+
 
 	\begin{teht} ...
 		\begin{aakkosta*}
