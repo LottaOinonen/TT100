@@ -756,24 +756,7 @@ Vektoria, joka alkaa ja päättyy samaan pisteeseen, sanotaan \textbf{nollavektori
 		\end{aakkosta*}
 	\end{teht}
 
-Edellisen tehtävän vektorit $\vv$ ja $\vw$ ovat toistensa vastavektoreita. Näin ollen voidaan merkitä $\vw=-\vv$, ja summavektori $\vv+\vw$ saadaan muotoon $\vv+\vw=\vv +(-\vv)=\vv-\vv=\bar{0}$. 
-
-
-
-	\begin{teht} Tutkitaan vektoreita $\vv=$ ja $\vw=$
-		\begin{aakkosta*}
-		\item Piirrä vektori $\vv$ koordinaatistoon.
-		\item Muodosta vektorin $\vw$ vastavektori $-\vw$.
-		\item Piirrä vektori $-\vw$ koordinaatistoon siten, että että se alkaa vektorin $\vv$ kärjestä.
-		\item Piirrä vektori, joka alkaa vektorin $\vv$ alkupisteestä ja päättyy vektorin $-\vw$ kärkeen. Merkitse tätä vektoria $\vv+(-\vw)$.
-		\item Ilmoita vektori $\vv+(-\vw)$ vektorien $\vi$ ja $\vj$ avulla.
-		\end{aakkosta*}
-	\end{teht}
-
-
-Vektori $\vv+(-\vw)=\vv-\vw$. Se on siis vektorien $\vv$ ja $\vw$ erotusvektori. 
-
-\maaritelma[Erotusvektori]{Vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ \textbf{erotusvektori} on vektori $\vv-\vw=(x_1-x_2)\vi+(y_1-y_2)\vj$.}
+Edellisen tehtävän vektorit $\vv$ ja $\vw$ ovat toistensa vastavektoreita. Näin ollen voidaan merkitä $\vw=-\vv$, ja summavektori $\vv+\vw$ saadaan muotoon $\vv+\vw=\vv +(-\vv)=\vv-\vv=\bar{0}$. Tämä pätee kaikille vektoreille: vektori $\vv+(-\vw)=\vv-\vw$. Vektorien $\vv$ ja $\vw$ erotusvektori $\vv-\vw$ saadaan siis lisäämällä vektoriin $\vv$ vektorin $\vw$ vastavektori. Vektoreiden erotusta havainnollistetaan kuvassa \ref{kuva:erotusvektorit}.
 
 		\begin{center}
 		\begin{figurehere}
@@ -804,35 +787,50 @@ Vektori $\vv+(-\vw)=\vv-\vw$. Se on siis vektorien $\vv$ ja $\vw$ erotusvektori.
 		% Vektorit
 
 		\draw[->] (-2,-1)--(0,1);
-		\node[below right] at (-1.8, 0.8) {$\va$};
+		\node[below right] at (-1.8, 0.8) {$\vv$};
 		
 		\draw[->] (0,1)--(2,-2);
-		\node[above right] at (1.5,-1) {$\vb$};
+		\node[above right] at (1.5,-1) {$\vw$};
 		
 		\draw[->] (0,1)--(-2,4);
-		\node[above right] at (-1, 2) {$-\vb$};
+		\node[above right] at (-1, 2) {$-\vw$};
 		
 		\draw[->, color=darkgreen] (-2,-1)--(-2,4);
-		\node[left] at (-2.2, 1.6) {\textcolor{darkgreen}{$\va-\vb$}};
+		\node[left] at (-2.2, 1.6) {\textcolor{darkgreen}{$\vv-\vw$}};
 		
 		\draw[->, color=blue] (-2,-1)--(2,-2);
-		\node[below left] at (-0.3, -1.4) {\textcolor{blue}{$\va+\vb$}};
+		\node[below left] at (-0.3, -1.4) {\textcolor{blue}{$\vv+\vw$}};
 		
 		
 	\end{tikzpicture}
-	\caption{Vektorit $\va+\vb$ ja $\va-\vb$.}
+	\caption{Vektorit $\vv+\vw$ ja $\vv-\vw$.}
 	\label{kuva:erotusvektorit}
 		\end{figurehere}
 		\end{center}
 		
+
+\maaritelma[Erotusvektori]{Vektorien $\vv$ ja $\vw$ erotusvektori $\vv-\vw$ saadaan lisäämällä vektoriin $\vv$ vektorin $\vw$ vastavektori $-\vw$, eli $\vv-\vw=\vv+(-\vw)$.}
+
+Vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ erotusvektori on siis vektori $$\vv-\vw=(x_1-x_2)\vi+(y_1-y_2)\vj.$$		
 		
 
-	\begin{teht} Tutkitaan vektoreita $\va$ ja $\vb$.
+	%\begin{teht} Tutkitaan vektoreita $\vv=$ ja $\vw=$
+	%	\begin{aakkosta*}
+	%	\item Piirrä vektori $\vv$ koordinaatistoon.
+	%	\item Muodosta vektorin $\vw$ vastavektori $-\vw$.
+	%	\item Piirrä vektori $-\vw$ koordinaatistoon siten, että että se alkaa vektorin $\vv$ kärkipisteestä.
+	%	\item Piirrä vektori, joka alkaa vektorin $\vv$ alkupisteestä ja päättyy vektorin $-\vw$ kärkeen.
+	%	\item Ilmoita vektori $\vv+(-\vw)$ vektorien $\vi$ ja $\vj$ avulla.
+	%	\end{aakkosta*}
+	%\end{teht}
+
+	
+	\begin{teht} Tutkitaan vektoreita $\va=-3\vi+4\vj$ ja $\vb=5\vi+2\vj$.
 		\begin{aakkosta*}
 		\item Määritä vektorin $\vb$ vastavektori $-\vb$. 
 		\item Piirrä vektori $\va-\vb$ koordinaatistoon vektorien $\va$ ja $-\vb$ avulla.
-		\item Määritä koordinaatistosta vektorin $\va-\vb$ komponenttiesitys.
-		\item Tarkista vastauksesi määrittämällä vektori $\va-\vb$ suoraan vektorien $\va$ ja $\vb$ komponenttiesitysten avulla.
+		\item Ilmoita vektori $\va-\vb$ vektorien $\vi$ ja $\vj$ avulla.
+		\item Tarkista tuloksesi laskemalla yhteen vektorit $\va$ ja $-\vb$ komponenteittain.
 		\end{aakkosta*}
 	\end{teht}
 
@@ -853,7 +851,14 @@ Vektori $\vv+(-\vw)=\vv-\vw$. Se on siis vektorien $\vv$ ja $\vw$ erotusvektori.
 
 
 
-Vektorin pituus saadaan laskettua Pythagoraan lauseen avulla.  
+Vektorin pituus saadaan laskettua Pythagoraan lauseen avulla. Esimerkiksi kuvan \ref{kuva:vektorin pituus} vektorin $\va = -2\vi + 3\vj$ pituus saadaan yhtälöstä
+$$
+|\va|^2 = 2^2 + 3^2.
+$$
+Vektorin $\va$ pituudeksi saadaan siis 
+$$
+|\va| = \sqrt{2^2 + 3^2}=\sqrt{4+9}=\sqrt{13}.
+$$
 
 
 
@@ -903,18 +908,15 @@ Vektorin pituus saadaan laskettua Pythagoraan lauseen avulla.
 		
 		
 	\end{tikzpicture}
-	\caption{Vektorin $\va$ pituus.}
+	\caption{Vektori $\va$.}
 	\label{kuva:vektorin pituus}
 		\end{figurehere}
 		\end{center}
 
 
+\maaritelma[Vektorin pituus]{Vektorin $\vv=x\vi+y\vj$ pituus $|\va|$ saadaan yhtälöstä $$|\va|=\sqrt{|x|^2+|y|^2}.$$}
 
-Esimerkiksi vektorin $\va = -2\vi + 3\vj$ pituus saadaan yhtälöstä
-\[
-|\va|^2 = 2^2 + 3^2.
-\]
-Vektorin $\va$ pituudeksi saadaan $|\va| = \sqrt{2^2 + 3^2}=\sqrt{4+9}=\sqrt{13}$.
+Huomaa, että merkintä $|\va|$ tarkoittaa vektorin $\va$ pituutta, kun taas merkinnällä $|x|$ tarkoitetaan luvun $x$ itseisarvoa.
 
 	\begin{teht}\label{tehtava:yksikkovektori1} Tutkitaan vektoria $\vb = 3\vi - 4\vj$. 
 		\begin{aakkosta*}
@@ -925,23 +927,105 @@ Vektorin $\va$ pituudeksi saadaan $|\va| = \sqrt{2^2 + 3^2}=\sqrt{4+9}=\sqrt{13}
 	\end{teht}
 
 
-	\begin{teht} 
-	Millaisella luvulla vektoria tulee kertoa, jotta sen pituus kasvaa? Entä lyhenee? 	
+	\begin{teht} Tutkitaan vektoria $\vv=6\vi+3\vj$.
+		\begin{aakkosta*}
+		\item Muodosta vektorit $5\vv$, $-2\vv$ ja $1/3\vv$.
+		\item Laske vektorien $\vv$, $5\vv$, $-2\vv$ ja $1/3\vv$ pituudet.
+		\item Vertaa vektorien $\vv$ ja $5\vv$ pituuksia toisiinsa. Mitä huomaat? 
+		\end{aakkosta*}	
+	\end{teht}
+
+Tarkastellaan kuvassa \ref{kuva:vektorin ta pituus} olevien vektorien $\va=2\vi+\vj$ ja $4\va=4(2\vi+\vj)=8\vi+4\vj$ pituuksia. Huomataan, että vektorin $\va$ pituus on	
+$$
+|\va|=\sqrt{2^2+1^2} 
+= \sqrt{4+1}
+=\sqrt{5}
+$$
+ja vektorin $4\va$ pituus on
+\begin{align*}
+|4\va|=\sqrt{8^2+4^2} 
+= \sqrt{64+16}
+=\sqrt{80}
+= \sqrt{16\cdot 5}
+=4\sqrt{5}
+=4\cdot |\va|.
+\end{align*}
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->, color=blue] (-3,-2)--(-1,-1);
+		\node[above left] at (-2,-1.6) {\textcolor{blue}{$\va$}};
+
+		\draw[->, color=gray] (-1,-1)--(1,0);
+		\node[above left] at (0,-0.6) {\textcolor{gray}{$\va$}};
+		
+		\draw[->, color=gray] (1,0)--(3,1);
+		\node[above left] at (2,0.4) {\textcolor{gray}{$\va$}};
+		
+		\draw[->, color=gray] (3,1)--(5,2);
+		\node[above left] at (4,1.4) {\textcolor{gray}{$\va$}};
+		
+		\draw[->, color=darkgreen] (-3,-3)--(5,1);
+		\node[below right] at (1,-1) {\textcolor{darkgreen}{$4\va$}};
+		
+		
+	\end{tikzpicture}
+	\caption{Vektorit $\va$ ja $4\va$.}
+	\label{kuva:vektorin ta pituus}
+		\end{figurehere}
+		\end{center}
+
+Tämä pätee kaikille vektoreille. Vektorin $t\vv$ pituus $|t\vv|$ saadaan siis kertomalla vektorin $\vv$ pituutta luvulla $t$. Näin ollen $|t\vv|=t\cdot |\vv|.$ 
+
+	\begin{teht}
+	Millaisella luvulla vektoria tulee kertoa, jotta sen pituus kasvaa? Entä lyhenee? 
 	\end{teht}
 
 	\begin{teht} 
 	Laske vektorien $\vi$ ja $\vj$ pituudet.		
 	\end{teht}
 
-
-
-
 \maaritelma[Yksikkövektori]{Vektoria, jonka pituus on $1$, sanotaan \textbf{yksikkövektoriksi}.} 
 
 Komponenttivektorit $\vi$ ja $\vj$ ovat siis yksikkövektoreita.
 
-Vektorin $\vv = 8\vi + 6\vj$ pituudeksi saadaan $|\vv| = \sqrt{8^2+6^2} = \sqrt{100} = 10$. Sen kanssa samansuuntainen yksikkövektori saadaan ottamalla vektorista $\vv$ kymmenesosa eli 
-\[\frac{1}{10}\vv =  \frac{1}{10}(8\vi + 6\vj) = 0{,}8\vi + 0{,}6\vj\]
+Tarkastellaan sitten kuvassa \ref{kuva:vektori ja samansuuntainen yksikkövektori} olevaa vektoria $\vv = 8\vi + 6\vj$. Sen pituudeksi saadaan $|\vv| = \sqrt{8^2+6^2} = \sqrt{100} = 10$. Vektorin $\vv$ kanssa samansuuntainen yksikkövektori saadaan ottamalla siitä kymmenesosa, eli 
+$$
+\frac{1}{10}\vv =  \frac{1}{10}(8\vi + 6\vj) = 0{,}8\vi + 0{,}6\vj
+$$
 
 
 
@@ -974,26 +1058,49 @@ Vektorin $\vv = 8\vi + 6\vj$ pituudeksi saadaan $|\vv| = \sqrt{8^2+6^2} = \sqrt{
 		% Varsinainen kuva
 		
 		% Komponenttivektorit
-		\draw[->] (0,0)--(1,0);
-		\node[below] at (0.4, -0.2) {$\vi$};
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
 
-		\draw[->] (0,0)--(0,1);
-		\node[left] at (-0.2, 0.4) {$\vj$};
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
 
 		% Vektorit
-		\draw[->] (4,1)--(2,4);
-		\node[above right] at (4,3) {$\va$};
+		\draw[->] (-5,-2)--(3,4);
+		\node[above left] at (-1,1) {$\vv$};
 
-		\draw[->, color=gray] (4,1)--(2,1);
-		\node[below] at (3, 1) {\textcolor{gray}{$-2\vi$}};
+		\draw[->, color=blue] (-5,-3)--(-4.2,-2.4);
+		\node[below right] at (-4.5,-2.5) {\textcolor{blue}{$\frac{1}{10}\vv$}};
 		
-		\draw[->, color=gray] (2,1)--(2,4);
-		\node[left] at (1.5,2) {\textcolor{gray}{$3\vj$}};
+		\draw[->, color=gray] (-4.2,-2.4)--(-3.4,-1.8);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
 		
-
+		\draw[->, color=gray] (-3.4,-1.8)--(-2.6,-1.2);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
+		
+		\draw[->, color=gray] (-2.6,-1.2)--(-1.8,-0.6);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
+		
+		\draw[->, color=gray] (-1.8,-0.6)--(-1.0,-0.0);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
+		
+		\draw[->, color=gray] (-1.0,-0.0)--(-0.2,0.6);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
+		
+		\draw[->, color=gray] (-0.2,0.6)--(0.6,1.2);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
+		
+		\draw[->, color=gray] (0.6,1.2)--(1.4,1.8);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
+		
+		\draw[->, color=gray] (1.4,1.8)--(2.2,2.4);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
+		
+		\draw[->, color=gray] (2.2,2.4)--(3,3);
+		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
 		
 	\end{tikzpicture}
-	\caption{Vektorin $\vv$ pituus. \textsc{väärä kuva}}
+	\label{kuva:vektori ja samansuuntainen yksikkövektori}
+	\caption{Vektorin $\vv$ ja sen kanssa samansuuntainen yksikkövektori.}
 		\end{figurehere}
 		\end{center}
 
@@ -1010,51 +1117,190 @@ Vektorin $\vv = 8\vi + 6\vj$ pituudeksi saadaan $|\vv| = \sqrt{8^2+6^2} = \sqrt{
 
 
 
-
-\maaritelma[Samat vektorit (toinen määritelmä)]{Kaksi vektoria ovat samat, jos ne ovat saman suuntaiset ja yhtä pitkät.}
-
-
-
-
+\begin{teoreema}
+Kaksi vektoria ovat samat, jos ne ovat saman suuntaiset ja yhtä pitkät.
+\proof Määritelmän \ref{maaritelma: samat vektorit} mukaan vektorit ovat samat, jos ne voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla. Jos vektorit voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla, ne ovat välttämättä saman suuntaiset ja yhtä pitkät. Jos vektorit ovat saman suuntaiset ja yhtä pitkät, ne voidaan ilmaista samalla tavalla vektorien $\vi$ ja $\vj$ avulla, jolloin ne määritelmän mukaan ovat samat vektorit.
+\end{teoreema}
 
 
 
 
 
-\begin{comment}
-
-\subsection{Vektorien välinen kulma}
 
 
-Vektorien välinen kulma on pienempi
 
-Kosinilause on Pythagoraan lauseen yleistys. Pyhtagoraan lause pätee suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille. Geometria-kurssin kertausta.  
 
-pistetulo 
 
-pistetulon graafinen tulkinta
 
-\maaritelma[Pistetulo]{Vektorien $\va=x_1\vi+y_1\vj$ ja $\vb=x_2\vi+y_2\vj$ \textbf{pistetulo} on $\va \cdot \vb = x_1x_2+y_1y_2$.}
 
-	\begin{teht}
+
+
+\subsection{Vektorien välinen kulma ja pistetulo}
+
+Vektorien välisiä kulmia voidaan tarkastella, kun vektorien lähtöpisteet ovat samat. Vektorien välisellä kulmalla tarkoitetaan muodostuvista kulmista pienempää. Esimerkiksi kuvan \ref{kuva:vektorien välinen kulma} vektorien $\vv$ ja $\vw$ välisellä kulmalla tarkoitetaan kulmaa $\alpha$.
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->, color=blue] (-1,1)--(3,3);
+		\node[above left] at (1,2) {\textcolor{blue}{$\vv$}};
+
+		\draw[->, color=blue] (-1,1)--(4,-1);
+		\node[below right] at (1.5,-0.3) {\textcolor{blue}{$\vw$}};
+		
+		\draw[color=red] (0.2,0.51) arc (-30:30:1.1);
+		%\draw[color=red] (-1,1) -- (180:.60cm) arc (60:180:.75cm);
+		\node[right] at (0.5,1) {\textcolor{red}{$\alpha$}}; 		
+ 		%\draw(120:0.4cm) node {$\alpha$};
+		
+	\end{tikzpicture}
+	\caption{Vektorien $\vv$ ja $\vw$ välinen kulma $\alpha$.}
+	\label{kuva:vektorien välinen kulma}
+		\end{figurehere}
+		\end{center}
+
+	\begin{teht} ...
 		\begin{aakkosta*}
-		\item
-		\item
+		\item Kuinka suuri on vektorien $\vv$ ja $3\vv$ välinen kulma? 
+		\item Päteekö a-kohdan tulos kaikille samansuuntaisille vektoreille?
+		\item Kuinka suuri on vektorien $\vv$ ja $-\vv$ välinen kulma?
+		\item Päteekö c-kohdan tulos kaikille vastakkaissuuntaisille vektoreille?
+		\end{aakkosta*}
+	\end{teht}
+
+
+Tarkastellaan seuraavaksi vektorien \textbf{pistetuloa}. Pistetulon avulla voidaan laskea vektorien välisiä kulmia. Esimerkiksi vektorien $\vv=-2\vi+4\vj$ ja $\vw=3\vi-\vj$ pistetulo on 
+$$
+\vv \cdot \vw 
+= (-2\vi+4\vj) \cdot (3\vi-\vj) 
+= (-2) \cdot 3 + 4\cdot (-1)
+= -6-4
+=-10.
+$$
+
+\maaritelma[Pistetulo]{Vektorien välinen pistetulo saadaan laskemalla yhteen vektorien $\vi$ ja $\vj$ kertoimien tulot.}
+
+Vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ pistetulo on siis $\vv \cdot \vw = x_1x_2+y_1y_2$.
+
+Huomaa, että merkintä $\vv \cdot \vw$ tarkoittaa vektorien $\vv$ ja $\vw$ pistetuloa, kun taas merkintä $3\cdot 5$ tarkoittaa lukujen $3$ ja $5$ tuloa. Vektorien pistetulo on aina reaaliluku, joten sitä kutsutaan joskus myös \textbf{skalaarituloksi}.
+
+	\begin{teht} Tarkastellaan vektoreita $\va=7\vi+2\vj$, $~\vb=3\vi-5\vj~$ ja $~\vc=-4\vi-6\vj$.
+		\begin{aakkosta*}
+		\item Laske vektoreiden $\va$ ja $\vb$ välinen pistetulo $\va \cdot \vb$.
+		\item Laske vektoreiden $\va$ ja $\vc$ välinen pistetulo $\va \cdot \vc$.
+		\item Laske vektoreiden $\vb$ ja $\vc$ välinen pistetulo $\va \cdot \vb$.
 		\end{aakkosta*}	
 	\end{teht}
 
-\begin{lause}
+	\begin{teht} Tarkastellaan vektoreita $\va=-2\vi+3\vj~$ ja $~\vb=6\vi+4\vj$.
+		\begin{aakkosta*}
+		\item Laske vektoreiden $\va$ ja $\vb$ välinen pistetulo $\va \cdot \vb$.
+		\item Piirrä vektorit $\va$ ja $\vb$ koordinaatistoon siten, että niillä on sama lähtöpiste.
+		\item Mitä huomaat vektorien välisestä kulmasta?
+		\end{aakkosta*}	
+	\end{teht}
+
+
+\begin{teoreema}
 Vektorit $\va$ ja $\vb$ ovat toisiaan vastaan kohtisuorassa, jos ja vain jos $\va \cdot \vb=0$.
 
-\proof moi
-\end{lause}
+\proof ...
+\end{teoreema}
 
 	\begin{teht} Tutkitaan vektoreita ...
 		\begin{aakkosta*}
 		\item Laske pistetulot ...
 		\item Mitkä vektoreista ovat kohtisuorassa toisiaan vasten?
-		\item Tarkista edellisen kohdan vastauksesi piirtämällä vektorit koordinaatistoon.
+		\item Tarkista edellisen kohdan vastauksesi tarkastelemalla vektorien välisiä kulmia koordinaatistossa.
 		\end{aakkosta*}
 	\end{teht}
+	
+	\begin{teht} Tutkitaan vektoreita $\va=-2\vi+3\vj~$ ja $~\vb=t\vi+3\vj$, missä $t$ on jokin reaaliluku.
+		\begin{aakkosta*}
+		\item Muodosta vektorien $\va$ ja $\vb$ välisen pistetulon $\va \cdot \vb$ yhtälö. 
+		\item Millä muuttujan $t$ arvolla vektorit $\va$ ja $\vb$ ovat kohtisuorassa toisiaan vasten?
+		\end{aakkosta*}
+	\end{teht}	
 
-\end{comment}
+\textsc{tähän tehtävä, jossa tarvitaan pistetulon laskusääntöjä. kts. esim. pitkä sigma s.76}
+
+Vektorien välinen kulma voidaan laskea Geometria-kurssista tutun \textbf{kosinilauseen} avulla. Kosinilause on Pythagoraan lauseen yleistys. Pythagoraan lausehan pätee ainoastaan suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille.
+
+Kosinilauseen mukaan 
+$$
+a^2=b^2+c^2-2bc \cos \alpha.
+$$
+
+KUVA
+
+\begin{teoreema}\label{teoreema:pistetulo}
+$\va \cdot \vb = |\va||\vb|\cos (\va, \vb).$
+
+\proof 
+KUVA
+
+Pistetulon ominaisuuksia hyväksi käyttäen
+\begin{align*}
+|\va-\vb|^2
+&=(\va-\vb)\cdot(\va-\vb) \\
+&= \va \cdot(\va-\vb) - \vb \cdot (\va - \vb) \\
+&= \va \cdot \va -\va\cdot\vb - \vb\cdot\va+\vb\cdot\vb \\
+&= \va \cdot \va -\va\cdot\vb - \va \cdot \vb+\vb\cdot\vb \\
+&= |\va|^2 - 2(\va\cdot\vb) +|\vb|^2 \\
+&= |\va|^2 +|\vb|^2- 2(\va\cdot\vb).
+\end{align*}
+
+Toisaalta kosinilauseen mukaan 
+\begin{align*}
+|\va-\vb|^2=|\va|^2+|\vb|^2 - 2|\va||\vb|\cos (\va, \vb).
+\end{align*}
+
+Näin ollen tiedetään, että 
+\begin{align*}
+|\va-\vb|^2
+&=|\va|^2 +|\vb|^2- 2(\va\cdot\vb)\\
+&=|\va|^2+|\vb|^2 - 2|\va||\vb|\cos (\va, \vb),
+\end{align*}
+joten välttämättä on oltava 
+\begin{align*}
+(\va\cdot\vb)=|\va||\vb|\cos (\va, \vb).
+\end{align*}
+\end{teoreema}
+
+Teoreemasta \ref{teoreema:pistetulo} saadaan johdettua kaava myös vektorien väliselle kulmalle. 
+
+\begin{teoreema}
+Vektorien $\va$ ja $\vb$ välinen kulma saadaan kaavasta $$\cos (\va, \vb)=\frac{\va \cdot \vb}{|\va||\vb|}.$$
+\end{teoreema}
