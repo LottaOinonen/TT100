@@ -59,7 +59,7 @@ Edellisessä kappaleessa opittiin muodostamaan vektoreita x- ja y-akselien suunta
 
 Vektoreita $\vi$ ja $\vj$ sanotaan komponenttivektoreiksi, ja summattavia $2\vi$ ja $4\vj$ vektorin $\vv$ \textbf{komponenteiksi}. Vektorin komponenttiesityksellä tarkoitetaan vektorin esittämistä vektorien $\vi$ ja $\vj$ avulla. 
 
-\maaritelma[Vektorin komponenttiesitys]{Vektorin ilmaisemista komponenttivektorien $\vi$ ja $\vj$ avulla sanotaan vektorin \textbf{komponenttiesitykseksi}.} 
+\maaritelma[Vektorin komponenttiesitys]{Vektorin ilmaisemista komponenttivektorien $\vi$ ja $\vj$ avulla sanotaan vektorin komponenttiesitykseksi.} 
 
 Seuraavaksi tutkitaan, miten lasketaan yhteen mitä tahansa vektoreita.
 
@@ -405,7 +405,7 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:vektorin skalaarimonikerta}. Kuvassa ole
 		\end{aakkosta*}
 	\end{teht} 
 
-Edellisessä tehtävässä havaittiin, että \textsc{mitä huomattiin?}. Kun esimerkiksi vektoria $\vv=-4\vi+3\vj$ kerrotaan luvulla $2$, saadaan vektori 
+Edellisessä tehtävässä havaittiin, että vektorin kertominen jollakin reaaliluvulla on sama asia, kuin jos samalla reaaliluvulla kerrotaan vektorien $\vi$ ja $\vj$ kertoimet. Kun siis esimerkiksi vektoria $\vv=-4\vi+3\vj$ kerrotaan luvulla $2$, saadaan vektori 
 
 \begin{align*}
 2\vv
@@ -630,7 +630,7 @@ Tutkitaan seuraavaksi vektorien suuntia. Esimerkiksi kuvasta \ref{kuva:vektorin 
 		\end{aakkosta*}
 	\end{teht}
 
-\maaritelma[Yhdensuuntaisuus]{Vektorit $\vv$ ja $\vw$ ovat \textbf{yhdensuuntaiset}, jos $\vv=r\vw$ jollakin reaaliluvulla $r$.}
+\maaritelma[Yhdensuuntaisuus]{Vektorit $\vv$ ja $\vw$ ovat yhdensuuntaiset, jos $\vv=r\vw$ jollakin reaaliluvulla $r$.}
 
 Toisin sanoen vektorit ovat yhdensuuntaiset, jos ne ovat joko saman- tai vastakkaisuuntaiset.
 
@@ -714,7 +714,7 @@ Toisin sanoen vektorit ovat yhdensuuntaiset, jos ne ovat joko saman- tai vastakk
 		\end{aakkosta*}
 	\end{teht}
 
-Vektoria, joka alkaa ja päättyy samaan pisteeseen, sanotaan \textbf{nollavektoriksi}. Sen komponenttiesitys on muotoa $0\cdot \vi + 0 \cdot \vj$. Jos mitä tahansa vektoria $\vv=x\vi +y\vj$ kerrotaan luvulla nolla, saadaan nollavektori, sillä 
+Vektoria, joka alkaa ja päättyy samaan pisteeseen, sanotaan nollavektoriksi. Sen komponenttiesitys on muotoa $0\cdot \vi + 0 \cdot \vj$. Jos mitä tahansa vektoria $\vv=x\vi +y\vj$ kerrotaan luvulla nolla, saadaan nollavektori, sillä 
 \begin{align*}
 0 \cdot \vv 
 &= 0 \cdot(x \vi + y \vj) \\
@@ -1018,7 +1018,7 @@ Tämä pätee kaikille vektoreille. Vektorin $t\vv$ pituus $|t\vv|$ saadaan siis ke
 	Laske vektorien $\vi$ ja $\vj$ pituudet.		
 	\end{teht}
 
-\maaritelma[Yksikkövektori]{Vektoria, jonka pituus on $1$, sanotaan \textbf{yksikkövektoriksi}.} 
+\maaritelma[Yksikkövektori]{Vektoria, jonka pituus on $1$, sanotaan yksikkövektoriksi.} 
 
 Komponenttivektorit $\vi$ ja $\vj$ ovat siis yksikkövektoreita.
 
@@ -1232,16 +1232,114 @@ Huomaa, että merkintä $\vv \cdot \vw$ tarkoittaa vektorien $\vv$ ja $\vw$ pistet
 		\end{aakkosta*}	
 	\end{teht}
 
+Edellisessä tehtävässä tehty havainto pitää aina paikkansa. Itse asiassa aina, kun vektorit ovat kohtisuorassa toisiaan vasten, niiden välinen pistetulo on nolla. Toisaalta jos tiedetään, että vektorien välinen pistetulo on nolla, ne ovat välttämättä kohtisuorassa toisiaan vasten. Tämä osoitetaan täsmällisesti seuraavassa teoreemassa \ref{teoreema:pistetulo ja kohtisuoruus}.
 
-\begin{teoreema}
+\begin{teoreema}\label{teoreema:pistetulo ja kohtisuoruus}
 Vektorit $\va$ ja $\vb$ ovat toisiaan vastaan kohtisuorassa, jos ja vain jos $\va \cdot \vb=0$.
 
-\proof ...
+\proof Tutkitaan mielivaltaista kolmiota, jonka sivuina on vektorit $\va$, $\vb$ ja $\va-\vb$. Merkitään $\va=x_1\vi+y_1\vj~$ ja $~\vb=x_2\vi+y_2\vj$. Tällöin 
+$$
+\va-\vb=(x_1\vi+y_1\vj)-(x_2\vi+y_2\vj)=(x_1-x_2)\vi+(y_1-y_2)\vj.
+$$ 
+
+		\begin{center}
+		\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,0,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->, color=blue] (-5,-2)--(-2,4);
+		\node[above left] at (-3.8,.4) {\textcolor{blue}{$\va$}};
+
+		\draw[->, color=blue] (-5,-2)--(5,-4);
+		\node[below left] at (0,-2) {\textcolor{blue}{$\vb$}};
+		
+		\draw[->, color=darkgreen] (-2,4)--(5,-4);
+		\node[right] at (1.5,0.5) {\textcolor{darkgreen}{$\va-\vb$}};
+		
+		\draw[color=red] (-4.2,-2.15) arc (-15:45:1.15);
+		\node[right] at (-3.8,-1.5) {\textcolor{red}{$\sphericalangle(\va,\vb)$}}; 		
+		
+	\end{tikzpicture}
+	\caption{Kolmio, jonka sivuina on vektorit $\va$, $\vb$ ja $\va-vb$.}
+	\label{kuva:kolmio}
+		\end{figurehere}
+		\end{center}
+
+Oletetaan ensin, että vektorit $\va$ ja $\vb$ ovat kohtisuorassa toisiaan vasten, eli $\sphericalangle(\va,\vb)=90^{\circ}$. Tutkitaan sitten kolmion sivun $\va-\vb$ pituuden neliötä. Sen yhtälöksi saadaan
+\begin{align*}
+|\va-\vb|^2
+&=(x_1-x_2)^2+(y_1-y_2)^2 \\
+&= (x_1^2 - 2x_1x_2 + x_2^2)+(y_1^2-2y_1y_2+y_2^2) \\
+&= x_1^2+y_1^2+x_2^2+y_2^2-2(x_1x_2+y_1y_2) \\
+&= |\va|^2+|\vb|^2-2(x_1x_2+y_1y_2).  
+\end{align*}
+
+Koska kyseessä on suorakulmainen kolmio, niin Pythagoraan lauseen käänteislauseen nojalla tiedetään, että 
+$$
+|\va-\vb|^2=|\va|^2+|\vb|^2.
+$$
+Tästä seuraa, että sivun $|\va-\vb|$ pituuden neliön yhtälössä olevan termin
+$$
+2(x_1x_2+y_1y_2)
+$$
+tulee olla nolla.
+Tämä pätee ainoastaan silloin, kun 
+$$
+x_1x_2+y_1y_2=0,
+$$
+eli kun 
+$$
+\va \cdot \vb = 0.
+$$
+Näin ollen jos vektorit $\va$ ja $\vb$ ovat kohtisuorassa toisiaan vasten, niin $\va \cdot \vb = 0.$
+
+Oletetaan sitten, että vektorien $\va$ ja $\vb$ välinen pistetulo on nolla, eli $\va \cdot \vb = 0$. Tällöin tiedetään, että
+\begin{align*}
+\va \cdot \vb = x_1x_2+y_1y_2=0.
+\end{align*}
+Tällöin kolmion sivun $\va-\vb$ pituuden neliölle pätee
+\begin{align*}
+|\va-\vb|^2
+&= |\va|^2+|\vb|^2-2(x_1x_2+y_1y_2) \\
+&= |\va|^2+|\vb|^2-2\cdot0 \\
+&=|\va|^2+|\vb|^2.
+\end{align*}
+Nyt Pythagoraan lauseen käänteislauseen nojalla kolmio on suorakulmainen. Näin ollen jos $\va \cdot \vb=0$, niin vektorit $\va$ ja $\vb$ ovat kohtisuorassa toisiaan vasten.
 \end{teoreema}
 
-	\begin{teht} Tutkitaan vektoreita ...
+	\begin{teht} Tutkitaan vektoreita $\va=$, $\vb=$ ja $\vc=$.
 		\begin{aakkosta*}
-		\item Laske pistetulot ...
+		\item Laske pistetulot $\va \cdot \vb$, $\va \cdot \vc$ ja $\vb \cdot \vc$.
 		\item Mitkä vektoreista ovat kohtisuorassa toisiaan vasten?
 		\item Tarkista edellisen kohdan vastauksesi tarkastelemalla vektorien välisiä kulmia koordinaatistossa.
 		\end{aakkosta*}
@@ -1254,24 +1352,173 @@ Vektorit $\va$ ja $\vb$ ovat toisiaan vastaan kohtisuorassa, jos ja vain jos $\v
 		\end{aakkosta*}
 	\end{teht}	
 
-\textsc{tähän tehtävä, jossa tarvitaan pistetulon laskusääntöjä. kts. esim. pitkä sigma s.76}
 
-Vektorien välinen kulma voidaan laskea Geometria-kurssista tutun \textbf{kosinilauseen} avulla. Kosinilause on Pythagoraan lauseen yleistys. Pythagoraan lausehan pätee ainoastaan suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille.
+	
+	\begin{teht} Tutkitaan vektoreita $\vv=$ ja $\vw=$.
+		\begin{aakkosta*}
+		\item Laske pistetulo $\vv \cdot \vw$.
+		\item Laske pistetulo $\vw \cdot \vv$.
+		\item Vertaa edellisten kohtien tuloksia keskenään. Mitä huomaat?
+		\end{aakkosta*}
+	\end{teht}
 
-Kosinilauseen mukaan 
+\begin{teoreema} $\va \cdot \vb = \vb \cdot \va$.
+\proof ...
+\end{teoreema}
+
+Aivan kuten vektorien yhteenlaskun tapauksessa, vektorien pistetulokin on siis \textbf{vaihdannainen} operaatio.
+
+	\begin{teht} Tutkitaan vektoreita $\vv=$, $\vw=$ ja $\vu$.
+		\begin{aakkosta*}
+		\item Laske pistetulo $\vv \cdot (\vw + \vu)$.
+		\item Laske pistetulo $(\vv \cdot \vw) + (\vv \cdot \vu)$.
+		\item Vertaa edellisten kohtien tuloksia keskenään. Mitä huomaat?
+		\end{aakkosta*}
+	\end{teht}
+
+\begin{teoreema} $\va \cdot (\vb + \vc)=(\va \cdot \vb) + (\va \cdot \vc)$.
+\proof ...
+\end{teoreema}
+
+\begin{teoreema} $(t\va) \cdot \vb= \va \cdot (t\vb)=t(\va \cdot \vb)$.
+\proof ...
+\end{teoreema}
+
+\begin{teoreema} $\va \cdot \va = |\va|^2$.
+\proof ...
+\end{teoreema}
+
+
+
+	\begin{teht} 
+	Laske pistetulo $(2\va+\vb)\cdot (7\va-3\vb)$, kun $|\va|=2$, $|\vb|=6$ ja $\va \cdot \vb = -4$. Käytä hyväksesi edellä mainittuja pistetulon ominaisuuksia.
+	\end{teht}
+
+
+
+
+Vektorien välinen kulma voidaan laskea Geometria-kurssista tutun \textbf{kosinilauseen} avulla. Kosinilause on Pythagoraan lauseen yleistys. Pythagoraan lause pätee ainoastaan suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille. Kosinilauseen mukaan 
 $$
-a^2=b^2+c^2-2bc \cos \alpha.
+c^2=a^2+b^2-2ab \cos \alpha.
+$$
+Vektoreita hyödyntämällä kosinilause saadaan muotoon 
+$$
+|\va-\vb|^2=|\va|^2+|\vb|^2-2|\va||\vb| \cos \sphericalangle(\va,\vb).
 $$
 
-KUVA
+
+		\begin{figurehere}
+		\begin{center}
+		\begin{minipage}{.45\textwidth}
+	\begin{tikzpicture}[scale=0.5] %[x={10.0pt},y={10.0pt}]
+	
+	%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,0,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->, color=blue] (-5,-2)--(-2,4);
+		\node[above left] at (-3.8,.4) {\textcolor{blue}{$a$}};
+
+		\draw[->, color=blue] (-5,-2)--(5,-4);
+		\node[below left] at (0,-2) {\textcolor{blue}{$b$}};
+		
+		\draw[->, color=darkgreen] (-2,4)--(5,-4);
+		\node[right] at (1.5,0.5) {\textcolor{darkgreen}{$c$}};
+		
+		\draw[color=red] (-4.2,-2.15) arc (-15:45:1.15);
+		\node[right] at (-3.8,-1.5) {\textcolor{red}{$\alpha$}}; 
+
+	\end{tikzpicture} % pic 1
+	\end{minipage}
+	\begin{minipage}{.45\textwidth}
+	\begin{tikzpicture}[scale=0.5] %[x={10.0pt},y={10.0pt}]
+	
+		%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,0,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->, color=blue] (-5,-2)--(-2,4);
+		\node[above left] at (-3.8,.4) {\textcolor{blue}{$\va$}};
+
+		\draw[->, color=blue] (-5,-2)--(5,-4);
+		\node[below left] at (0,-2) {\textcolor{blue}{$\vb$}};
+		
+		\draw[->, color=darkgreen] (-2,4)--(5,-4);
+		\node[right] at (1.5,0.5) {\textcolor{darkgreen}{$\va-\vb$}};
+		
+		\draw[color=red] (-4.2,-2.15) arc (-15:45:1.15);
+		\node[right] at (-3.8,-1.5) {\textcolor{red}{$\sphericalangle(\va,\vb)$}}; 
+
+	\end{tikzpicture}
+		\end{minipage}
+		\end{center}
+		\caption{Kosinilause.}
+		\label{kuva:kosinilause}
+	\end{figurehere}
+
+
+Kosinilauseen avulla saadaan muodostettua yhteys vektorien välisen kulman ja niiden pistetulon välille. Tämä todistetaan täsmällisesti seuraavassa teoreemassa \ref{teoreema:pistetulo}.
+
 
 \begin{teoreema}\label{teoreema:pistetulo}
-$\va \cdot \vb = |\va||\vb|\cos (\va, \vb).$
+Vektorien $\va$ ja $\vb$ pistetulo on $\va \cdot \vb = |\va||\vb|\cos (\va, \vb).$
 
 \proof 
-KUVA
-
-Pistetulon ominaisuuksia hyväksi käyttäen
+Tutkitaan ensin sivun $\va-\vb$ pituuden neliötä. Pistetulon ominaisuuksia hyväksi käyttäen sen yhtälö saadaan muotoon
 \begin{align*}
 |\va-\vb|^2
 &=(\va-\vb)\cdot(\va-\vb) \\
@@ -1282,7 +1529,7 @@ Pistetulon ominaisuuksia hyväksi käyttäen
 &= |\va|^2 +|\vb|^2- 2(\va\cdot\vb).
 \end{align*}
 
-Toisaalta kosinilauseen mukaan 
+Toisaalta kosinilauseen mukaan sivun $\va-\vb$ pituuden neliölle pätee 
 \begin{align*}
 |\va-\vb|^2=|\va|^2+|\vb|^2 - 2|\va||\vb|\cos (\va, \vb).
 \end{align*}
@@ -1295,12 +1542,35 @@ Näin ollen tiedetään, että
 \end{align*}
 joten välttämättä on oltava 
 \begin{align*}
-(\va\cdot\vb)=|\va||\vb|\cos (\va, \vb).
+\va\cdot\vb=|\va||\vb|\cos (\va, \vb).
 \end{align*}
 \end{teoreema}
 
-Teoreemasta \ref{teoreema:pistetulo} saadaan johdettua kaava myös vektorien väliselle kulmalle. 
+
+
+	\begin{teht} Vektorin $\va$ pituus on $3$ ja vektorin $\vb$ pituus on $7$. Laske vektoreiden välinen pistetulo $\va \cdot \vb$, kun
+		\begin{aakkosta*}
+		\item vektorit $\va$ ja $\vb$ ovat samansuuntaiset.
+		\item vektorit $\va$ ja $\vb$ ovat vastakkaissuuntaiset.
+		\item vektorien $\va$ ja $\vb$ välinen kulma on $43^{\circ}$.
+		\end{aakkosta*}
+	\end{teht}
+
+
+Teoreemasta \ref{teoreema:pistetulo} saadaan johdettua kaava myös vektorien väliselle kulmalle. Kun yhtälön 
+\begin{align*}
+\va\cdot\vb=|\va||\vb|\cos (\va, \vb)
+\end{align*}
+molemmat puolet jaetaan termillä $|\va||\vb|$, saadaan seuraava tulos:
 
 \begin{teoreema}
-Vektorien $\va$ ja $\vb$ välinen kulma saadaan kaavasta $$\cos (\va, \vb)=\frac{\va \cdot \vb}{|\va||\vb|}.$$
+Jatkoa teoreemaan \ref{teoreema:pistetulo}. Vektorien $\va$ ja $\vb$ välinen kulma saadaan kaavasta $$\cos (\va, \vb)=\frac{\va \cdot \vb}{|\va||\vb|}.$$
 \end{teoreema}
+
+
+
+	\begin{teht} Tarkastellaan kolmiota $ABC$, missä $\pv{AB}=5\vi-4\vj$ ja $\pv{AC}=9\vi+3\vj$. Laske kolmion kulmien suuruudet asteen tarkkuudella.
+	\end{teht}
+	
+	\begin{teht} Kolmion $ABC$ kärjet ovat pisteissä $A=(-7,1)$, $B=(4,9)$ ja $C=(-3,-5)$. Laske kolmion kulmien suuruudet asteen tarkkuudella.
+	\end{teht}
