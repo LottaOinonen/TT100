@@ -128,23 +128,31 @@ $$
 \vv+\vw=(x_1+x_2)\vi+(y_1+y_2)\vj.
 $$
 
-\begin{teht} Tutkitaan vektoreita $\vv=2i+2j$ ja $\vw=i+3j$.
+\begin{teht} Tutki vektoreita $\vv=-3\vi-4\vj$,$\vw=9\vi-5\vj$ ja $\vu=-2\vi+7\vj$.
+\begin{aakkosta*}
+\item Laske summavektori $\vv+\vw$, eli laske vektorit $\vv$ ja $\vw$ komponenteittain yhteen.
+\item Laske summavektori $\vw+\vu$, eli laske vektorit $\vw$ ja $\vu$ komponenteittain yhteen.
+\item Laske summavektori $\vv+\vu$, eli laske vektorit $\vv$ ja $\vu$ komponenteittain yhteen.
+\end{aakkosta*}
+\end{teht}
+
+\begin{teht} Tutki vektoreita $\vv=2i+2j$ ja $\vw=i+3j$.
 \begin{aakkosta*}
 \item Piirrä vektori $\vv$ koordinaatistoon. 
 \item Piirrä vektori $\vw$ koordinaatistoon siten, että se alkaa vektorin $\vv$ kärkipisteestä.
-\item Laske summavektori $\vv+\vw$, eli ilmoita se vektorien $\vi$ ja $\vj$ avulla.
+\item Laske summavektori $\vv+\vw$, eli laske vektorit $\vv$ ja $\vw$ komponenteittain yhteen.
 \item Piirrä vektori $\vv+\vw$ koordinaatistoon siten, että se alkaa vektorin $\vv$ alkupisteestä. Mitä huomaat?
 \end{aakkosta*}
 \end{teht}
 	
-Edellisen tehtävän havaintosi pätee yleisesti: vektorien $\vv$ ja $\vw$ summa on vektori $\vv+\vw$, joka alkaa vektorin $\vv$ alkupisteestä ja päättyy vektorin $\vw$ kärkipisteeseen. Esimerkiksi kuvan \ref{kuva:summavektori} vektorien $\va=3\vi+5\vj$ ja $\vb=4\vi-2\vj$ summa on
+Tarkastellaan seuraavaa kuvaa \ref{kuva:summavektori}. Kuvassa on vektorit $\va=3\vi+5\vj$ ja $\vb=4\vi+3\vj$ piirrettynä siten, että vektori $\vb$ alkaa vektorin $\va$ kärkipisteestä. Vektorien $\va$ ja $\vb$ summa on komponenteittain laskettuna
 \begin{align*}
 \va+\vb 
-&= (3\vi+5\vj)+(4\vi-2\vj) \\
-&= (3+4)\vi+(5+(-2))\vj \\
-&= 7\vi+3\vj \\
-&= \vc.
+&= (\textcolor{darkgreen}{3}\vi+\textcolor{blue}{5}\vj)+(\textcolor{darkgreen}{4}\vi\textcolor{blue}{-2}\vj) \\
+&= (\textcolor{darkgreen}{3+4})\vi+(\textcolor{blue}{5+(-2)})\vj \\
+&= \textcolor{darkgreen}{7}\vi+\textcolor{blue}{3}\vj.
 \end{align*}
+Tämä vektori muodostuu vektorin $\va$ alkupisteestä vektorin $\vb$ kärkipisteeseen. Se on seuraus yhteenlaskun suorittamisesta komponenteittan.Näin ollen vektori $\va+\vb=\vc$. 
 
 	\begin{center}
 	\begin{figurehere}
@@ -181,26 +189,27 @@ Edellisen tehtävän havaintosi pätee yleisesti: vektorien $\vv$ ja $\vw$ summa on
 		%\node[left] at (-0.2, 0.4) {$\vj$};
 
 		% Vektorit
-		\draw[->, color=blue] (-4,-2)--(-1,3);
-		\node[above left] at (-2.1,1) {\textcolor{blue}{$\va$}};
-
-		\draw[->, color=darkgreen] (-1,3)--(3,1);
-		\node[above right] at (1.1,1.9) {\textcolor{darkgreen}{$\vb$}};
 		
-		\draw[->, color=red] (-4,-2)--(3,1);
-		\node[below left] at (1,-0.9) {\textcolor{red}{$\vc=\va+\vb$}};
+		\draw[->] (-4,-2)--(-1,3);
+		\node[above left] at (-2.1,1) {$\va$};
+
+		\draw[->] (-1,3)--(3,1);
+		\node[above right] at (1.1,1.9) {$\vb$};
+		
+		\draw[->] (-4,-2)--(3,1);
+		\node[below left] at (1,-0.9) {$\vc=\va+\vb$};
 		
 		% Kaarisulku alasp.
 		\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},yshift=0pt,rotate around={90:(3,-2)},=90]
-		(3,-2) -- (3,5) node [black,midway,yshift=-0.7cm]{\textcolor{red}{$7$}};
+		(3,-2) -- (3,5) node [black,midway,yshift=-0.7cm]{\textcolor{darkgreen}{$7$}};
 
 		% Kaarisulku oikeanp.
 		\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=2pt},xshift=0pt]
-		(3,-2) -- (3,1) node [black,midway,xshift=0.7cm] {\textcolor{red}{$3$}};
+		(3,-2) -- (3,1) node [black,midway,xshift=0.7cm] {\textcolor{blue}{$3$}};
 		
 		% Kaarisulku oikeanp.
 		\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=2pt},xshift=0pt]
-		(3,1) -- (3,3) node [black,midway,xshift=0.8cm] {\textcolor{darkgreen}{$-2$}};
+		(3,1) -- (3,3) node [black,midway,xshift=0.8cm] {\textcolor{blue}{$-2$}};
 		
 		%Kaarisulku vasemmanp.
 		\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},yshift=0pt]
@@ -208,28 +217,58 @@ Edellisen tehtävän havaintosi pätee yleisesti: vektorien $\vv$ ja $\vw$ summa on
 		
 		%Kaarisulku ylösp.
 		\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},xshift=0pt, rotate around={90:(-4,3)},=90]
-		(-4,3) -- (-4,0) node [black,midway,yshift=0.7cm] {\textcolor{blue}{$3$}}; 
+		(-4,3) -- (-4,0) node [black,midway,yshift=0.7cm] {\textcolor{darkgreen}{$3$}}; 
 		
 		%Kaarisulku ylösp.
 		\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},xshift=0pt, rotate around={90:(-1,3)},=90]
 		(-1,3) -- (-1,-1) node [black,midway,yshift=0.7cm] {\textcolor{darkgreen}{$4$}}; 
+		
+		
+		% SAMA KUVA ERILAISILLA VÄRITYKSILLÄ
+		%\draw[->, color=blue] (-4,-2)--(-1,3);
+		%\node[above left] at (-2.1,1) {\textcolor{blue}{$\va$}};
+
+		%\draw[->, color=darkgreen] (-1,3)--(3,1);
+		%\node[above right] at (1.1,1.9) {\textcolor{darkgreen}{$\vb$}};
+		
+		%\draw[->, color=red] (-4,-2)--(3,1);
+		%\node[below left] at (1,-0.9) {\textcolor{red}{$\vc=\va+\vb$}};
+		
+		% Kaarisulku alasp.
+		%\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},yshift=0pt,rotate around={90:(3,-2)},=90]
+		%(3,-2) -- (3,5) node [black,midway,yshift=-0.7cm]{\textcolor{red}{$7$}};
+
+		% Kaarisulku oikeanp.
+		%\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=2pt},xshift=0pt]
+		%(3,-2) -- (3,1) node [black,midway,xshift=0.7cm] {\textcolor{red}{$3$}};
+		
+		% Kaarisulku oikeanp.
+		%\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=2pt},xshift=0pt]
+		%(3,1) -- (3,3) node [black,midway,xshift=0.8cm] {\textcolor{darkgreen}{$-2$}};
+		
+		%Kaarisulku vasemmanp.
+		%\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},yshift=0pt]
+		%(-4,-2) -- (-4,3) node [black,midway,xshift=-0.7cm] {\textcolor{blue}{$5$}}; 
+		
+		%Kaarisulku ylösp.
+		%\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},xshift=0pt, rotate around={90:(-4,3)},=90]
+		%(-4,3) -- (-4,0) node [black,midway,yshift=0.7cm] {\textcolor{blue}{$3$}}; 
+		
+		%Kaarisulku ylösp.
+		%\draw [decorate,decoration={brace,amplitude=10pt,raise=2pt},xshift=0pt, rotate around={90:(-1,3)},=90]
+		%(-1,3) -- (-1,-1) node [black,midway,yshift=0.7cm] {\textcolor{darkgreen}{$4$}}; 
 	
 		
 	\end{tikzpicture}
-	\caption{Vektorien $\va=\textcolor{blue}{3}\vi+\textcolor{blue}{5}\vj$ ja $\vb=\textcolor{darkgreen}{4}\vi\textcolor{darkgreen}{-2}\vj$ summa on vektori $\vc=\textcolor{red}{7}\vi+\textcolor{red}{3}\vj$.}
+	\caption{Vektorien $\va=3\vi+5\vj$ ja $\vb=4\vi-2\vj$ summa on vektori $\vc=7\vi+3\vj$.}
+	%\caption{Vektorien $\va=\textcolor{blue}{3}\vi+\textcolor{blue}{5}\vj$ ja $\vb=\textcolor{darkgreen}{4}\vi\textcolor{darkgreen}{-2}\vj$ summa on vektori $\vc=\textcolor{red}{7}\vi+\textcolor{red}{3}\vj$.}
 	\label{kuva:summavektori}
 	\end{figurehere}
 	\end{center}
 
+Summavektorin $\va+\vb$ voi siis määrittää joko laskemalla tai vektorien $\va$ ja $\vb$ avulla kuvan \ref{kuva:summavektori} mukaisesti: piirretään ensin vektori $\va$, ja piirretään sitten vektori $\vb$ alkamaan vektorin $\va$ kärkipisteestä. Summavektori $\va+\vb$ on nyt vektori, joka alkaa vektorin $\va$ alkupisteestä ja päättyy vektorin $\vb$ kärkipisteeseen. 
 
-
-
-\textsc{yo. tehtävä muhimassa. tähän tarvitsee koosteen siitä, miten summa voidaan määrittää piirtämällä. (seuraavissa tehtävissä tulee ymmärtää, mitä haetaan, kun sanotaan ''piirrä summavektori vektorien ... ja ... avulla''.)}
-
-
-
-
-\begin{teht} Tutkitaan vektoreita $\vv=-2i+j$ ja $\vw=4i+4j$.
+\begin{teht} Tutki vektoreita $\vv=-2i+j$ ja $\vw=4i+4j$.
 \begin{aakkosta*}
 \item Piirrä summavektori $\vv+\vw$ koordinaatistoon vektorien $\vv$ ja $\vw$ avulla. 
 \item Ilmoita vektori $\vv+\vw$ vektorien $\vi$ ja $\vj$ avulla.
@@ -237,7 +276,7 @@ Edellisen tehtävän havaintosi pätee yleisesti: vektorien $\vv$ ja $\vw$ summa on
 \end{aakkosta*}
 \end{teht}
 
-\begin{teht} Tutkitaan vektoreita $\vu=i+2\vj$, $\vv=-3i+j$ ja $\vw=3i+-5j$.
+\begin{teht} Tutki vektoreita $\vu=i+2\vj$, $\vv=-3i+j$ ja $\vw=3i+-5j$.
 \begin{aakkosta*}
 \item Piirrä vektori $\vu+\vv+\vw$ koordinaatistoon vektorien $\vu, \vv$ ja $\vw$ avulla. 
 \item Piirrä vektori $\vv+\vu+\vw$ koordinaatistoon vektorien $\vu, \vv$ ja $\vw$ avulla. 
@@ -305,11 +344,12 @@ Edellisen tehtävän tulos tarkoittaa sitä, että vektorien yhteenlaskun järjestyks
 	\end{center}
 
 
-\begin{teht} Tutkitaan vektoreita $\va=2\vi+3\vj$, $\vb=-3\vi+\vj$ ja $\vc=\vi-4\vj$. 
+\begin{teht} Tutki vektoreita $\va=2\vi+3\vj$, $\vb=-3\vi+\vj$ ja $\vc=\vi-4\vj$. 
 \begin{aakkosta*}
-\item Piirrä koordinaatistoon vektori $\va +\vb +\vc $.
-\item Mitä huomaat?
-\end{aakkosta*}
+\item Piirrä vektori $\va +\vb +\vc$ koordinaatistoon.
+\item Mitä huomaat? 
+\item Miten voit ilmaista vektorin $\vc$ vektorien $\va$ ja $\vb$ avulla?
+\end{aakkosta*} 
 \end{teht}
 
 
@@ -384,9 +424,6 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:vektorin skalaarimonikerta}. Kuvassa ole
 	\end{figurehere}
 	\end{center}
 
-
-\maaritelma[Vektorin kertominen reaaliluvulla]{Vektorin $\vv$ skalaarimonikerta $r\vv$ saadaan kertomalla vektorin $\vv$ komponentit reaaliluvulla $r$.}
-
 \begin{teht} ...
 \begin{aakkosta*}
 \item Piirrä koordinaatistoon vektorit $\va=\vi+\vj$ ja $3\va$.
@@ -395,7 +432,11 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:vektorin skalaarimonikerta}. Kuvassa ole
 \end{aakkosta*}
 \end{teht} 
 
-Edellisessä tehtävässä havaittiin, että vektorin kertominen jollakin reaaliluvulla on sama asia, kuin jos samalla reaaliluvulla kerrotaan vektorien $\vi$ ja $\vj$ kertoimet. Esimerkiksi kuvassa \ref{kuva:vektorin kertominen reaaliluvulla} olevan vektorin $\vv=-4\vi+3\vj$ kertominen luvulla $2$ tapahtuu kertomalla vektorin molemmat komponentit $-4\vi$ ja $3\vj$ luvulla $2$. Koska 
+Vektorin kertominen jollakin reaaliluvulla on siis sama asia, kuin jos samalla reaaliluvulla kerrotaan vektorien $\vi$ ja $\vj$ kertoimet.
+
+\maaritelma[Vektorin kertominen reaaliluvulla]{Vektorin $\vv$ skalaarimonikerta $r\vv$ saadaan kertomalla vektorin $\vv$ komponentit reaaliluvulla $r$.}
+
+Esimerkiksi kuvassa \ref{kuva:vektorin kertominen reaaliluvulla} olevan vektorin $\vv=-4\vi+3\vj$ kertominen luvulla $2$ tapahtuu kertomalla vektorin molemmat komponentit $-4\vi$ ja $3\vj$ luvulla $2$. Koska 
 $$
 2\cdot (-4\vi)=-8\vi
 $$
@@ -467,7 +508,7 @@ $$
 
 Vektorin kertomisen reaaliluvulla määritelmän voi ilmaista myös seuraavasti: kun vektoria $\vv=x\vi+y\vj$ kerrotaan reaaliluvulla $r$, saadaan vektori $$r\vv=r(x\vi+y\vj)=(rx)\vi+(ry)\vj.$$
 
-\begin{teht} Tutkitaan vektoria $\va=-\vi+2\vj$.
+\begin{teht} Tutki vektoria $\va=-\vi+2\vj$.
 \begin{aakkosta*}
 \item Piirrä vektorit $2\va$, $3\va$ ja $5\va$ koordinaatistoon vektorin $\va$ avulla.
 \item Ilmoita vektorit $2\va$, $3\va$ ja $5\va$ vektorien $\vi$ ja $\vj$ avulla.
@@ -482,7 +523,7 @@ Vektorin kertomisen reaaliluvulla määritelmän voi ilmaista myös seuraavasti: kun
 \end{aakkosta*}
 \end{teht} 
 
-\begin{teht} Tutkitaan vektoria $\va=-3\vi + 2\vj$. 
+\begin{teht} Tutki vektoria $\va=-3\vi + 2\vj$. 
 \begin{aakkosta*}
 \item Piirrä vektori $\va$ koordinaatistoon.
 \item Laske vektorin $-1 \cdot \va$ komponenttiesitys ja piirrä se koordinaatistoon.
@@ -533,9 +574,10 @@ Vektorin kertomisen reaaliluvulla määritelmän voi ilmaista myös seuraavasti: kun
 	\label{kuva:vastavektorit}
 	\end{figurehere}
 	\end{center}
+	
+Esimerkiksi pisteiden $A$ ja $B$ välillä vastakkaisiin suuntiin kulkevat vektorit $\pv{AB}$ ja $\pv{BA}$ ovat toistensa vastavektorerita. Tällöin voidaan merkitä $\pv{BA}=-\pv{AB}$ tai $\pv{AB}=-\pv{BA}$.
 
-
-\begin{teht} Tarkastellaan alla olevaa kuvaa \ref{kuva:etsitaan vastavektoreita}. 
+\begin{teht} Tarkastele alla olevaa kuvaa \ref{kuva:etsitaan vastavektoreita}. 
 	
 	\begin{center}
 	\begin{figurehere}
@@ -598,7 +640,8 @@ Vektorin kertomisen reaaliluvulla määritelmän voi ilmaista myös seuraavasti: kun
 	\end{center}
 	
 \begin{aakkosta*}
-\item Nimeä kaikki kuvan vektorit ja ilmoita ne vektorien $\vi$ ja $\vj$ avulla.
+\item Nimeä kaikki kuvan vektorit, eli merkitse niitä jollakin kirjaimella (esim. $\va, \vb, \vc$ jne.)
+\item Ilmoita nimeämäsi vektorit vektorien $\vi$ ja $\vj$ avulla.
 \item Mitkä vektoreista ovat toistensa vastavektoreita?
 \end{aakkosta*}
 
@@ -661,19 +704,9 @@ Tutkitaan seuraavaksi vektorien suuntia. Esimerkiksi kuvasta \ref{kuva:saman- ja
 	\end{figurehere}
 	\end{center}
 
+Vektoreita, jotka ovat joko saman- tai vastakkaisuuntaisia, sanotaan \textbf{yhdensuuntaisiksi} vektoreiksi. 
 
-\begin{teht} ...
-\begin{aakkosta*}
-\item Millaisella luvulla vektoria tulee kertoa, jotta sen suunta muuttuu vastakkaiseksi? 
-\item Millaisella luvulla kertominen säilyttää vektorin suunnan? 
-\end{aakkosta*}
-\end{teht}
-
-\maaritelma[Yhdensuuntaisuus]{Vektorit $\vv$ ja $\vw$ ovat yhdensuuntaiset, jos $\vv=r\vw$ jollakin reaaliluvulla $r$.}
-
-Toisin sanoen vektorit ovat yhdensuuntaiset, jos ne ovat joko saman- tai vastakkaisuuntaiset.
-
-\begin{teht} Tarkastellaan alla olevaa kuvaa \ref{kuva:etsitaan samansuuntaisia vektoreita}
+\begin{teht} Tarkastele alla olevaa kuvaa \ref{kuva:etsitaan samansuuntaisia vektoreita}
 	
 	\begin{center}
 	\begin{figurehere}
@@ -753,6 +786,33 @@ Toisin sanoen vektorit ovat yhdensuuntaiset, jos ne ovat joko saman- tai vastakk
 \end{aakkosta*}
 \end{teht}
 
+\begin{teht} ...
+\begin{aakkosta*}
+\item Millaisella luvulla vektoria tulee kertoa, jotta sen suunta muuttuu vastakkaiseksi? 
+\item Millaisella luvulla kertominen säilyttää vektorin suunnan? 
+\end{aakkosta*}
+\end{teht}
+
+Yhdensuuntaisuus voidaan määritellä seuraavasti:
+
+\maaritelma[Yhdensuuntaisuus]{Vektorit $\vv$ ja $\vw$ ovat yhdensuuntaiset, jos $\vv=r\vw$ jollakin reaaliluvulla $r$.}
+
+Esimerkiksi vektorit $\vv=-2\vi-3\vj$ ja $\vw=4\vi+6\vj$ ovat yhdensuuntaisia, sillä 
+\begin{align*}
+\vw
+&=4\vi+6\vj \\
+&=-2(-2\vi-3\vj) \\
+&=-2\vv.
+\end{align*}
+
+\begin{teht} Tarkastele vektoria $\vv=-5\vi-5\vj$.
+\begin{aakkosta*}
+\item Muodosta kaksi uutta vektoria, jotka ovat vektorin $\vv$ kanssa samansuuntaisia.
+\item Onko vektori $\vw=\vi+\vj$ yhdensuuntainen vektorin $\vv$ kanssa?
+\item Onko vektori $\vu=3\vi+7\vj$ yhdensuuntainen vektorin $\vv$ kanssa?
+\end{aakkosta*}
+\end{teht}
+
 
 
 
@@ -767,7 +827,7 @@ Toisin sanoen vektorit ovat yhdensuuntaiset, jos ne ovat joko saman- tai vastakk
 \subsection{Erotus}
 
 
-\begin{teht} Tutkitaan vektoreita $\vv=-2\vi+3\vj$ ja $\vw=2\vi-3\vj$.
+\begin{teht} Tutki vektoreita $\vv=-2\vi+3\vj$ ja $\vw=2\vi-3\vj$.
 \begin{aakkosta*}
 \item Määritä summavektori $\vv+\vw$ laskemalla yhteen vektorit $\vv$ ja $\vw$ komponenteittain. 
 \item Piirrä vektori $\vv+\vw$ koordinaatistoon vektorien $\vv$ ja $\vw$ avulla. 
@@ -830,7 +890,7 @@ Edellisen tehtävän vektorit $\vv$ ja $\vw$ ovat toistensa vastavektoreita. Näin 
 
 Vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ erotusvektori on siis vektori $$\vv-\vw=(x_1-x_2)\vi+(y_1-y_2)\vj.$$		
 
-\begin{teht} Tutkitaan vektoreita $\va=-3\vi+4\vj$ ja $\vb=5\vi+2\vj$.
+\begin{teht} Tutki vektoreita $\va=-3\vi+4\vj$ ja $\vb=5\vi+2\vj$.
 \begin{aakkosta*}
 \item Määritä vektorin $\vb$ vastavektori $-\vb$. 
 \item Piirrä vektori $\va-\vb$ koordinaatistoon vektorien $\va$ ja $-\vb$ avulla.
@@ -909,7 +969,7 @@ $$
 	\end{figurehere}
 	\end{center}
 
-\begin{teht}\label{tehtava:yksikkovektori1} Tutkitaan vektoria $\vb = 3\vi - 4\vj$. 
+\begin{teht}\label{tehtava:yksikkovektori1} Tutki vektoria $\vb = 3\vi - 4\vj$. 
 \begin{aakkosta*}
 \item Piirrä vektori $\vb$ koordinaatistoon.
 \item Laske vektorin $\vb$ pituus $|\vb|$.
@@ -921,7 +981,7 @@ $$
 
 Huomaa, että merkintä $|\va|$ tarkoittaa vektorin $\va$ pituutta, kun taas merkinnällä $|x|$ tarkoitetaan luvun $x$ itseisarvoa.
 
-\begin{teht} Tutkitaan vektoria $\vv=6\vi+3\vj$.
+\begin{teht} Tutki vektoria $\vv=6\vi+3\vj$.
 \begin{aakkosta*}
 \item Muodosta vektorit $5\vv$, $-2\vv$ ja $1/3\vv$.
 \item Laske vektorien $\vv$, $5\vv$, $-2\vv$ ja $1/3\vv$ pituudet.
@@ -1087,13 +1147,13 @@ $$
 		%\node[below right] at (-4.5,-2.5) {\textcolor{gray}{$\frac{1}{10}\va$}};
 		
 	\end{tikzpicture}
-	\label{kuva:vektori ja samansuuntainen yksikkövektori}
 	\caption{Vektorin $\vv$ ja sen kanssa samansuuntainen yksikkövektori.}
+	\label{kuva:vektori ja samansuuntainen yksikkövektori}
 	\end{figurehere}
 	\end{center}
 
 
-\begin{teht} Jatkoa tehtävään \ref{tehtava:yksikkovektori1}. Tutkitaan edelleen vektoria $\vb = 3\vi - 4\vj$. 
+\begin{teht} Jatkoa tehtävään \ref{tehtava:yksikkovektori1}. Tutki edelleen vektoria $\vb = 3\vi - 4\vj$. 
 \begin{aakkosta*}
 \item Määritä vektorin $\vb$ kanssa samansuuntainen yksikkövektori eli vektori, joka pituus on $1$. Piirrä se koordinaatistoon.
 \item Määritä vektorin $\vb$ kanssa samansuuntainen vektori, jonka pituus on $10$. Piirrä se koordinaatistoon.
@@ -1102,8 +1162,8 @@ $$
 \end{teht}
 
 \begin{teoreema}
-Kaksi vektoria ovat samat, jos ne ovat saman suuntaiset ja yhtä pitkät.
-\proof Määritelmän \ref{maaritelma: samat vektorit} mukaan vektorit ovat samat, jos ne voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla. Jos vektorit voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla, ne ovat välttämättä saman suuntaiset ja yhtä pitkät. Jos vektorit ovat saman suuntaiset ja yhtä pitkät, ne voidaan ilmaista samalla tavalla vektorien $\vi$ ja $\vj$ avulla, jolloin ne määritelmän mukaan ovat samat vektorit.
+Kaksi vektoria ovat samat, jos ne ovat samansuuntaiset ja yhtä pitkät.
+\proof Määritelmän \ref{maaritelma: samat vektorit} mukaan vektorit ovat samat, jos ne voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla. Jos vektorit voidaan esittää samalla tavalla vektorien $\vi$ ja $\vj$ avulla, ne ovat välttämättä samansuuntaiset ja yhtä pitkät. Jos vektorit ovat samansuuntaiset ja yhtä pitkät, ne voidaan ilmaista samalla tavalla vektorien $\vi$ ja $\vj$ avulla, jolloin ne määritelmän mukaan ovat samat vektorit.
 \end{teoreema}
 
 
@@ -1184,20 +1244,22 @@ Vektorien välisiä kulmia voidaan tarkastella, kun vektorien alkupisteet ovat sam
 \end{aakkosta*}
 \end{teht}
 
-Tarkastellaan seuraavaksi vektorien \textbf{pistetuloa}. Pistetulon avulla voidaan laskea vektorien välisiä kulmia. Esimerkiksi vektorien $\vv=-2\vi+4\vj$ ja $\vw=3\vi-\vj$ pistetulo on 
-$$
-\vv \cdot \vw 
-= (-2\vi+4\vj) \cdot (3\vi-\vj) 
-= (-2) \cdot 3 + 4\cdot (-1)
-= -6-4
-=-10.
-$$
+Tarkastellaan seuraavaksi vektorien \textbf{pistetuloa}. Pistetuloa voidaan hyödyntää vektorien välisiä kulmia laskettaessa. 
 
 \maaritelma[Pistetulo]{Vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ pistetulo on $\vv \cdot \vw = x_1x_2+y_1y_2$.}
 
+Esimerkiksi vektorien $\vv=-2\vi+4\vj$ ja $\vw=3\vi-\vj$ pistetulo on 
+\begin{align*}
+\vv \cdot \vw 
+&= (-2\vi+4\vj) \cdot (3\vi-\vj) \\ 
+&= (-2) \cdot 3 + 4\cdot (-1) \\
+&= -6-4 \\
+&=-10.
+\end{align*}
+
 Huomaa, että merkintä $\vv \cdot \vw$ tarkoittaa vektorien $\vv$ ja $\vw$ pistetuloa, kun taas merkintä $3\cdot 5$ tarkoittaa lukujen $3$ ja $5$ tuloa. Vektorien pistetulo on aina reaaliluku, joten sitä kutsutaan joskus myös \textbf{skalaarituloksi}.
 
-\begin{teht} Tarkastellaan vektoreita $\va=7\vi+2\vj$, $~\vb=3\vi-5\vj~$ ja $~\vc=-4\vi-6\vj$.
+\begin{teht} Tarkaste vektoreita $\va=7\vi+2\vj$, $\vb=3\vi-5\vj$ ja $\vc=-4\vi-6\vj$.
 \begin{aakkosta*}
 \item Laske pistetulo $\va \cdot \vb$.
 \item Laske pistetulo $\va \cdot \vc$.
@@ -1205,7 +1267,7 @@ Huomaa, että merkintä $\vv \cdot \vw$ tarkoittaa vektorien $\vv$ ja $\vw$ pistet
 \end{aakkosta*}	
 \end{teht}
 
-\begin{teht} Tutkitaan vektoreita $\va=$, $\vb=$ ja $\vc=$ sekä reaalilukua $t=3$.
+\begin{teht} Tarkastele vektoreita $\va=-11\vi+5\vj$, $\vb=-4\vi-7\vj$ ja $\vc=3\vi-9\vj$, sekä reaalilukua $t=3$.
 \begin{aakkosta*}
 \item Laske pistetulo $\va \cdot \vb$.
 \item Laske pistetulo $\va \cdot (\vb + \vc)$.
@@ -1213,7 +1275,7 @@ Huomaa, että merkintä $\vv \cdot \vw$ tarkoittaa vektorien $\vv$ ja $\vw$ pistet
 \end{aakkosta*}
 \end{teht}
 
-Pistetulolla voidaan laskea tavallisten laskusääntöjen mukaan. Näitä on koottu teoreemaan \ref{teoreema:pistetulon ominaisuuksia 1}.
+Edellisen tehtävän kaltaisissa tilanteissa on hyödyllistä tuntea pistetulon ominaisuuksia. Pistetulolla voidaan laskea tavallisten laskusääntöjen mukaan. Näitä on koottu teoreemaan \ref{teoreema:pistetulon ominaisuuksia 1}.
 
 \begin{teoreema}\label{teoreema:pistetulon ominaisuuksia 1}
 Olkoot $\va$, $\vb$ ja $\vc$ vektoreita, ja $t$ jokin reaaliluku. Nyt pistetulolla on seuraavat ominaisuudet: 
@@ -1226,11 +1288,12 @@ t(\va \cdot \vb)
 &=(t\va) \cdot \vb
 = \va \cdot (t\vb)
 \end{align*}
+\proof $-$
 \end{teoreema}
 
 Pistetulolla on myös seuraava ominaisuus:
 
-\begin{teoreema}\label{teoreema:pistetulon ominaisuuksia 2} Olkoon $\va$ jokin vektori. Nyt pistetulolle pätee 
+\begin{teoreema}\label{teoreema:pistetulon ominaisuuksia 2} Olkoon $\va$ jokin vektori. Nyt pistetulolle pätee, että 
 $$\va \cdot \va = |\va|^2.
 $$
 \proof Merkitään $\va=x\vi+y\vj$. Vektorin $\va$ pituus on
@@ -1245,11 +1308,11 @@ joten sen pituuden neliö on
 Tutkitaan sitten vektorin $\va$ pistetuloa itsensä kanssa. Huomataan, että
 \begin{align*}
 \va \cdot \va 
-= (x\vi+y\vj) \cdot (x\vi+y\vj) 
-= x\cdot x + y \cdot y
-= x^2 + y^2.
+&= (x\vi+y\vj) \cdot (x\vi+y\vj) \\
+&= x\cdot x + y \cdot y \\
+&= x^2 + y^2.
 \end{align*}
-Näin ollen
+Näin ollen vektorin $\va$ pistetulo itsensä kanssa on sama kuin sen pituuden neliö, eli
 \begin{align*}
 \va \cdot \va = |\va|^2.
 \end{align*}
@@ -1258,11 +1321,11 @@ Näin ollen
 \begin{teht} Laske pistetulo $(2\va+\vb)\cdot (7\va-3\vb)$, kun $|\va|=2$, $|\vb|=6$ ja $\va \cdot \vb = -4$. Käytä hyväksesi teoreemoissa \ref{teoreema:pistetulon ominaisuuksia 1} ja \ref{teoreema:pistetulon ominaisuuksia 2} mainittuja pistetulon ominaisuuksia.
 \end{teht}
 
-Vektorien välinen kulma voidaan laskea Geometria$-$kurssista tutun \textbf{kosinilauseen} avulla. Kosinilause on Pythagoraan lauseen yleistys. Pythagoraan lause pätee ainoastaan suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille. Tarkastellaan kuvaa \ref{kuva:kosinilause}. Kosinilauseen mukaan 
+Tutkitaan seuraavaksi vektorien välisen kulman ja pistetulon yhteyttä. Vektorien välinen kulma voidaan laskea Geometria$-$kurssista tutun \textbf{kosinilauseen} avulla. Kosinilause on Pythagoraan lauseen yleistys. Pythagoraan lause pätee ainoastaan suorakulmaisille kolmioille, mutta kosinilausetta voi käyttää kaikille kolmioille. Tarkastellaan kuvaa \ref{kuva:kosinilause}. Kosinilauseen mukaan 
 $$
 c^2=a^2+b^2-2ab \cos \alpha.
 $$
-Vektoreita hyödyntämällä kosinilause saadaan muotoon 
+Vektorien pituuksia hyödyntämällä kosinilause saadaan muotoon 
 $$
 |\va-\vb|^2=|\va|^2+|\vb|^2-2|\va||\vb| \cos \sphericalangle(\va,\vb).
 $$
@@ -1367,13 +1430,13 @@ $$
 	\label{kuva:kosinilause}
 	\end{figurehere}
 
-Kosinilauseen avulla saadaan muodostettua yhteys vektorien välisen kulman ja niiden pistetulon välille. Tämä todistetaan täsmällisesti seuraavassa teoreemassa \ref{teoreema:pistetulo}.
+Vektorien välisen kulman ja niiden pistetulon välinen yhteys todistetaan täsmällisesti seuraavassa teoreemassa \ref{teoreema:pistetulo}.
 
 \begin{teoreema}\label{teoreema:pistetulo}
 Vektorien $\va$ ja $\vb$ pistetulo on $\va \cdot \vb = |\va||\vb|\cos (\va, \vb).$
 
 \proof 
-Tutkitaan ensin sivun $\va-\vb$ pituuden neliötä. Pistetulon ominaisuuksia hyväksi käyttäen sen yhtälö saadaan muotoon
+Tutkitaan ensin sivun $\va-\vb$ pituuden neliötä. Käyttäen hyväksi pistetulon ominaisuuksia sen yhtälö saadaan muotoon
 \begin{align*}
 |\va-\vb|^2
 &=(\va-\vb)\cdot(\va-\vb) \\
@@ -1401,7 +1464,7 @@ Näin ollen
 \end{align*}
 \end{teoreema}
 
-\begin{teht} Vektorin $\va$ pituus on $3$ ja vektorin $\vb$ pituus on $7$. Laske vektoreiden välinen pistetulo $\va \cdot \vb$, kun
+\begin{teht} Vektorin $\va$ pituus on $3$ ja vektorin $\vb$ pituus on $7$. Hyödynnä teoreeman \ref{teoreema:pistetulo} tulosta ja laske vektoreiden välinen pistetulo $\va \cdot \vb$, kun
 \begin{aakkosta*}
 \item vektorit $\va$ ja $\vb$ ovat samansuuntaiset.
 \item vektorit $\va$ ja $\vb$ ovat vastakkaissuuntaiset.
@@ -1409,7 +1472,7 @@ Näin ollen
 \end{aakkosta*}
 \end{teht}
 
-\begin{teht} Tarkastellaan vektoreita $\va=-2\vi+3\vj~$ ja $~\vb=6\vi+4\vj$.
+\begin{teht} Tarkastele vektoreita $\va=-2\vi+3\vj$ ja $\vb=6\vi+4\vj$.
 \begin{aakkosta*}
 \item Laske pistetulo $\va \cdot \vb$.
 \item Piirrä vektorit $\va$ ja $\vb$ koordinaatistoon siten, että niillä on sama alkupiste.
@@ -1417,7 +1480,7 @@ Näin ollen
 \end{aakkosta*}	
 \end{teht}
 
-Edellisessä tehtävässä tehty havainto pitää aina paikkansa. Itse asiassa aina, kun vektorit ovat kohtisuorassa toisiaan vasten, niiden välinen pistetulo on nolla. Toisaalta jos tiedetään, että vektorien välinen pistetulo on nolla, ne ovat välttämättä kohtisuorassa toisiaan vasten. Tämä osoitetaan täsmällisesti seuraavassa teoreemassa \ref{teoreema:pistetulo ja kohtisuoruus}.
+Edellisessä tehtävässä tehty havainto pitää aina paikkansa: aina, kun vektorit ovat kohtisuorassa toisiaan vasten, niiden välinen pistetulo on nolla. Toisaalta jos tiedetään, että vektorien välinen pistetulo on nolla, ne ovat välttämättä kohtisuorassa toisiaan vasten. Tämä osoitetaan täsmällisesti seuraavassa teoreemassa \ref{teoreema:pistetulo ja kohtisuoruus}.
 
 \begin{teoreema}\label{teoreema:pistetulo ja kohtisuoruus}
 Vektorit $\va$ ja $\vb$ ovat toisiaan vastaan kohtisuorassa, jos ja vain jos $\va \cdot \vb=0$.
@@ -1426,7 +1489,7 @@ Vektorit $\va$ ja $\vb$ ovat toisiaan vastaan kohtisuorassa, jos ja vain jos $\v
 \begin{align*}
 \va \cdot \vb 
 &= |\va||\vb|\cos (\va, \vb) \\
-&= |\va||\vb|\cos (90^{\circ}) \\
+&= |\va||\vb|\cos 90^{\circ} \\
 &= |\va||\vb| \cdot 0 \\
 &= 0.
 \end{align*}
@@ -1450,7 +1513,7 @@ $$
 Siispä jos $\va \cdot \vb=0$, niin vektorit $\va$ ja $\vb$ ovat kohtisuorassa toisiaan vasten.
 \end{teoreema}
 
-\begin{teht} Tutkitaan vektoreita $\va=$, $\vb=$ ja $\vc=$.
+\begin{teht} Tutki vektoreita $\va=-6\vi+2\vj$, $\vb=\vi-3\vj$ ja $\vc=-2\vi+6\vj$.
 \begin{aakkosta*}
 \item Laske pistetulot $\va \cdot \vb$, $\va \cdot \vc$ ja $\vb \cdot \vc$.
 \item Mitkä vektoreista ovat kohtisuorassa toisiaan vasten?
@@ -1458,7 +1521,7 @@ Siispä jos $\va \cdot \vb=0$, niin vektorit $\va$ ja $\vb$ ovat kohtisuorassa to
 \end{aakkosta*}
 \end{teht}
 	
-\begin{teht} Tutkitaan vektoreita $\va=-2\vi+3\vj~$ ja $~\vb=t\vi+3\vj$, missä $t$ on jokin reaaliluku.
+\begin{teht} Tutki vektoreita $\va=-2\vi+3\vj$ ja $\vb=t\vi+3\vj$, missä $t$ on jokin reaaliluku.
 \begin{aakkosta*}
 \item Muodosta vektorien $\va$ ja $\vb$ välisen pistetulon $\va \cdot \vb$ yhtälö. 
 \item Millä muuttujan $t$ arvolla vektorit $\va$ ja $\vb$ ovat kohtisuorassa toisiaan vasten?
@@ -1475,8 +1538,41 @@ molemmat puolet jaetaan termillä $|\va||\vb|$, saadaan seuraava tulos:
 Jatkoa teoreemaan \ref{teoreema:pistetulo}. Vektorien $\va$ ja $\vb$ välinen kulma saadaan kaavasta $$\cos (\va, \vb)=\frac{\va \cdot \vb}{|\va||\vb|}.$$
 \end{teoreema}
 
-\begin{teht} Tarkastellaan kolmiota $ABC$, missä $\pv{AB}=5\vi-4\vj$ ja $\pv{AC}=9\vi+3\vj$. Laske kolmion kulmien suuruudet asteen tarkkuudella.
+\begin{teht} Tarkaste kolmiota $ABC$, missä $\pv{AB}=5\vi-4\vj$ ja $\pv{AC}=9\vi+3\vj$. Laske kolmion kulmien suuruudet asteen tarkkuudella.
 \end{teht}
 	
 \begin{teht} Kolmion $ABC$ kärjet ovat pisteissä $A=(-7,1)$, $B=(4,9)$ ja $C=(-3,-5)$. Laske kolmion kulmien suuruudet asteen tarkkuudella.
+\end{teht}
+
+
+
+\hrule
+
+\subsection*{Tehtäviä}
+
+\begin{teht} Tarkastele vektoreita $\va, \vb \neq \bar{0}$. Tiedetään, että 
+$$
+\vb-3\va=5(\va-\vb).
+$$
+\begin{aakkosta*}
+\item Osoita, että vektorit $\va$ ja $\vb$ ovat yhdensuuntaiset.
+\item Ovatko vektorit $\va$ ja $\vb$ saman- vai vastakkaissuuntaiset?
+\end{aakkosta*}
+\end{teht}
+
+\begin{teht} Tarkastele vektoreita $\va, \vb \neq \bar{0}$. Oletetaan, että vektorit eivät ole yhdensuuntaiset. Osoita, että vektori $3\va+\vb$ ei ole yhdensuuntainen vektorin $\va$ kanssa.
+\end{teht}
+
+\begin{teht} ...
+\begin{aakkosta*}
+\item 
+\item 
+\end{aakkosta*}
+\end{teht}
+
+\begin{teht} ...
+\begin{aakkosta*}
+\item 
+\item 
+\end{aakkosta*}
 \end{teht}
