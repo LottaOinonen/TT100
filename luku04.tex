@@ -1,0 +1,137 @@
+\section{Vektori avaruudessa}
+
+
+
+
+\subsection{Vektorit ja $xyz$-koordinaatisto}
+
+$xy$-koordinaatistossa liikutaan tasossa. Kun tähän koordinaatistoon lisätään yksi akseli lisää, saadaan $xyz$-koordinaatisto. $xyz$-koordinaatistossa pystyy liikkumaan myös syvyyssuunnassa. $xyz$-koordinaatisto vastaa siis reaalimaailmaa, jossa voi liikkua kolmeen suuntaan: eteen/taakse, oikealle/vasemmalle ja ylös/alas. $xyz$-koordinaatistosysteemistä puhutaan kolmiulotteisena avaruutena tai lyhyemmin avaruutena.
+	
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm, z=0.35cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-3.5,0) -- (3.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y,0)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+		
+		%z-akseli
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \z in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (-3.5,\z)--(3.5, \z);
+		\draw[shift={(0,0,\z)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (0,0,5.5) {\textcolor{darkgray}{$z$}};
+		}
+		
+		% Varsinainen kuva
+		% Komponenttivektorit		
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+		
+		% Vektorit
+		\draw[->, color=blue] (-3,-2)--(-1,2);
+		\node[above] at (-2.5, 0.2) {\textcolor{blue}{$\vv$}};
+		
+		\draw[->, color=gray] (-3,-2)--(-1,-2);
+		\node[below] at (-2, -2.2) {\textcolor{darkgray}{$2\vi$}};
+		
+		\draw[->, color=gray] (-1,-2)--(-1,2);
+		\node[right] at (-1, -0.5) {\textcolor{darkgray}{$4\vj$}};
+
+	\end{tikzpicture}
+	\caption{Vektori $\vv = 2\vi + 4\vj$.}
+	%\label{kuva:}
+	\end{figurehere}
+	\end{center}
+
+
+Avaruuden pistettä $P$ merkitään kolmen koordinaatin avulla: $P=(x,y,z)$, missä ensimmäiset kaksi lukua ilmoittavat pisteen paikan $xy$-tasossa ja kolmas koordinaatti ilmoittaa $z$-akselin suuntaisten askelten lukumäärän.
+
+Kuvan \ref{} pisteen $S$ päästään menemällä $xy$-tason pisteeseen $(4,3)$ ja siirrymällä siitä $5$ askelta $z$-akselin suuntaan. Näin ollen pistettä $S$ merkitään $S=(4,3,5)$.   
+
+KUVA
+
+Kolmiulotteisessa koordinaatistossa tarvitaan vektorien $\vi$ ja $\vj$ lisäksi myös $z$-akselin suuntainen yksikkövektori. Merkitään tätä vektoria kirjaimella $\vk$. Nyt kaikkia avaruuden vektorit voidaan ilmaista summana 
+$$
+\vv=x\vi+y\vj+z\vj.
+$$
+
+\maaritelma[Samat vektorit avaruudessa]{Vektorit ovat samat, jos ne voidaan ilmaista samalla tavalla vektorien $\vi$, $\vj$ ja $\vk$ avulla.}
+
+\maaritelma[Paikkavektori avaruudessa]{Vektori, joka lähtee origosta ja jonka kärki on pisteessä $P$, on pisteen $P$ paikkavektori.}
+
+Kuvassa \ref{} oleva vektori $\vv=-2\vi+4\vj+3\vk$ on siis pisteen $(-2,4,3)$ paikkavektori.
+
+KUVA 
+
+\maaritelma[Nollavektori avaruudessa]{Vektoria $\bar{0}\vi+\bar{0}\vj+\bar{0}\vk$ sanotaan nollavektoriksi.}
+
+Avaruuden pisteestä $A$ pisteeseen $B$ kulkevaa vektori merkitään $\pv{AB}$ ja vastaavasti pisteestä $B$ pisteeseen $A$ kulkevaa vektoria $\pv{BA}$.  
+
+
+
+\subsection{Avaruuden vektorien laskutoimituksia}
+
+\maaritelma[Summavektori avaruudessa]{Avaruuden vektorien $\vv$ ja $\vw$ summavektori $\vv+\vw$ saadaan laskemalla vektorit komponenteittain yhteen.}
+
+Avaruuden vektorien yhteenlaskun määritelmä voidaan ilmaista myös seuraavasti: vektorien $\vv=x_1\vi+y_1\vj+z_1\vj$ ja $\vw=x_2\vi+y_2\vj+z_2\vj$ summavektori on vektori
+$$
+\vv+\vw
+=(x_1+x_2)\vi+(y_1+y_2)\vj+(z_1+z_2)\vk.
+$$
+
+\maaritelma[Avaruuden vektorin kertominen reaaliluvulla]{Avaruuden vektorin $\vv$ skalaarimonikerta $r\vv$ saadaan kertomalla vektorin $\vv$ komponentit reaaliluvulla $r$.}
+
+Avaruuden vektorin reaaliluvulla kertomisen voi ilmaista myös seuraavasti: kun vektoria $\vv=x\vi+y\vj+z\vj$ kerrotaan reaaliluvulla $r$, saadaaan vektori
+$$
+r\vv
+=r(x\vi+y\vj+z\vj)
+=(rx)\vi+(ry)\vj+(rz)\vk.
+$$
+
+\maaritelma[Vastavektorit avaruudessa]{Vektori $-1\cdot \vv$ on avaruuden vektorin $\vv$ vastavektori. Sitä merkitänä $-\vv$.}
+
+
+yhdensuuntaisuus
+
+
+\maaritelma[Erotusvektori avaruudessa]{Avaruuden vektorien $\vv$ ja $\vw$ erotusvektori $\vv-\vw$ saadaan lisäämällä vektoriin $\vv$ vekrorin $\vw$ vastavektori $-\vw$, eli $\vv-\vw=\vv+(-\vw)$.}
+
+Avaruuden vektorien $\vv=x_1\vi+y_1\vj+z_1\vj$ ja $\vw=x_2\vi+y_2\vj+z_2\vj$ erotusvektori on siis vektori
+$$
+\vv-\vw
+=(x_1-x_2)\vi+(y_1-y_2)\vj+(z_1-z_2)\vk.
+$$
+
+\maaritelma[Avaruuden vektorin pituus]{Avaruuden vektorin $\vv=x\vi+y\vj+z\vj$ pituus $|\vv|$ saadaan yhtälöstä
+$$
+|\vv|=\sqrt{x^2+y^2+z^2}.
+$$}
+
+\maaritelma[Avaruuden yksikkövektoria]{Avaruuden vektoia, jonka pituus on $1$, sanotaan avaruuden yksikövektoriksi.}
+
+vektorien välinen kulma 
+
+\maaritelma[Pistetulo avaruudessa]{Avaruuden vektorien $\vv=x_1\vi+y_1\vj+z_1\vj$ ja $\vw=x_2\vi+y_2\vj+z_2\vj$ pistetulo on $\vv \cdot \vw = x_1x_2+y_1y_2+z_1z_2$.}
+

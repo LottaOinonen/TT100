@@ -1,0 +1,328 @@
+\section{Suora ja taso}
+
+\subsection{Suora}
+
+Tutkitaan seuraavaksi suoria ja niiden kulmakertoimia. Suoran kulmakerroin kertoo, miten jyrkästi suora nousee tai laskee. 
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+		\draw[-] (-5.5,-1.25)--(3.5,3.25);
+		\node[above left] at (-4.5,-0.7) {$s$};
+		
+		\draw[-] (3,-1)--(3,3);
+		\node[right] at (3,1) {$\Delta y$};
+		
+		\draw[-] (3,-1)--(-5,-1);
+		\node[below] at (-2,-1) {$\Delta x$};
+		
+	\end{tikzpicture}
+	\caption{Suoran $s$ kulmakerroin $k$.}
+	\label{kuva:suoran kulmakerroin}	
+	\end{figurehere}
+	\end{center}
+
+\maaritelma[Suoran kulmakerroin]{Suoran kulmakerroin on
+$$
+k
+=\frac{\Delta y}{\Delta x}
+= \frac{y_2-y_1}{x_2-x_1}. 
+$$}
+
+Tarkastellaan seuraavaa kuvaa \ref{kuva:suoran kulmakerroin esimerkki}. Suoran $s$ kulmakertoimen voi määrittää suoraan kuvasta:
+\begin{align*}
+k
+=\frac{\Delta y}{\Delta x}
+= \frac{4}{8}
+= \frac{1}{2}.
+\end{align*}
+Saman voi laskea myös suoraan pisteiden $A$ ja $B$ avulla:
+\begin{align*}
+k
+=\frac{\Delta y}{\Delta x}
+= \frac{y_2-y_1}{x_2-x_1}
+= \frac{3-(-1)}{3-(-5)}
+= \frac{4}{8}
+= \frac{1}{2}.
+\end{align*}
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+
+		\draw[-] (-5.5,-1.25)--(3.5,3.25);
+		\node[above left] at (-4.5,-0.7) {$s$};
+		
+		\draw[-] (3,-1)--(3,3);
+		\node[right] at (3,1) {$\Delta y$};
+		
+		\draw[-] (3,-1)--(-5,-1);
+		\node[below] at (-2,-1) {$\Delta x$};
+		
+		\draw[fill, color = black] (-5,-1) circle [radius = 1.5pt];
+		\node[below] at (-5,-1) {$A=(-5,-1)$};
+		
+		\draw[fill, color = black] (3,3) circle [radius = 1.5pt];
+		\node[below right] at (3, 3) {$B=(3,3)$};
+		
+	\end{tikzpicture}
+	\caption{Suoran $s$ kulmakerroin $k$.}
+	\label{kuva:suoran kulmakerroin esimerkki}	
+	\end{figurehere}
+	\end{center}
+	
+	
+	
+
+\maaritelma[Suoran yhtälö (ratkaistu muoto)]{$y=kx+b$, missä $k$ on suoran kulmakerroin.}
+
+\maaritelma[Suoran yhtälö (normaalimuoto)]{$ax+by+c=0$.}
+
+
+
+
+Suora $s$ kulkee pisteiden $A=(-4,3)$ ja $B=(0,-3)$ kautta. Tutkitaan, onko piste $P=(2,-6)$ suoralla. Suoran $s$ kulmakerroin on
+$$
+k
+=\frac{3-(-3)}{-4-0}
+=\frac{6}{-4}
+=-\frac{3}{2}.
+$$
+Suora leikkaa $y$-akselin pisteessä $y=-3$. Suoran $s$ ratkaistu muoto on siis
+$$
+y=-\frac{3}{2} x+(-3)
+=-\frac{3}{2} x-3).
+$$
+Tutkitaan, toteutaako piste $P$ suoran $s$ yhtälön:
+\begin{align*}
+y&=-\frac{3}{2} x-3 \\
+&\Leftrightarrow -6=-\frac{3}{2}\cdot 2 - 3 \\
+&\Leftrightarrow -6 = -\frac{6}{2} - 3 \\
+&\Leftrightarrow -6 = -3-3 \\
+&\Leftrightarrow 0=0.
+\end{align*}
+
+\subsection{Suoran yhtälöt}
+
+Suoran määrittämiseen riittää kaksi pistettä.
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(4,2);
+		\node[above left] at (-3.5,-1.7) {$s$};
+		
+		\draw[fill, color = black] (-2,-1) circle [radius = 1.5pt];
+		\node[above left] at (-2,-1) {$A$};
+		
+		\draw[fill, color = black] (2,1) circle [radius = 1.5pt];
+		\node[above left] at (2,1) {$B$};
+
+	\end{tikzpicture}
+	\caption{Pisteiden $A$ ja $B$ määrittävä suora $s$.}
+	\label{kuva:suoran kaksi pistettä}
+	\end{figurehere}
+	\end{center}
+	
+	
+Suoran määrittämisessä voidaan käyttä hyväksi myös vektoreita. Tällöin tarvitaan suoran yksi piste sekä yksi suoran suuntainen vektori. Tarkastellaan kuvaa \ref{kuva:suoran piste ja suuntavektori}. Suoran piste $A$ määrittää jonkin pisteen, jonka kautta suora kulkee. Yhden pisteen kautta voi kuitenkin kulkea äärettömän monta suoraa. Tästä syystä tarvitaan vielä vektori $\vv$, joka kertoo, mihin suuntaan suora kulkee. Tätä vektoria kutsutaan suoran \textbf{suuntavektoriksi}.
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(4,2);
+		\node[above left] at (-3.5,-1.7) {$s$};
+		
+		\draw[fill, color = black] (-2,-1) circle [radius = 1.5pt];
+		\node[above left] at (-2,-1) {$A$};
+		
+		\draw[->] (-2,-1)--(0,0);
+		\node[above left] at (-1.1,-0.6) {$\vv$};
+
+	\end{tikzpicture}
+	\caption{Pisteen $A$ ja suuntavektorin $\vv$ määrittämä suora $s$.}
+	\label{kuva:suoran piste ja suuntavektori}
+	\end{figurehere}
+	\end{center}
+
+Jos pisteet $A$ ja $B$ ovat suoralla $s$, suoran suuntavektoriksi voidaan valita vektori $\pv{AB}$ tai vektori $\pv{BA}$. Nyt suora voidaan määrittä kumman tahansa pisteen ja kumman tahansa suuntavektorin avulla.
+
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(4,2);
+		\node[above left] at (-3.5,-1.7) {$s$};
+		
+		\draw[fill, color = black] (-2,-1) circle [radius = 1.5pt];
+		\node[above left] at (-2,-1) {$A$};
+		
+		\draw[fill, color = black] (2,1) circle [radius = 1.5pt];
+		\node[above left] at (2,1) {$B$};
+		
+		\draw[fill, color = black] (3,1.5) circle [radius = 1.5pt];
+		\node[above left] at (3,1.5) {$P$};
+
+	\end{tikzpicture}
+	\caption{Piste $P$ on suoralla $s$.}
+	\label{kuva:onko piste suoralla 1}
+	\end{figurehere}
+	\end{center}
+
+Piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa. 
+
+\maaritelma[Piste suoralla]{Piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos ja vain jos vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa eli $\pv{AP}=t\pv{AB}$ jollakin reaaliluvulla t.}
+
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(4,2);
+		\node[above left] at (-3.5,-1.7) {$s$};
+		
+		\draw[fill, color = black] (-2,-1) circle [radius = 1.5pt];
+		\node[above left] at (-2,-1) {$A$};
+		
+		\draw[->] (-2,-1)--(0,0);
+		\node[above left] at (-1.1,-0.6) {$\vv$};
+		
+		\draw[fill, color = black] (3,1.5) circle [radius = 1.5pt];
+		\node[above left] at (3,1.5) {$P$};
+		
+		\draw[fill, color = black] (1,-3) circle [radius = 1.5pt];
+		\node[below left] at (1,-3) {$O$};
+		
+		\draw[->] (1,-3)--(-2,-1);
+		\node[below left] at (-1,-2) {$\pv{OA}$};
+		
+		\draw[->] (1,-3)--(3,1.5);
+		\node[below right] at (2.5,-1) {$\pv{OP}$};
+
+	\end{tikzpicture}
+	\caption{Suoran $s$ vektoriyhtälö.}
+	\label{kuva:suoran vektoriyhtälö}
+	\end{figurehere}
+	\end{center}
+	
+
+\maaritelma[Suoran vektoriyhtälö]{$\pv{OP}=\pv{OA}+t\vv$}
+
+vektori-, parametri-, koordinaatti- ja normaalimuotoinen yhtälö
+
+Suorien leikkauspiste
+
+Suorien välinen kulma
+
+
+\subsection{Suora avaruudessa}
+
+\subsection{Taso}
