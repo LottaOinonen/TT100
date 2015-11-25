@@ -1,5 +1,6 @@
 \section{Suora ja taso}
 
+\begin{comment}
 \subsection{Suora}
 
 Tutkitaan seuraavaksi suoria ja niiden kulmakertoimia. Suoran kulmakerroin kertoo, miten jyrkästi suora nousee tai laskee. 
@@ -147,9 +148,17 @@ y&=-\frac{3}{2} x-3 \\
 &\Leftrightarrow 0=0.
 \end{align*}
 
-\subsection{Suoran yhtälöt}
+\end{comment}
 
-Suoran määrittämiseen riittää kaksi pistettä.
+
+
+
+
+
+
+\subsection{Suora}
+
+Tutkitaan seuraavaksi suoria. Kuvassa \ref{kuva:suoran kaksi pistettä} olevien pisteiden $A$ ja $B$ kautta on mahdollista piirtää ainoastaan yksi suora $-$ pisteet $A$ ja $B$ määrittävät suoran $s$ kokonaan. Suoran määrittämiseen riittää siis kaksi pistettä.
 
 	\begin{center}
 	\begin{figurehere}
@@ -180,13 +189,13 @@ Suoran määrittämiseen riittää kaksi pistettä.
 		\node[above left] at (2,1) {$B$};
 
 	\end{tikzpicture}
-	\caption{Pisteiden $A$ ja $B$ määrittävä suora $s$.}
+	\caption{Pisteiden $A$ ja $B$ määrittämä suora $s$.}
 	\label{kuva:suoran kaksi pistettä}
 	\end{figurehere}
 	\end{center}
 	
 	
-Suoran määrittämisessä voidaan käyttä hyväksi myös vektoreita. Tällöin tarvitaan suoran yksi piste sekä yksi suoran suuntainen vektori. Tarkastellaan kuvaa \ref{kuva:suoran piste ja suuntavektori}. Suoran piste $A$ määrittää jonkin pisteen, jonka kautta suora kulkee. Yhden pisteen kautta voi kuitenkin kulkea äärettömän monta suoraa. Tästä syystä tarvitaan vielä vektori $\vv$, joka kertoo, mihin suuntaan suora kulkee. Tätä vektoria kutsutaan suoran \textbf{suuntavektoriksi}.
+Suoran määrittämisessä voidaan käyttää hyväksi myös vektoreita. Tällöin tarvitaan suoran yksi piste sekä yksi suoran suuntainen vektori. Tarkastellaan kuvaa \ref{kuva:suoran piste ja suuntavektori}. Suoran piste $A$ määrittää jonkin pisteen, jonka kautta suora kulkee. Yhden pisteen kautta voi kuitenkin kulkea äärettömän monta suoraa. Tästä syystä tarvitaan vielä vektori $\vv$, joka kertoo, mihin suuntaan suora kulkee. Tätä vektoria kutsutaan suoran \textbf{suuntavektoriksi}.
 
 	\begin{center}
 	\begin{figurehere}
@@ -222,8 +231,18 @@ Suoran määrittämisessä voidaan käyttä hyväksi myös vektoreita. Tällöin tarvitaan
 	\end{figurehere}
 	\end{center}
 
-Jos pisteet $A$ ja $B$ ovat suoralla $s$, suoran suuntavektoriksi voidaan valita vektori $\pv{AB}$ tai vektori $\pv{BA}$. Nyt suora voidaan määrittä kumman tahansa pisteen ja kumman tahansa suuntavektorin avulla.
+Jos pisteet $A$ ja $B$ ovat suoralla $s$, suoran suuntavektoriksi voidaan valita vektori $\pv{AB}$ tai vektori $\pv{BA}$. Nyt suora voidaan määrittää kumman tahansa pisteen ja kumman tahansa suuntavektorin avulla.
 
+\begin{teht} Tutki pisteitä $A=(-2,1)$ ja $B=(4,-2)$.
+\begin{aakkosta*}
+\item Piirrä pisteet $A$ ja $B$ koordinaatistoon.
+\item Piirrä pisteiden $A$ ja $B$ kautta kulkeva suora ja merkitse sitä kirjaimella $s$.
+\item Merkitse kuvaan vektori $\pv{AB}$ ja ilmoita se vektorien $\vi$ ja $\vj$ avulla.
+\item Suoran $s$ voi nyt määrittää esimerkiksi pisteen $A$ ja vektorin $\pv{AB}$ avulla. Keksi jokin toinen tapa määrittää sama suora.
+\end{aakkosta*}
+\end{teht}
+
+Suoralla olevia muita pisteitä voidaan tutkia yhdensuuntaisuuden avulla. Esimerkiksi kuvan \ref{kuva:onko piste suoralla 1} piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, koska vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa.
 
 	\begin{center}
 	\begin{figurehere}
@@ -255,17 +274,107 @@ Jos pisteet $A$ ja $B$ ovat suoralla $s$, suoran suuntavektoriksi voidaan valita
 		
 		\draw[fill, color = black] (3,1.5) circle [radius = 1.5pt];
 		\node[above left] at (3,1.5) {$P$};
+		
+		\draw[->, color=darkgreen] (-2,-0.9)--(2,1.1);
+		\node[above left] at (0,0) {\textcolor{darkgreen}{$\pv{AB}$}};
+		
+		%\draw[->, color=blue] (-2,-1.1)--(3,1.4);
+		%\node[below right] at (0,0) {\textcolor{blue}{$\pv{AP}$}};
+	\end{tikzpicture}
+	\hspace*{.2cm}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
 
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(4,2);
+		\node[above left] at (-3.5,-1.7) {$s$};
+		
+		\draw[fill, color = black] (-2,-1) circle [radius = 1.5pt];
+		\node[above left] at (-2,-1) {$A$};
+		
+		\draw[fill, color = black] (2,1) circle [radius = 1.5pt];
+		\node[above left] at (2,1) {$B$};
+		
+		\draw[fill, color = black] (3,1.5) circle [radius = 1.5pt];
+		\node[above left] at (3,1.5) {$P$};
+		
+		%\draw[->, color=darkgreen] (-2,-0.9)--(2,1.1);
+		%\node[above left] at (0,0) {\textcolor{darkgreen}{$\pv{AB}$}};
+		
+		\draw[->, color=blue] (-2,-1.1)--(3,1.4);
+		\node[below right] at (0,0) {\textcolor{blue}{$\pv{AP}$}};
 	\end{tikzpicture}
 	\caption{Piste $P$ on suoralla $s$.}
 	\label{kuva:onko piste suoralla 1}
 	\end{figurehere}
 	\end{center}
-
-Piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa. 
+ 
 
 \maaritelma[Piste suoralla]{Piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos ja vain jos vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa eli $\pv{AP}=t\pv{AB}$ jollakin reaaliluvulla t.}
 
+\begin{teht} Tutki pisteitä $A=(-2,-1)$ ja $B=(1,3)$.
+\begin{aakkosta*}
+\item Piirrä pisteet $A$ ja $B$ koordinaatistoon.
+\item Piirrä pisteiden $A$ ja $B$ kautta kulkeva suora ja merkitse sitä kirjaimella $s$.
+\item Katso kuvasta, onko piste $P=(8,3)$ suoralla $s$.
+\item Merkitse kuvaan vektorit $\pv{AB}$ ja $\pv{AP}$, ja ilmoita ne vektorien $\vi$ ja $\vj$ avulla.
+\item Tutki yhtälöä $\pv{AP}=t\pv{AB}$. Löydätkö jonkin reaaliluvun $t$, joka toteuttaa yhtälön? Toisin sanoen ovatko vektorit $\pv{AB}$ ja $\pv{AP}$ yhdensuuntaiset?
+\end{aakkosta*}
+\end{teht}
+
+Tarkastellaan suoraa $s$, joka kulkee pisteiden $A=(-3,1)$ ja $B=(2,6)$ kautta. Tutkitaan, onko piste $P=(-1,3)$ kyseisellä suoralla. Muodostetaan tätä varten vektorit $\pv{AB}$ ja $\pv{AP}$. Vektori 
+$$
+\pv{AB}
+=(2-(-3))\vi+(6-1)\vj
+=5\vi+5\vj
+$$ 
+ja vektori 
+$$
+\pv{AP}
+=((-1)-(-3))\vi+(3-1)\vj
+=2\vi+2\vj.
+$$ 
+Tutkitaan yhtälöä $\pv{AP}=t\pv{AB}$. Sijoitetaan vektorit yhtälöön, jolloin saadaan 
+$$
+2\vi+2\vj=t(5\vi+5\vj)
+$$
+ja edelleen
+$$
+2(\vi+\vj)=5t(\vi+\vj).
+$$
+Huomataan, että yhtälö on tosi silloin, kun $2=5t$, eli kun $t=2/5$. Vektorit $\pv{AB}$ ja $\pv{AP}$ ovat siis yhdensuuntaiset. Näin ollen piste $P$ on suoralla $s$.
+
+Tarkastellaan edelleen samaa suoraa $s$. Tutkitaan, onko piste $Q=(2,4)$ kyseisellä suoralla. Huomataan, että vektori $\pv{AB}=5\vi+5\vj$ ja vektori $\pv{AQ}=5\vi+3\vj$. Sijoitetaan nämä yhtälöön $\pv{AP}=t\pv{AB}$, jolloin saadaan 
+$$
+5\vi+3\vj=t(5\vi+5\vj)
+$$
+ja edelleen
+$$
+5\vi+3\vj=5t\vi+5t\vj.
+$$
+Yhtälö on tosi silloin, kun $5\vi=5t\vi$ ja $3\vj=5t\vj$. Ensimmäisen yhtälön perusteella $t=1$, mutta tämä ei totetuta toista yhtälöä. Yhtälö $5\vi+3\vj=5t\vi+5t\vj$ ei siis toteudu millään reaaliluvulla $t$, joten vektorit $\pv{AB}$ ja $\pv{AQ}$ eivät ole yhdensuuntaiset. Näin ollen piste $Q$ ei ole suoralla $s$. 
+
+\begin{teht} Tutki pisteiden $A=()$ ja $B=()$ määrittämää suoraa $s$.
+\begin{aakkosta*}
+\item Onko piste $P=()$ suoralla $s$?
+\item Onko piste $Q=()$ suoralla $s$?
+\end{aakkosta*}
+\end{teht}
+
+Suoralla olevia muita pisteitä voidaan tutkia myös paikkavektorien ja vektorien yhteenlaskun avulla. Tarkastellaan kuvassa \ref{kuva:suoran vektoriyhtälö} olevaa suoraa $s$, joka on määritelty pisteen $A$ ja suuntavektorin $\vv$ avulla. Myös piste $P$ on suoralla $s$, sillä vektori $\pv{OP}=\pv{OA}+5/2\vv$.
 
 	\begin{center}
 	\begin{figurehere}
@@ -292,8 +401,11 @@ Piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos vektori $\
 		\draw[fill, color = black] (-2,-1) circle [radius = 1.5pt];
 		\node[above left] at (-2,-1) {$A$};
 		
-		\draw[->] (-2,-1)--(0,0);
-		\node[above left] at (-1.1,-0.6) {$\vv$};
+		\draw[->, color=blue] (-2,-1)--(0,0);
+		\node[below right] at (-1,-0.5) {\textcolor{blue}{$\vv$}};
+		
+		\draw[->, color=darkgreen] (-2,-0.9)--(3,1.6);
+		\node[above left] at (0.8,0.3) {\textcolor{darkgreen}{$5/2\vv$}};
 		
 		\draw[fill, color = black] (3,1.5) circle [radius = 1.5pt];
 		\node[above left] at (3,1.5) {$P$};
@@ -314,15 +426,250 @@ Piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos vektori $\
 	\end{center}
 	
 
-\maaritelma[Suoran vektoriyhtälö]{$\pv{OP}=\pv{OA}+t\vv$}
+\maaritelma[Suoran vektoriyhtälö]{Piste $P$ on pisteen $A$ ja suuntavektorin $\vv$ määrittämällä suoralla $s$, jos ja vain jos $\pv{OP}=\pv{OA}+t\vv$ jollakin reaaliluvulla $t$. Yhtälöä $\pv{OP}=\pv{OA}+t\vv$ sanotaan suoran vektoriyhtälöksi.}
 
-vektori-, parametri-, koordinaatti- ja normaalimuotoinen yhtälö
+Suoran vektoriyhtälö antaa suoran kaikkien pisteiden paikkavektorit, kun kerroin $t$ käy läpi kaikki reaaliluvut.
 
-Suorien leikkauspiste
+\begin{teht} Tutki pisteen $A=(-1,6)$ ja suuntavektorin $\vv=2\vi-3\vj$ määrittämää suoraa $s$.
+\begin{aakkosta*}
+\item Onko piste $P=(5,-3)$ suoralla $s$?
+\item Onko piste $Q=(4,1)$ suoralla $s$?
+\end{aakkosta*}
+\end{teht}
 
-Suorien välinen kulma
+Tutkitaan sitten suorien mahdollisia leikkauspisteitä. Tasossa kaksi suoraa joko leikkaavat toisensa tai ne ovat yhdensuuntaiset. 
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(4,2);
+		\node[above left] at (-3.5,-1.7) {$s_1$};
+		
+		\draw[-] (-4,5)--(4,-0.333);
+		\node[below left] at (-3.8,4.8) {$s_2$};
+
+	\end{tikzpicture}
+	\hspace*{0.3cm}	
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(4,2);
+		\node[above left] at (-3.5,-1.8) {$s_1$};
+		
+		\draw[-] (-4,0)--(4,4);
+		\node[above left] at (-3.5,0.6) {$s_2$};
+
+
+	\end{tikzpicture}
+	\caption{Tason kaksi suoraa $s_1$ ja $s_2$ joko leikkaavat toisensa tai ovat yhdensuuntaisia.}
+	\label{kuva:suorien leikkauspiste tai yhdensuuntaisuus}
+	\end{figurehere}
+	\end{center}
+ 
+Suorilla on leikkauspiste, jos niillä on yksi yhteinen piste, eli on olemassa piste, joka kuuluu molemmille suorille. Leikkauspiste voidaan löytää esimerkiksi suorien vektoriyhtälöiden avulla. Tarkastellaan kuvaa \ref{kuva:suorien leikkauspiste}. Suorat $s_1$ ja $s_2$ leikkaavat toisensa pisteessä $P$. Suoran $s_1$ vektoriyhtälön perusteella vektori $\pv{OP}=\pv{OA}+t\vv$ ja suoran $s_2$ vektoriyhtälön perusteella $\pv{OP}=\pv{OB}+r\vw$ joillakin reaaliluvuilla $t$ ja $r$. Yhdistämällä nämä kaksi tietoa saadaan yhtälö
+$$
+\pv{OA}+t\vv=\pv{OB}+r\vw.
+$$
+
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(2,4);
+		\node[above left] at (-3.5,-3) {$s_1$};
+		
+		\draw[fill, color = black] (-3,-1) circle [radius = 1.5pt];
+		\node[above left] at (-3,-1) {$A$};
+		
+		\draw[->] (-3,-1)--(-1.5,0.5);
+		\node[above left] at (-2,-1) {$\vv$};
+		
+		\draw[-] (-4,2)--(5,-1);
+		\node[below left] at (-2.8,2.5) {$s_2$};
+		
+		\draw[fill, color = black] (4,-2/3) circle [radius = 1.5pt];
+		\node[above right] at (4,-2/3) {$B$};
+		
+		\draw[->, color = black] (4,-2/3)--(2,0);
+		\node[below left] at (3.2,0.5) {$\vw$};
+		
+		\draw[fill, color = black] (-1,1) circle [radius = 1.5pt];
+		\node[above] at (-1,1) {$P$};
+		
+		\draw[fill, color = black] (2,-3) circle [radius = 1.5pt];
+		\node[below right] at (2,-3) {$O$};
+		
+		\draw[->, color = black] (2,-3)--(-3,-1);
+		
+		\draw[->, color = black] (2,-3)--(-1,1);
+		
+		\draw[->, color = black] (2,-3)--(4,-2/3);
+		
+	\end{tikzpicture}
+	\caption{Suorien $s_1$ ja $s_2$ leikkauspiste $P$.}
+	\label{kuva:suorien leikkauspiste}
+	\end{figurehere}
+	\end{center}
+
+- - - - - - - - - -
+
+Tutkitaan suoraa $y=-2x+1$. Suora voidaan ilmoittaa muodossa $-2x-y+1=0$. Tällaista muotoa kutsutaan \textbf{suoran normaalimuotoiseksi yhtälöksi}. Normaalimuotoinen yhtälö on aina muotoa $ax+by+c=0$. 
+
+Vektoria $\vn$, joka on kohtisuorassa suoraa $s$ vasten, sanotaan suoran $s$ \textbf{normaalivektoriksi}. 
+
+Suoran normaalivektorit nähdään suoraan sen normaalimuotoisesta yhtälöstä. Suoran $ax+by+c=0$ normaalivektorit ovat vektorin $a\vi+b\vj$ monikertoja eli muotoa $t(a\vi+b\vj)$ jollakin reaaliluvulla $t$.
+
+- - - - - - - - - -
+
+Kappaleessa \ref{subsection:Vektorien välinen kulma ja pistetulo} opittiin määrittämään vektorien välisiä kulmia. Teoreeman \ref{teoreema:vektorien välinen kulma} mukaan vektorien $\va$ ja $\vb$ välinen kulma saadaan kaavasta 
+$$
+\cos (\va, \vb)
+=\frac{\va \cdot \vb}{|\va||\vb|}.
+$$
+Kahden suoran välistä kulmaa voidaan tutkia suorien suuntavektoreiden avulla. Tässä on kuitenkin oltava tarkkana. Suorien välisellä kulmalla tarkoitetaan kulmista pienempää. Joskus suorien suuntavektorien valinnasta johtuen vektorien väliseksi kulmaksi saadaan suorien välisistä kulmista suurempi. Tilannetta havainnollistetaan kuvassa \ref{kuva:suorien välinen kulma}. Jos siis saat suorien väliseksi kulmaksi yli $90$ astetta, vähennä se $180$ asteesta, jolloin saat oikean suorien välisen kulman.  
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(5,1);
+		\node[above left] at (-3.5,-1.7) {$s_1$};
+		
+		\draw[->, color=darkgreen] (2,0)--(4,0.666);
+		\node[below right] at (3.3,0.3) {\textcolor{darkgreen}{$\vv$}};
+		
+		\draw[-] (-4,2)--(5,-1);
+		\node[above right] at (-3.5,2) {$s_2$};
+		
+		\draw[->, color=blue] (2,0)--(0,0.666);
+		\node[above left] at (0.5,-0.3) {\textcolor{blue}{$\vw$}};
+
+	\end{tikzpicture}
+	\hspace*{0cm}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-2)--(5,1);
+		\node[above left] at (-3.5,-1.7) {$s_1$};
+		
+		\draw[->, color=darkgreen] (2,0)--(4,0.666);
+		\node[above left] at (3,0.3) {\textcolor{darkgreen}{$\vv$}};
+		
+		\draw[-] (-4,2)--(5,-1);
+		\node[above right] at (-3.5,2) {$s_2$};
+		
+		\draw[->, color=blue] (2,0)--(4,-2/3);
+		\node[below left] at (2.5,-0.2) {\textcolor{blue}{$\vw$}};
+
+	\end{tikzpicture}
+	\caption{Suorien $s_1$ ja $s_2$ suuntavektoreiden $\vv$ ja $\vw$ välinen kulma.}
+	\label{kuva:suorien välinen kulma}
+	\end{figurehere}
+	\end{center}
+
 
 
 \subsection{Suora avaruudessa}
 
+Kolmiulotteisessa koordinaatistossa suoralle ei voida laskea kulmakerrointa samaan tapaan kuin kaksiulotteisessa koordinaatistossa. Tästä syystä avaruuden suoria tutkitaan ainoastaan vektorien avulla.
+
+\maaritelma[Avaruussuoran vektoriyhtälö]{$\pv{OP}=x\vi+y\vj+z\vk=\pv{OA}+t\vv$}
+
+\maaritelma[Avaruussuoran parametriesitys]{$\begin{cases} 
+x=x_0+t\vv_x \\
+y=y_0+t\vv_y \\ 
+z=z_0+t\vv_z
+\end{cases}$}
+
+\maaritelma[Avaruussuoran koordinaattiesitys]{$$\frac{x-x_0}{\vv_x}=\frac{y-y_0}{\vv_y}=\frac{z-z_0}{\vv_z}, \vv_x, \vv_y, \vv_z \neq 0.$$}
+
 \subsection{Taso}
+
+\maaritelma[Tason vektoriyhtälö]{Jos piste $A$ on tasossa ja jos $\pv{AB}$ ja $\pv{AC}$ ovat erisuuntaiset tason suuntavektorit, niin tason vektoriyhtälö on $\pv{OP}=\pv{OA}+s\pv{AB}+t\pv{AC}$.}
+
+\maaritelma[Tason parametrimuotoinen yhtälö]{}
+
+\maaritelma[Tason normaalimuotoinen yhtälö]{$ax+by+cz+d=0$.}
+
+\maaritelma[Tason koordinaattiyhtälö]{$a(x-x_0)+b(y-y_0)+c(z-z_0)=0$.}
+
+\maaritelma[Tason normaalivektori]{Vektoria, joka on kohtisuorassa kaikkia tason vektoreita vasten, sanotaan tason normaalivektoriksi.}
+
+\subsection{Suoran ja tason leikkauspiste}
+
+\subsection{Suoran ja tason välinen kulma}
