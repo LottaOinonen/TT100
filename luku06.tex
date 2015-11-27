@@ -437,6 +437,9 @@ Suoran vektoriyhtälö antaa suoran kaikkien pisteiden paikkavektorit, kun kerroin
 \end{aakkosta*}
 \end{teht}
 
+\begin{teht} Tutki pisteen $A=()$ ja suuntavektorin $\vv=$ määrittämää suoraa $s$. Määritä kolme suoran $s$ pistettä.
+\end{teht}
+
 Tutkitaan sitten suorien mahdollisia leikkauspisteitä. Tasossa kaksi suoraa joko leikkaavat toisensa tai ne ovat yhdensuuntaiset. 
 
 	\begin{center}
@@ -496,11 +499,21 @@ Tutkitaan sitten suorien mahdollisia leikkauspisteitä. Tasossa kaksi suoraa joko
 	\end{figurehere}
 	\end{center}
  
-Suorilla on leikkauspiste, jos niillä on yksi yhteinen piste, eli on olemassa piste, joka kuuluu molemmille suorille. Leikkauspiste voidaan löytää esimerkiksi suorien vektoriyhtälöiden avulla. Tarkastellaan kuvaa \ref{kuva:suorien leikkauspiste}. Suorat $s_1$ ja $s_2$ leikkaavat toisensa pisteessä $P$. Suoran $s_1$ vektoriyhtälön perusteella vektori $\pv{OP}=\pv{OA}+t\vv$ ja suoran $s_2$ vektoriyhtälön perusteella $\pv{OP}=\pv{OB}+r\vw$ joillakin reaaliluvuilla $t$ ja $r$. Yhdistämällä nämä kaksi tietoa saadaan yhtälö
+Suorilla on leikkauspiste, jos niillä on yksi yhteinen piste, eli on olemassa piste, joka kuuluu molemmille suorille. Leikkauspiste voidaan löytää esimerkiksi suorien vektoriyhtälöiden avulla. Tarkastellaan kuvaa \ref{kuva:suorien leikkauspiste}. Suorat $s_1$ ja $s_2$ leikkaavat toisensa pisteessä $P$. Suoran $s_1$ vektoriyhtälön perusteella vektori 
+$$
+\pv{OP}
+=\pv{OA}+t\vv
+$$ 
+ja suoran $s_2$ vektoriyhtälön perusteella 
+$$
+\pv{OP}
+=\pv{OB}+r\vw
+$$ 
+joillakin reaaliluvuilla $t$ ja $r$. Yhdistämällä nämä kaksi tietoa saadaan yhtälö
 $$
 \pv{OA}+t\vv=\pv{OB}+r\vw.
 $$
-
+Koska suorat $s_1$ ja $s_2$ leikkaavat toisensa, on olemassa reaaliluvut $t$ ja $r$, jotka toteuttavat kyseisen yhtälön.
 
 	\begin{center}
 	\begin{figurehere}
@@ -521,8 +534,8 @@ $$
 		
 		% Vektorit
 		
-		\draw[-] (-4,-2)--(2,4);
-		\node[above left] at (-3.5,-3) {$s_1$};
+		\draw[-, color=blue] (-4,-2)--(2,4);
+		\node[above left] at (-3.5,-3) {\textcolor{blue}{$s_1$}};
 		
 		\draw[fill, color = black] (-3,-1) circle [radius = 1.5pt];
 		\node[above left] at (-3,-1) {$A$};
@@ -530,8 +543,8 @@ $$
 		\draw[->] (-3,-1)--(-1.5,0.5);
 		\node[above left] at (-2,-1) {$\vv$};
 		
-		\draw[-] (-4,2)--(5,-1);
-		\node[below left] at (-2.8,2.5) {$s_2$};
+		\draw[-, color=darkgreen] (-4,2)--(5,-1);
+		\node[below left] at (-2.8,2.5) {\textcolor{darkgreen}{$s_2$}};
 		
 		\draw[fill, color = black] (4,-2/3) circle [radius = 1.5pt];
 		\node[above right] at (4,-2/3) {$B$};
@@ -556,6 +569,73 @@ $$
 	\label{kuva:suorien leikkauspiste}
 	\end{figurehere}
 	\end{center}
+
+
+Tarkastellaan pisteen $A=(7,2)$ ja suuntavektorin $\vv=-3\vi-4\vj$ määrittämää suoraa $s_1$ ja pisteen $B=(-5,6)$ ja suuntavektorin $\vw=2\vi+\vj$ määrittämää suoraa $s_2$. Tutkitaan, leikkaavatko suorat toisensa. Merkitään suorien mahdollista leikkauspistettä kirjaimella $P$. Jos suorat leikkaavat toisensa, niin on olemassa reaaliluvut $t$ ja $r$, jotka toteutavat yhtälön
+\begin{align*}
+\pv{OP}
+&=\pv{OA}+t\vv \\
+&=\pv{OB}+r\vw.
+\end{align*}
+Sijoitetaan pisteet ja suuntavektorit yhtälöön 
+$$
+\pv{OA}+t\vv=\pv{OB}+r\vw,
+$$
+jolloin saadaan yhtälö
+$$
+(7\vi+2\vj)+t(-3\vi-4\vj) 
+=(-5\vi+6\vj)+r(2\vi+\vj). 
+$$
+Yhtälön vasen puoli sievenee muotoon 
+\begin{align*}
+(7\vi+2\vj)+t(-3\vi-4\vj) 
+= (3t+7)\vi+(4t+2)\vj
+\end{align*}
+ja oikea puoli muotoon
+\begin{align*}
+(-5\vi+6\vj)+r(2\vi+\vj)
+= (2r-5)\vi+(r+6)\vj.
+\end{align*}
+Jotta yhtälön vasen ja oikea puoli olisivat samat, pitää vektorien $\vi$ ja $\vj$ kertoimien olla samat. Näin ollen saadaan yhtälöryhmä
+\begin{align*}
+\begin{cases}
+3t+7=2r-5 \\
+4t+2=r+6
+\end{cases}
+\end{align*}
+Ratkaistaan yhtälöryhmän alempi yhtälö muuttujan $r$ suhteen, jolloin saadaan
+$$
+r=4t-4.
+$$
+Sijoitetaan tämä yhtälöryhmän ensimmäiseen yhtälöön, jolloin saadaan
+\begin{align*}
+3t+7&=2r-5 \\
+\Rightarrow 3t+7&=2(4t-4)-5 \\
+\Rightarrow 3t+7&=8t-13 \\
+\Rightarrow 5t &= 20 \\
+\Rightarrow t&=4.
+\end{align*}
+Nyt $r=4t-4=4\cdot4-4=16-4=12$. 
+Löydettiin siis reaaliluvut $t$ ja $r$, jotka toteuttavat yhtälön.
+Suorat $s_1$ ja $s_2$ leikkaavat toisensa. 
+Leikkauspiste
+\begin{align*}
+\pv{OP}
+&=\pv{OA}+4\vv \\
+&= (7\vi+2\vj)+4(-3\vi-4\vj) \\
+&= 5\vi-14\vj.
+\end{align*}
+Suorat laikkaavat siis pisteessä $P=(5,-14)$.
+
+
+\begin{teht}
+\begin{aakkosta*}
+\item 
+\item 
+\end{aakkosta*}
+\end{teht}
+
+
 
 - - - - - - - - - -
 
@@ -646,27 +726,17 @@ Kahden suoran välistä kulmaa voidaan tutkia suorien suuntavektoreiden avulla. Tä
 
 \subsection{Suora avaruudessa}
 
-Kolmiulotteisessa koordinaatistossa suoralle ei voida laskea kulmakerrointa samaan tapaan kuin kaksiulotteisessa koordinaatistossa. Tästä syystä avaruuden suoria tutkitaan ainoastaan vektorien avulla.
+Kolmiulotteisessa koordinaatistossa tutkitaan kolmiulotteisten vektorien avulla.
 
 \maaritelma[Avaruussuoran vektoriyhtälö]{$\pv{OP}=x\vi+y\vj+z\vk=\pv{OA}+t\vv$}
 
-\maaritelma[Avaruussuoran parametriesitys]{$\begin{cases} 
-x=x_0+t\vv_x \\
-y=y_0+t\vv_y \\ 
-z=z_0+t\vv_z
-\end{cases}$}
 
-\maaritelma[Avaruussuoran koordinaattiesitys]{$$\frac{x-x_0}{\vv_x}=\frac{y-y_0}{\vv_y}=\frac{z-z_0}{\vv_z}, \vv_x, \vv_y, \vv_z \neq 0.$$}
 
 \subsection{Taso}
 
 \maaritelma[Tason vektoriyhtälö]{Jos piste $A$ on tasossa ja jos $\pv{AB}$ ja $\pv{AC}$ ovat erisuuntaiset tason suuntavektorit, niin tason vektoriyhtälö on $\pv{OP}=\pv{OA}+s\pv{AB}+t\pv{AC}$.}
 
-\maaritelma[Tason parametrimuotoinen yhtälö]{}
-
 \maaritelma[Tason normaalimuotoinen yhtälö]{$ax+by+cz+d=0$.}
-
-\maaritelma[Tason koordinaattiyhtälö]{$a(x-x_0)+b(y-y_0)+c(z-z_0)=0$.}
 
 \maaritelma[Tason normaalivektori]{Vektoria, joka on kohtisuorassa kaikkia tason vektoreita vasten, sanotaan tason normaalivektoriksi.}
 
