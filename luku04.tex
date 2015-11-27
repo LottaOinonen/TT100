@@ -5,77 +5,121 @@
 
 \subsection{Vektorit ja $xyz$-koordinaatisto}
 
-$xy$-koordinaatistossa liikutaan tasossa. Kun tähän koordinaatistoon lisätään yksi akseli lisää, saadaan $xyz$-koordinaatisto. $xyz$-koordinaatistossa pystyy liikkumaan myös syvyyssuunnassa. $xyz$-koordinaatisto vastaa siis reaalimaailmaa, jossa voi liikkua kolmeen suuntaan: eteen/taakse, oikealle/vasemmalle ja ylös/alas. $xyz$-koordinaatistosysteemistä puhutaan kolmiulotteisena avaruutena tai lyhyemmin avaruutena.
+Tutustuimme kappaleessa \ref{section:vektorit ja xy-koordinaatisto} $xy$-koordinaatistoon, jossa liikutaan tasossa. Kun tähän koordinaatistoon lisätään yksi akseli lisää, saadaan $xyz$-koordinaatisto. Kolmatta akslia sanotaan $z$-akseliksi, ja se on kohtisuorassa sekä $x$- että $y$-akselia vasten. $xyz$-koordinaatistossa pystyy liikkumaan myös syvyyssuunnassa. Tällainen kolmiulotteinen koordinaatisto vastaa reaalimaailmaa, jossa voi liikkua kolmeen eri suuntaan: eteen/taakse, oikealle/vasemmalle ja ylös/alas. $xyz$-koor\-di\-naa\-tis\-to\-sys\-tee\-mis\-tä puhutaan kolmiulotteisena avaruutena tai lyhyemmin avaruutena.
 	
 	\begin{center}
 	\begin{figurehere}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm, z=0.35cm]
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
 
 		%x-akseli:
-		\draw[->,color=gray] (-3.5,0) -- (3.5,0);
+		\draw[->,color=gray] (0,0) -- (9.8,0);
 		%tiksut ja viivat
-		\foreach \x in {-3,-2,-1,1,2,3}
-		{
-		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
-		\draw[shift={(\x,0,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		\node [below] at (5.5,0,0) {\textcolor{darkgray}{$x$}};
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+		{\draw[dashed, color= lightgray] (\x,-4.5)--(\x,9.5);
+		%\draw[shift={(3*\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
 		}
-		
-		%y-akseli
-		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
-		%tiksut ja viivat
-		\foreach \y in {-3,-2,-1,1,2,3}
-		{
-		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
-		\draw[shift={(0,\y,0)},color=black] (1pt,0pt) -- (-1pt,0pt);
-		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		\node [below] at (9.5,0) {$x$};
+		\foreach \x in {1,2,3}
+		{%\draw[dashed, color= lightgray] (\x,-6.5)--(\x,9.5);
+		\draw[shift={(3*\x,0)},color=black, thick] (0pt,1.5pt) -- (0pt,-1.5pt);
+		%\node [below] at (9.5,0) {\textcolor{darkgray}{$x$}};
 		}
-		
-		%z-akseli
-		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
-		%tiksut ja viivat
-		\foreach \z in {-5,-4,-3,-2,-1,1,2,3,4,5}
-		{
-		\draw[dashed, color= lightgray] (-3.5,\z)--(3.5, \z);
-		\draw[shift={(0,0,\z)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		\node [below] at (0,0,5.5) {\textcolor{darkgray}{$z$}};
-		}
-		
-		% Varsinainen kuva
-		% Komponenttivektorit		
-		%\draw[->] (0,0)--(1,0);
-		%\node[below] at (0.4, -0.2) {$\vi$};
 
-		%\draw[->] (0,0)--(0,1);
-		%\node[left] at (-0.2, 0.4) {$\vj$};
-		
-		% Vektorit
-		\draw[->, color=blue] (-3,-2)--(-1,2);
-		\node[above] at (-2.5, 0.2) {\textcolor{blue}{$\vv$}};
-		
-		\draw[->, color=gray] (-3,-2)--(-1,-2);
-		\node[below] at (-2, -2.2) {\textcolor{darkgray}{$2\vi$}};
-		
-		\draw[->, color=gray] (-1,-2)--(-1,2);
-		\node[right] at (-1, -0.5) {\textcolor{darkgray}{$4\vj$}};
+		%y-akseli
+		\draw[->,color=gray] (0,0) -- (0,9.8);
+
+		%tiksut ja viivat
+		\foreach \y in {-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(9.5,\y);
+		%\draw[shift={(0,3*\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		}
+		\node [left] at (0,9.5) {$y$};
+		\foreach \y in {1,2,3}
+		{
+		%\draw[dashed, color=lightgray] (-9.5,\y)--(9.5,\y);
+		\draw[shift={(0,3*\y)},color=black, thick] (1.5pt,0pt) -- (-1.5pt,0pt);
+		%\node [left] at (0,9.5) {\textcolor{darkgray}{$y$}};
+		}
+		\draw[->, color=gray] (0,0)--(-4.8,-4.8);
+		\foreach \y in {1,...,4}
+		{\begin{scope}[shift={(-\y,-\y)}]
+    	\draw (-45:1.5 pt)--(135:1.5 pt);
+  		\end{scope}
+		}
+		\node [below] at (-4,-4.5) {$z$};
 
 	\end{tikzpicture}
-	\caption{Vektori $\vv = 2\vi + 4\vj$.}
-	%\label{kuva:}
+	\caption{Kolmiulotteinen $xyz$-koordinaatisto.}
+	\label{kuva:kolmiulotteinenKoordinaatisto}
+	\end{figurehere}
+	\end{center}		
+
+
+Avaruuden pisteen $P$ merkitsemiseen tarvitaan kolme koordinaattia, yksi kullekin akselille. Avaruuden pisteet ovat siis muotoa $P=(x,y,z)$, missä ensimmäiset kaksi lukua ilmoittavat pisteen paikan $xy$-tasossa ja kolmas koordinaatti ilmoittaa $z$-akselin suuntaisten askelten lukumäärän. Esimerkiksi kuvan \ref{kuva:piste avaruudessa} pisteen $S$ päästään menemällä $xy$-tason pisteeseen $(1,0)$ ja siirrymällä siitä $4$ askelta $z$-akselin suuntaan. Näin ollen pistettä $S$ merkitään $S=(1,0,4)$.   
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (0,0) -- (9.8,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+		{\draw[dashed, color= lightgray] (\x,-4.5)--(\x,9.5);
+		%\draw[shift={(3*\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		}
+		\node [below] at (9.5,0) {$x$};
+		\foreach \x in {1,2,3}
+		{%\draw[dashed, color= lightgray] (\x,-6.5)--(\x,9.5);
+		\draw[shift={(3*\x,0)},color=black, thick] (0pt,1.5pt) -- (0pt,-1.5pt);
+		%\node [below] at (9.5,0) {\textcolor{darkgray}{$x$}};
+		}
+
+		%y-akseli
+		\draw[->,color=gray] (0,0) -- (0,9.8);
+
+		%tiksut ja viivat
+		\foreach \y in {-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(9.5,\y);
+		%\draw[shift={(0,3*\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		}
+		\node [left] at (0,9.5) {$y$};
+		\foreach \y in {1,2,3}
+		{
+		%\draw[dashed, color=lightgray] (-9.5,\y)--(9.5,\y);
+		\draw[shift={(0,3*\y)},color=black, thick] (1.5pt,0pt) -- (-1.5pt,0pt);
+		%\node [left] at (0,9.5) {\textcolor{darkgray}{$y$}};
+		}
+		\draw[->, color=gray] (0,0)--(-4.8,-4.8);
+		\foreach \y in {1,...,4}
+		{\begin{scope}[shift={(-\y,-\y)}]
+    	\draw (-45:1.5 pt)--(135:1.5 pt);
+  		\end{scope}
+		}
+		\node [below] at (-4,-4.5) {$z$};
+		
+		% Varsinainen kuva
+		
+		\draw[fill, color = black] (-1,-4) circle [radius = 1.5pt];
+		\node[right] at (-0.5,-4) {$S=(1,0,4)$};
+		
+		\draw[dashed, color=darkgray] (3,0)--(-1,-4);
+		
+		\draw[dashed, color=darkgray] (-4,-4)--(-1,-4);
+
+	\end{tikzpicture}
+	\caption{Avaruuden piste $S=(1,0,4)$}
+	\label{kuva:piste avaruudessa}
 	\end{figurehere}
 	\end{center}
 
-
-Avaruuden pistettä $P$ merkitään kolmen koordinaatin avulla: $P=(x,y,z)$, missä ensimmäiset kaksi lukua ilmoittavat pisteen paikan $xy$-tasossa ja kolmas koordinaatti ilmoittaa $z$-akselin suuntaisten askelten lukumäärän.
-
-Kuvan \ref{} pisteen $S$ päästään menemällä $xy$-tason pisteeseen $(4,3)$ ja siirrymällä siitä $5$ askelta $z$-akselin suuntaan. Näin ollen pistettä $S$ merkitään $S=(4,3,5)$.   
-
-KUVA
-
-Kolmiulotteisessa koordinaatistossa tarvitaan vektorien $\vi$ ja $\vj$ lisäksi myös $z$-akselin suuntainen yksikkövektori. Merkitään tätä vektoria kirjaimella $\vk$. Nyt kaikkia avaruuden vektorit voidaan ilmaista summana 
+Kolmiulotteisessa koordinaatistossa tarvitaan vektorien $\vi$ ja $\vj$ lisäksi myös $z$-akselin suuntainen yksikkövektori. Merkitään tätä vektoria kirjaimella $\vk$. Nyt kaikki avaruuden vektorit voidaan ilmaista summana 
 $$
-\vv=x\vi+y\vj+z\vj.
+\vv=x\vi+y\vj+z\vj,
 $$
+missä kertoimet $x, y$ ja $z$ kertovat $x$-, $y$- ja $z$-akselin suuntaisten askelten lukumäärän. 
 
 \maaritelma[Samat vektorit avaruudessa]{Vektorit ovat samat, jos ne voidaan ilmaista samalla tavalla vektorien $\vi$, $\vj$ ja $\vk$ avulla.}
 

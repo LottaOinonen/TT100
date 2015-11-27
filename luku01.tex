@@ -1,7 +1,7 @@
 \section{Vektori}
 
 
-\subsection{Vektorit ja $xy$-koordinaatisto}
+\subsection{Vektorit ja $xy$-koordinaatisto}\label{section:vektorit ja xy-koordinaatisto}
 
 Kuvassa \ref{kuva:koordinaatiston neljännekset} on koordinaatisto, johon on piirretty $x$- ja $y$-akselit. Koordinaattiakselit jakavat tason neljään osaan. Osat nimetään yleensä järjestysnumeroilla I, II, III ja IV kuvan \ref{kuva:koordinaatiston neljännekset} mukaisesti. Koordinaattiakselien leikkauskohtaa kutsutaan \textbf{origoksi}. Origoa merkitään yleensä kirjaimella $O$. 
 
@@ -48,68 +48,7 @@ Kuvassa \ref{kuva:koordinaatiston neljännekset} on koordinaatisto, johon on piir
 	\end{figurehere}
 	\end{center}	
 	
-	\begin{center}
-	\begin{figurehere}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
 
-		%x-akseli:
-		\draw[->,color=gray] (0,0) -- (9.8,0);
-		%tiksut ja viivat
-		\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
-		{\draw[dashed, color= lightgray] (\x,-4.5)--(\x,9.5);
-		%\draw[shift={(3*\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		}
-		\node [below] at (9.5,0) {$x$};
-		\foreach \x in {1,2,3}
-		{%\draw[dashed, color= lightgray] (\x,-6.5)--(\x,9.5);
-		\draw[shift={(3*\x,0)},color=black, thick] (0pt,1.5pt) -- (0pt,-1.5pt);
-		%\node [below] at (9.5,0) {\textcolor{darkgray}{$x$}};
-		}
-
-		%y-akseli
-		\draw[->,color=gray] (0,0) -- (0,9.8);
-
-		%tiksut ja viivat
-		\foreach \y in {-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
-		{
-		\draw[dashed, color=lightgray] (-5.5,\y)--(9.5,\y);
-		%\draw[shift={(0,3*\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-		}
-		\node [left] at (0,9.5) {$y$};
-		\foreach \y in {1,2,3}
-		{
-		%\draw[dashed, color=lightgray] (-9.5,\y)--(9.5,\y);
-		\draw[shift={(0,3*\y)},color=black, thick] (1.5pt,0pt) -- (-1.5pt,0pt);
-		%\node [left] at (0,9.5) {\textcolor{darkgray}{$y$}};
-		}
-		\draw[->, color=gray] (0,0)--(-4.8,-4.8);
-		\foreach \y in {1,...,4}
-		{\begin{scope}[shift={(-\y,-\y)}]
-    	\draw (-45:1.5 pt)--(135:1.5 pt);
-  		\end{scope}
-		}
-		\node [below] at (-4,-4.5) {$z$};
-		% Varsinainen kuva
-
-%		\node[below left] at (3,2) {\huge{$I$}};
-%
-%		\node[below right] at (-3,2) {\huge{$II$}};
-%
-%		\node[above right] at (-3,-2) {\huge{$III$}};
-%
-%		\node[above left] at (3, -2) {\huge{$IV$}};
-%		
-%		\draw[fill, color = black] (0,0) circle [radius = 1.5pt];
-%		\node[above right] at (0,0) {$O$};
-
-	\end{tikzpicture}
-	\caption{Kolmiulotteinen koordinaatisto.}
-	\label{kuva:kolmiulotteinenKoordinaatisto}
-	\end{figurehere}
-	\end{center}	
-	
-
-		
 \begin{teht} Tutki alla olevaa kuvaa \ref{kuva:kolme pistetta koordinaatistossa}. 
 	
 	\begin{center}

@@ -242,7 +242,7 @@ Jos pisteet $A$ ja $B$ ovat suoralla $s$, suoran suuntavektoriksi voidaan valita
 \end{aakkosta*}
 \end{teht}
 
-Suoralla olevia muita pisteitä voidaan tutkia yhdensuuntaisuuden avulla. Esimerkiksi kuvan \ref{kuva:onko piste suoralla 1} piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, koska vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa.
+Suoralla olevia muita pisteitä voidaan tutkia yhdensuuntaisuuden avulla. Esimerkiksi kuvan \ref{kuva:onko piste suoralla 1} piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, koska vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa. Toisin sanoen vektori $\pv{AP}$ on suuntavektorin $\pv{AB}$ monikerta, eli $\pv{AP}=t\pv{AB}$ jollakin reaaliluvulla $t$.
 
 	\begin{center}
 	\begin{figurehere}
@@ -323,7 +323,7 @@ Suoralla olevia muita pisteitä voidaan tutkia yhdensuuntaisuuden avulla. Esimerk
 	\end{center}
  
 
-\maaritelma[Piste suoralla]{Piste $P$ on pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos ja vain jos vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa eli $\pv{AP}=t\pv{AB}$ jollakin reaaliluvulla t.}
+Mielivaltainen piste $P$ on siis joidenkin pisteiden $A$ ja $B$ kautta kulkevalla suoralla $s$, jos ja vain jos vektori $\pv{AB}$ on yhdensuuntainen vektorin $\pv{AP}$ kanssa, eli yhtälö $\pv{AP}=t\pv{AB}$ pätee jollakin reaaliluvulla t.
 
 \begin{teht} Tutki pisteitä $A=(-2,-1)$ ja $B=(1,3)$.
 \begin{aakkosta*}
@@ -335,19 +335,19 @@ Suoralla olevia muita pisteitä voidaan tutkia yhdensuuntaisuuden avulla. Esimerk
 \end{aakkosta*}
 \end{teht}
 
-Tarkastellaan suoraa $s$, joka kulkee pisteiden $A=(-3,1)$ ja $B=(2,6)$ kautta. Tutkitaan, onko piste $P=(-1,3)$ kyseisellä suoralla. Muodostetaan tätä varten vektorit $\pv{AB}$ ja $\pv{AP}$. Vektori 
-$$
+Tarkastellaan sitten suoraa $s$, joka kulkee pisteiden $A=(-3,1)$ ja $B=(2,6)$ kautta. Tutkitaan, onko piste $P=(-1,3)$ kyseisellä suoralla. Muodostetaan tätä varten vektorit $\pv{AB}$ ja $\pv{AP}$. Vektori 
+\begin{align*}
 \pv{AB}
-=(2-(-3))\vi+(6-1)\vj
-=5\vi+5\vj
-$$ 
+&=(2-(-3))\vi+(6-1)\vj \\
+&=5\vi+5\vj
+\end{align*} 
 ja vektori 
-$$
+\begin{align*}
 \pv{AP}
-=((-1)-(-3))\vi+(3-1)\vj
-=2\vi+2\vj.
-$$ 
-Tutkitaan yhtälöä $\pv{AP}=t\pv{AB}$. Sijoitetaan vektorit yhtälöön, jolloin saadaan 
+&=((-1)-(-3))\vi+(3-1)\vj \\
+&=2\vi+2\vj.
+\end{align*}  
+Sijoitetaan nämä vektorit yhtälöön $\pv{AP}=t\pv{AB}$, jolloin saadaan 
 $$
 2\vi+2\vj=t(5\vi+5\vj)
 $$
@@ -357,7 +357,7 @@ $$
 $$
 Huomataan, että yhtälö on tosi silloin, kun $2=5t$, eli kun $t=2/5$. Vektorit $\pv{AB}$ ja $\pv{AP}$ ovat siis yhdensuuntaiset. Näin ollen piste $P$ on suoralla $s$.
 
-Tarkastellaan edelleen samaa suoraa $s$. Tutkitaan, onko piste $Q=(2,4)$ kyseisellä suoralla. Huomataan, että vektori $\pv{AB}=5\vi+5\vj$ ja vektori $\pv{AQ}=5\vi+3\vj$. Sijoitetaan nämä yhtälöön $\pv{AP}=t\pv{AB}$, jolloin saadaan 
+Tarkastellaan edelleen samaa suoraa $s$. Tutkitaan, onko piste $Q=(2,4)$ kyseisellä suoralla. Huomataan, että vektori $$\pv{AB}=5\vi+5\vj$$ ja vektori $$\pv{AQ}=5\vi+3\vj.$$ Sijoitetaan nämä vektorit yhtälöön $\pv{AP}=t\pv{AB}$, jolloin saadaan 
 $$
 5\vi+3\vj=t(5\vi+5\vj)
 $$
@@ -365,7 +365,7 @@ ja edelleen
 $$
 5\vi+3\vj=5t\vi+5t\vj.
 $$
-Yhtälö on tosi silloin, kun $5\vi=5t\vi$ ja $3\vj=5t\vj$. Ensimmäisen yhtälön perusteella $t=1$, mutta tämä ei totetuta toista yhtälöä. Yhtälö $5\vi+3\vj=5t\vi+5t\vj$ ei siis toteudu millään reaaliluvulla $t$, joten vektorit $\pv{AB}$ ja $\pv{AQ}$ eivät ole yhdensuuntaiset. Näin ollen piste $Q$ ei ole suoralla $s$. 
+Yhtälö on tosi silloin, kun vektorin $\vi$ ja $\vj$ kertoimet ovat samat, eli kun $5=5t$ ja $3=5t$. Ensimmäisen yhtälön perusteella $t=1$, mutta tämä ei totetuta toista yhtälöä. Yhtälö $5\vi+3\vj=5t\vi+5t\vj$ ei siis toteudu millään reaaliluvulla $t$. Näin ollen vektorit $\pv{AB}$ ja $\pv{AQ}$ eivät ole yhdensuuntaiset, eikä piste $Q$ ole suoralla $s$. 
 
 \begin{teht} Tutki pisteiden $A=()$ ja $B=()$ määrittämää suoraa $s$.
 \begin{aakkosta*}
@@ -426,9 +426,11 @@ Suoralla olevia muita pisteitä voidaan tutkia myös paikkavektorien ja vektorien 
 	\end{center}
 	
 
-\maaritelma[Suoran vektoriyhtälö]{Piste $P$ on pisteen $A$ ja suuntavektorin $\vv$ määrittämällä suoralla $s$, jos ja vain jos $\pv{OP}=\pv{OA}+t\vv$ jollakin reaaliluvulla $t$. Yhtälöä $\pv{OP}=\pv{OA}+t\vv$ sanotaan suoran vektoriyhtälöksi.}
+%\maaritelma[Suoran vektoriyhtälö]{Piste $P$ on pisteen $A$ ja suuntavektorin $\vv$ määrittämällä suoralla $s$, jos ja vain jos $\pv{OP}=\pv{OA}+t\vv$ jollakin reaaliluvulla $t$. Yhtälöä $\pv{OP}=\pv{OA}+t\vv$ sanotaan suoran vektoriyhtälöksi.}
 
-Suoran vektoriyhtälö antaa suoran kaikkien pisteiden paikkavektorit, kun kerroin $t$ käy läpi kaikki reaaliluvut.
+\maaritelma[Suoran vektoriyhtälö]{Oletetaan, että piste $A$ on suoralla $s$, jonka suuntavektori on vektori $\vv$. Yhtälöä $\pv{OP}=\pv{OA}+t\vv$, missä $t$ on jokin reaaliluku, sanotaan suoran $s$ vektoriyhtälöksi.}
+
+Suoran vektoriyhtälö antaa kaikkien suoran pisteiden $P$ paikkavektorit, kun kerroin $t$ käy läpi kaikki reaaliluvut.
 
 \begin{teht} Tutki pisteen $A=(-1,6)$ ja suuntavektorin $\vv=2\vi-3\vj$ määrittämää suoraa $s$.
 \begin{aakkosta*}
@@ -504,12 +506,12 @@ $$
 \pv{OP}
 =\pv{OA}+t\vv
 $$ 
-ja suoran $s_2$ vektoriyhtälön perusteella 
+jollakin reaaliluvulla $t$, ja suoran $s_2$ vektoriyhtälön perusteella 
 $$
 \pv{OP}
 =\pv{OB}+r\vw
 $$ 
-joillakin reaaliluvuilla $t$ ja $r$. Yhdistämällä nämä kaksi tietoa saadaan yhtälö
+jollakin reaaliluvulla $r$. Yhdistämällä nämä kaksi tietoa saadaan yhtälö
 $$
 \pv{OA}+t\vv=\pv{OB}+r\vw.
 $$
@@ -571,7 +573,7 @@ Koska suorat $s_1$ ja $s_2$ leikkaavat toisensa, on olemassa reaaliluvut $t$ ja 
 	\end{center}
 
 
-Tarkastellaan pisteen $A=(7,2)$ ja suuntavektorin $\vv=-3\vi-4\vj$ määrittämää suoraa $s_1$ ja pisteen $B=(-5,6)$ ja suuntavektorin $\vw=2\vi+\vj$ määrittämää suoraa $s_2$. Tutkitaan, leikkaavatko suorat toisensa. Merkitään suorien mahdollista leikkauspistettä kirjaimella $P$. Jos suorat leikkaavat toisensa, niin on olemassa reaaliluvut $t$ ja $r$, jotka toteutavat yhtälön
+Tarkastellaan asiaa vielä esimerkin avulla. Tutkitaan pisteen $A=(7,2)$ ja suuntavektorin $\vv=-3\vi-4\vj$ määrittämää suoraa $s_1$, ja pisteen $B=(-5,6)$ ja suuntavektorin $\vw=2\vi+\vj$ määrittämää suoraa $s_2$. Tutkitaan, leikkaavatko suorat toisensa. Merkitään suorien mahdollista leikkauspistettä kirjaimella $P$. Jos suorat leikkaavat toisensa, niin on olemassa sellaiset reaaliluvut $t$ ja $r$, jotka totteutavat yhtälön
 \begin{align*}
 \pv{OP}
 &=\pv{OA}+t\vv \\
@@ -581,7 +583,7 @@ Sijoitetaan pisteet ja suuntavektorit yhtälöön
 $$
 \pv{OA}+t\vv=\pv{OB}+r\vw,
 $$
-jolloin saadaan yhtälö
+jolloin saadaan
 $$
 (7\vi+2\vj)+t(-3\vi-4\vj) 
 =(-5\vi+6\vj)+r(2\vi+\vj). 
@@ -589,7 +591,7 @@ $$
 Yhtälön vasen puoli sievenee muotoon 
 \begin{align*}
 (7\vi+2\vj)+t(-3\vi-4\vj) 
-= (3t+7)\vi+(4t+2)\vj
+= (3t+7)\vi+(4t+2)\vj,
 \end{align*}
 ja oikea puoli muotoon
 \begin{align*}
@@ -600,13 +602,15 @@ Jotta yhtälön vasen ja oikea puoli olisivat samat, pitää vektorien $\vi$ ja $\vj
 \begin{align*}
 \begin{cases}
 3t+7=2r-5 \\
-4t+2=r+6
+4t+2=r+6.
 \end{cases}
 \end{align*}
 Ratkaistaan yhtälöryhmän alempi yhtälö muuttujan $r$ suhteen, jolloin saadaan
-$$
-r=4t-4.
-$$
+\begin{align*}
+r
+&=4t+2-6 \\
+&=4t-4.
+\end{align*}
 Sijoitetaan tämä yhtälöryhmän ensimmäiseen yhtälöön, jolloin saadaan
 \begin{align*}
 3t+7&=2r-5 \\
@@ -616,36 +620,25 @@ Sijoitetaan tämä yhtälöryhmän ensimmäiseen yhtälöön, jolloin saadaan
 \Rightarrow t&=4.
 \end{align*}
 Nyt $r=4t-4=4\cdot4-4=16-4=12$. 
-Löydettiin siis reaaliluvut $t$ ja $r$, jotka toteuttavat yhtälön.
-Suorat $s_1$ ja $s_2$ leikkaavat toisensa. 
-Leikkauspiste
+Löydettiin siis reaaliluvut $t=4$ ja $r=12$, jotka toteuttavat yhtälön.
+Näin ollen suorat $s_1$ ja $s_2$ leikkaavat toisensa, ja leikkauspisteen paikkavektori on
 \begin{align*}
 \pv{OP}
 &=\pv{OA}+4\vv \\
 &= (7\vi+2\vj)+4(-3\vi-4\vj) \\
 &= 5\vi-14\vj.
 \end{align*}
-Suorat laikkaavat siis pisteessä $P=(5,-14)$.
+Suorat $s_1$ ja $s_2$ leikkaavat siis pisteessä $P=(5,-14)$.
 
 
-\begin{teht}
+\begin{teht} ...
 \begin{aakkosta*}
-\item 
-\item 
+\item Onko piste $P=()$ suorien $s_1$ ja $s_2$ leikkauspiste?
+\item Missä pisteessä suorat leikkaavat toisensa? 
 \end{aakkosta*}
 \end{teht}
 
 
-
-- - - - - - - - - -
-
-Tutkitaan suoraa $y=-2x+1$. Suora voidaan ilmoittaa muodossa $-2x-y+1=0$. Tällaista muotoa kutsutaan \textbf{suoran normaalimuotoiseksi yhtälöksi}. Normaalimuotoinen yhtälö on aina muotoa $ax+by+c=0$. 
-
-Vektoria $\vn$, joka on kohtisuorassa suoraa $s$ vasten, sanotaan suoran $s$ \textbf{normaalivektoriksi}. 
-
-Suoran normaalivektorit nähdään suoraan sen normaalimuotoisesta yhtälöstä. Suoran $ax+by+c=0$ normaalivektorit ovat vektorin $a\vi+b\vj$ monikertoja eli muotoa $t(a\vi+b\vj)$ jollakin reaaliluvulla $t$.
-
-- - - - - - - - - -
 
 Kappaleessa \ref{subsection:Vektorien välinen kulma ja pistetulo} opittiin määrittämään vektorien välisiä kulmia. Teoreeman \ref{teoreema:vektorien välinen kulma} mukaan vektorien $\va$ ja $\vb$ välinen kulma saadaan kaavasta 
 $$
@@ -722,13 +715,55 @@ Kahden suoran välistä kulmaa voidaan tutkia suorien suuntavektoreiden avulla. Tä
 	\end{figurehere}
 	\end{center}
 
+Joskus on hyödyllistä tutkia ainoastaan suoraa vasten kohtisuorassa olevia vektoreita. Tarkastellaan tätä varten suoraa $y=-2x+1$. Kyseinen suora voidaan ilmoittaa myös muodossa $-2x-y+1=0$. Tällaista muotoa kutsutaan \textbf{suoran normaalimuotoiseksi yhtälöksi}. Normaalimuotoinen yhtälö on aina muotoa $ax+by+c=0$ joillakin kertoimilla $a, b$ ja $c$. Vektoria $\vn$, joka on kohtisuorassa suoraa $s$ vasten, sanotaan suoran $s$ \textbf{normaalivektoriksi}. Suoran normaalivektorit nähdään suoraan sen normaalimuotoisesta yhtälöstä. Suoran $ax+by+c=0$ normaalivektorit ovat vektorin $a\vi+b\vj$ monikertoja, eli muotoa $t(a\vi+b\vj)$ jollakin reaaliluvulla $t$. Suoran $-2x-y+1=0$ eräs normaalivektori on siis $\vn=-2\vi-\vj$.
+
+\begin{teht} Tutki suoraa $ax+by+c=0$. 
+\begin{aakkosta*}
+\item Etsi jokin suoran $s$ suuntavektori.
+\item Määritä suoran normaalimuodosta sille jokin normaalivektori.
+\item Osoita vektorien pistetulon avulla, että a- ja b-kohtien vektorit ovat toisiaan vasten kohtisuorassa.
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} ...
+\begin{aakkosta*}
+\item Ilmoita suora $s$ normaalimuodossa.
+\item Määritä kolme suoraa $s$ vasten kohtisuorassa olevaa vektoria. 
+\end{aakkosta*}
+\end{teht}
+
+
+
+
+
 
 
 \subsection{Suora avaruudessa}
 
-Kolmiulotteisessa koordinaatistossa tutkitaan kolmiulotteisten vektorien avulla.
+Kolmiulotteisessa koordinaatistossa suoran tntemiseen riittää edelleen joko kaksi suoran pistettä tai yksi piste ja sen suuntavektori. Pisteet ja vektori ovat nyt kuitenkin kolmiulotteisen avaruuden pisteitä ja vektoreita, joten niillä on kolme komponenttia. 
 
-\maaritelma[Avaruussuoran vektoriyhtälö]{$\pv{OP}=x\vi+y\vj+z\vk=\pv{OA}+t\vv$}
+Samat asiat pätee kuin kaksiulotteisessa avaruudessa.
+
+Huomaa, että avaruuden suorien leikkauspisteen selvittämiseksi tarvii osata ratkaisuta yhtälöryhmiä.
+
+Haastavampia tehtäviä.
+
+\begin{teht} ...
+\begin{aakkosta*}
+\item 
+\item 
+\end{aakkosta*}
+\end{teht}
+
+\begin{teht} ...
+\begin{aakkosta*}
+\item 
+\item 
+\end{aakkosta*}
+\end{teht}
+
+
 
 
 
@@ -740,6 +775,15 @@ Kolmiulotteisessa koordinaatistossa tutkitaan kolmiulotteisten vektorien avulla.
 
 \maaritelma[Tason normaalivektori]{Vektoria, joka on kohtisuorassa kaikkia tason vektoreita vasten, sanotaan tason normaalivektoriksi.}
 
+
+
+
+
 \subsection{Suoran ja tason leikkauspiste}
 
+Suoralla ja tasolla voi olla joko nolla, yksi tai ääretön määrä leikkauspisteitä. Jos suora on tasossa, kaikki suoran pisteet, joita on ääretön määrä, ovat leikkauspisteitä. Jos suora ei ole tasossa, mutta on sen kanssa yhdensuuntainen, leikkauspisteitä ei ole. Muissa tapauksissa suoralla ja tasolla on täsmälleen yksi leikkauspiste.
+
+
 \subsection{Suoran ja tason välinen kulma}
+
+Suoran ja tason välisen kulman selvittämiseksi suora projisoidaan ensin tasoon. Nyt haluttu kulma lasketaan suoran ja projektiosuoran suuntavektoreiden avulla.
