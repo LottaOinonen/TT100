@@ -25,7 +25,7 @@
 %\addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{1.0cm}
 \addtolength{\marginparsep}{0.2cm}
-\setlength{\parskip}{0.2cm}
+\setlength{\parskip}{0cm}
 
 
 %\usepackage{geometry}
@@ -79,7 +79,7 @@
 %\swapnumbers
 
 \theoremstyle{plain}
-\newtheorem{lause}{Lause}[subsection]
+\newtheorem{lause}{Lause}[section]
 \newtheorem{lemma}[lause]{Lemma}
 \newtheorem{prop}[lause]{Propositio}
 \newtheorem{kor}[lause]{Korollaari}
@@ -149,6 +149,7 @@
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\pv}{\overline}
 \newcommand{\tp}[1]{#1^{\top}}
+\newcommand{\nv}{\bar{0}}
 
 %t�ydennetyt matriisit
 \makeatletter
@@ -283,11 +284,12 @@
 {\end{enumerate}}
 
 \newenvironment{aakkosta*}{
-
+  \phantom{T}\hspace{2mm}
   \begin{enumerate}
   \setlength{\itemsep}{0cm}
   \setlength{\topsep}{0cm}
   \setlength{\partopsep}{0mm}
+  \setlength{\parsep}{2mm}
   \renewcommand{\theenumi}{(\alph{enumi})}
   \renewcommand{\labelenumi}{\theenumi}
 }
