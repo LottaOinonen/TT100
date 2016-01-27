@@ -2,7 +2,7 @@
 
 \subsection{Summa}
 
-Edellisessä kappaleessa opittiin muodostamaan vektoreita $x$- ja $y$-akselien suuntaisten vektorien $\vi$ ja $\vj$ avulla. Esimerkiksi kuvan \ref{kuva:vektorien yhteenlasku intro} vektori $\vv$ on vektorien $2\vi$ ja $4\vj$ summa.
+Edellisessä kappaleessa opittiin ilmoittamaan vektoreita vektorien $\vi$ ja $\vj$ avulla. Esimerkiksi kuvan \ref{kuva:vektorien yhteenlasku intro} vektori $\vv$ on vektorien $2\vi$ ja $4\vj$ summa.
 
 	\begin{center}
 	\begin{figurehere}
@@ -13,22 +13,20 @@ Edellisessä kappaleessa opittiin muodostamaan vektoreita $x$- ja $y$-akselien su
 		%tiksut ja viivat
 		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
 		{
-		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[dashed, color= lightgray] (\x,-2.5)--(\x,3.5);
 		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
 		}
-		
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
 		%y-akseli
-		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		\draw[->,color=gray] (0,-2.5) -- (0,3.5);
 
 		%tiksut ja viivat
-		\foreach \y in {-3,-2,-1,1,2,3}
+		\foreach \y in {-2,-1,1,2,3}
 		{
 		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
 		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
 		}
-
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
 		% Varsinainen kuva
 		% Komponenttivektorit		
 		%\draw[->] (0,0)--(1,0);
@@ -38,14 +36,14 @@ Edellisessä kappaleessa opittiin muodostamaan vektoreita $x$- ja $y$-akselien su
 		%\node[left] at (-0.2, 0.4) {$\vj$};
 		
 		% Vektorit
-		\draw[->, color=blue] (-3,-2)--(-1,2);
-		\node[above] at (-2.5, 0.2) {\textcolor{blue}{$\vv$}};
+		\draw[->, color=blue] (-3,-1)--(-1,3);
+		\node[above] at (-2.5, 1.2) {\textcolor{blue}{$\vv$}};
 		
-		\draw[->, color=gray] (-3,-2)--(-1,-2);
-		\node[below] at (-2, -2.2) {\textcolor{darkgray}{$2\vi$}};
+		\draw[->, color=gray] (-3,-1)--(-1,-1);
+		\node[below] at (-2, -1.2) {\textcolor{darkgray}{$2\vi$}};
 		
-		\draw[->, color=gray] (-1,-2)--(-1,2);
-		\node[right] at (-1, -0.5) {\textcolor{darkgray}{$4\vj$}};
+		\draw[->, color=gray] (-1,-1)--(-1,3);
+		\node[right] at (-1, 0.5) {\textcolor{darkgray}{$4\vj$}};
 
 	\end{tikzpicture}
 	\caption{Vektori $\vv = 2\vi + 4\vj$.}
@@ -59,20 +57,6 @@ Seuraavaksi tutkitaan, miten lasketaan yhteen mitä tahansa vektoreita. Yhteenlas
 
 \maaritelma[Summavektori]{Vektorien  $\vv$ ja $\vw$ summavektori $\vv + \vw$ saadaan laskemalla vektorit komponenteittain yhteen.}
 
-Esimerkiksi kuvan \ref{kuva:summan määritelmä} vektorien $\vv=\vi+2\vj$ ja $\vw=2\vi-3\vj$ summa saadaan laskemalla yhteen komponentit $\vi$ ja $2\vi$ sekä komponentit $2\vj$ ja $-3\vj$. Koska
-$$
-\vi+2\vi=3\vj
-$$
-ja
-$$
-2\vj+(-3\vj)=2\vj-3\vj=-\vj,
-$$
-niin vektorien $\vv$ ja $\vw$ summaksi saadaan
-$$
-\vv+\vw
-= 3\vi-\vj.
-$$ 
-
 	\begin{center}
 	\begin{figurehere}
 	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
@@ -82,65 +66,98 @@ $$
 		%tiksut ja viivat
 		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
 		{
-		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[dashed, color= lightgray] (\x,-2.5)--(\x,3.5);
 		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
 		}
-		
+		\node [below] at (5.5,0) {$x$};
 		%y-akseli
-		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		\draw[->,color=gray] (0,-2.5) -- (0,3.5);
 
 		%tiksut ja viivat
-		\foreach \y in {-3,-2,-1,1,2,3}
+		\foreach \y in {-2,-1,1,2,3}
 		{
 		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
 		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
 		}
-
+		\node [left] at (0,3.5) {$y$};
 		% Varsinainen kuva
 		
 		% Komponenttivektorit
-		\draw[->] (0,0)--(1,0);
-		\node[below] at (0.4, -0.2) {$\vi$};
-
-		\draw[->] (0,0)--(0,1);
-		\node[left] at (-0.2, 0.4) {$\vj$};
+%		\draw[->] (0,0)--(1,0);
+%		\node[below] at (0.4, -0.2) {$\vi$};
+%
+%		\draw[->] (0,0)--(0,1);
+%		\node[left] at (-0.2, 0.4) {$\vj$};
 
 		% Vektorit
+		\draw[->, color=gray] (-1,1)--(-1,3);
+		\draw[->, color=gray] (-2,1)--(-1,1);
 		\draw[->, color=blue] (-2,1)--(-1,3);
 		\node[above left] at (-1.5,1.9) {\textcolor{blue}{$\vv$}};
-
-		\draw[->, color=blue] (1,2)--(3,-1);
-		\node[above right] at (2,0.2) {\textcolor{blue}{$\vw$}};
+		\node[right, color=darkgray] at (-1,1.5) {$2\vj$};
+		\node[below, color=darkgray] at (-1.5,1) {$\vi$};
 		
-		\draw[->, color=red] (-2,-1)--(1,-2);
-		\node[below left] at (-1,-1.3) {\textcolor{red}{$\vv+\vw=3\vi-\vj$}};
+		\draw[->, color=gray] (1,2)--(1,-1);
+		\draw[->, color=gray] (1,-1)--(5,-1);
+		\draw[->, color=blue] (1,2)--(5,-1);
+		\node[above right] at (3,0.4) {\textcolor{blue}{$\vw$}};
+		\node[left, color=darkgray] at (1,0.5) {$-3\vj$};
+		\node[below, color=darkgray] at (3.5,-1) {$4\vi$};
+		
+%		\draw[->, color=red] (-2,-1)--(1,-2);
+%		\node[below left] at (-1,-1.3) {\textcolor{red}{$\vv+\vw$}};
 		
 	\end{tikzpicture}
-	\caption{Vektorien $\vv$ ja $\vw$  summa $\vv+\vw$.}
+	\caption{Vektorien $\vv = \vi + 2\vj$ ja $\vw = 4\vi-3\vj$  summa on $\vv+\vw = 5\vi - \vj$.}
 	\label{kuva:summan määritelmä}
 	\end{figurehere}
 	\end{center}
 
-Vektorien yhteenlaskun määritelmä voidaan ilmaista myös seuraavasti: vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ summavektori on vektori 
-$$
-\vv+\vw=(x_1+x_2)\vi+(y_1+y_2)\vj.
-$$
+Esimerkiksi kuvan \ref{kuva:summan määritelmä} vektorien $\vv=\vi+2\vj$ ja $\vw=4\vi-3\vj$ summa saadaan laskemalla yhteen $x$-akselin suuntaiset komponentit:
+\[\vi + 4\vi = 5\vi\]
+sekä $y$-akselin suuntaiset komponentit:
+\[2\vj+(-3\vj)=2\vj-3\vj=-\vj.\]
+Vektorien $\vv$ ja $\vw$ summaksi saadaan siis
+\[
+\vv + \vw = (\vi + 4\vi) + (2\vj-3\vj) = 5\vi - \vj.
+\]
 
-\begin{teht} Tutki vektoreita $\vv=-3\vi-4\vj$,$\vw=9\vi-5\vj$ ja $\vu=-2\vi+7\vj$.
-\begin{aakkosta*}
-\item Laske summavektori $\vv+\vw$, eli laske vektorit $\vv$ ja $\vw$ komponenteittain yhteen.
-\item Laske summavektori $\vw+\vu$, eli laske vektorit $\vw$ ja $\vu$ komponenteittain yhteen.
-\item Laske summavektori $\vv+\vu$, eli laske vektorit $\vv$ ja $\vu$ komponenteittain yhteen.
-\end{aakkosta*}
+%Koska $x$-akselin suuntaisten komponenttien summa on
+%$$
+%\vi+2\vi=3\vj
+%$$
+%ja $y$-akselin suuntaisten komponenttien summa on
+%$$
+%2\vj+(-3\vj)=2\vj-3\vj=-\vj,
+%$$
+%niin vektorien $\vv$ ja $\vw$ summaksi saadaan
+%$$
+%\vv+\vw
+%= 3\vi-\vj.
+%$$ 
+
+
+%Vektorien yhteenlaskun määritelmä voidaan ilmaista myös seuraavasti: vektorien $\vv=x_1\vi+y_1\vj$ ja $\vw=x_2\vi+y_2\vj$ summavektori on vektori 
+%$$
+%\vv+\vw=(x_1+x_2)\vi+(y_1+y_2)\vj.
+%$$
+
+\begin{teht} Tutki vektoreita $\vv=-3\vi-4\vj$, $\vw=9\vi-5\vj$ ja $\vu=-2\vi+7\vj$. Laske seuraavat summavektorit:
+\begin{center}
+(a) $\vv+\vw$ \hspace{1.5cm} (b) $\vw+\vu$ \hspace{1.5cm} (c) $\vv+\vu$.
+\end{center}
+%\begin{aakkosta*}
+%\item Laske summavektori $\vv+\vw$, eli laske vektorit $\vv$ ja $\vw$ komponenteittain yhteen.
+%\item Laske summavektori $\vw+\vu$, eli laske vektorit $\vw$ ja $\vu$ komponenteittain yhteen.
+%\item Laske summavektori $\vv+\vu$, eli laske vektorit $\vv$ ja $\vu$ komponenteittain yhteen.
+%\end{aakkosta*}
 \end{teht}
 
 \begin{teht} Tutki vektoreita $\vv=2i+2j$ ja $\vw=i+3j$.
 \begin{aakkosta*}
 \item Piirrä vektori $\vv$ koordinaatistoon. 
 \item Piirrä vektori $\vw$ koordinaatistoon siten, että se alkaa vektorin $\vv$ kärkipisteestä.
-\item Laske summavektori $\vv+\vw$, eli laske vektorit $\vv$ ja $\vw$ komponenteittain yhteen.
+\item Laske summavektori $\vv+\vw$.
 \item Piirrä vektori $\vv+\vw$ koordinaatistoon siten, että se alkaa vektorin $\vv$ alkupisteestä. Mitä huomaat?
 \end{aakkosta*}
 \end{teht}
@@ -152,7 +169,7 @@ Tarkastellaan seuraavaa kuvaa \ref{kuva:summavektori}. Kuvassa on vektorit $\va=
 &= (\textcolor{darkgreen}{3+4})\vi+(\textcolor{blue}{5+(-2)})\vj \\
 &= \textcolor{darkgreen}{7}\vi+\textcolor{blue}{3}\vj.
 \end{align*}
-Tämä vektori muodostuu vektorin $\va$ alkupisteestä vektorin $\vb$ kärkipisteeseen. Se on seuraus yhteenlaskun suorittamisesta komponenteittan.Näin ollen vektori $\va+\vb=\vc$. 
+Tämä vektori muodostuu vektorin $\va$ alkupisteestä vektorin $\vb$ kärkipisteeseen. Se on seuraus yhteenlaskun suorittamisesta komponenteittan. Näin ollen vektori $\va+\vb=\vc$. 
 
 	\begin{center}
 	\begin{figurehere}
