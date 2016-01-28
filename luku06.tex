@@ -365,7 +365,7 @@ ja edelleen
 $$
 5\vi+3\vj=5t\vi+5t\vj.
 $$
-Yht‰lˆ on tosi silloin, kun vektorin $\vi$ ja $\vj$ kertoimet ovat samat, eli kun $5=5t$ ja $3=5t$. Ensimm‰isen yht‰lˆn perusteella $t=1$, mutta t‰m‰ ei totetuta toista yht‰lˆ‰. Yht‰lˆ $5\vi+3\vj=5t\vi+5t\vj$ ei siis toteudu mill‰‰n reaaliluvulla $t$. N‰in ollen vektorit $\pv{AB}$ ja $\pv{AQ}$ eiv‰t ole yhdensuuntaiset, eik‰ piste $Q$ ole suoralla $s$. 
+Yht‰lˆ on tosi silloin, kun vektorien $\vi$ ja $\vj$ kertoimet ovat samat, eli kun $5=5t$ ja $3=5t$. Ensimm‰isen yht‰lˆn perusteella $t=1$, mutta t‰m‰ ei totetuta toista yht‰lˆ‰. Yht‰lˆ $5\vi+3\vj=5t\vi+5t\vj$ ei siis toteudu mill‰‰n reaaliluvulla $t$. N‰in ollen vektorit $\pv{AB}$ ja $\pv{AQ}$ eiv‰t ole yhdensuuntaiset, eik‰ piste $Q$ ole suoralla $s$. 
 
 \begin{teht} Tutki pisteiden $A=(-1,-3)$ ja $B=(1,3)$ m‰‰ritt‰m‰‰ suoraa $s$.
 \begin{aakkosta*}
@@ -430,7 +430,7 @@ Suoralla olevia muita pisteit‰ voidaan tutkia myˆs paikkavektorien ja vektorien 
 
 \maaritelma[Suoran vektoriyht‰lˆ]{Oletetaan, ett‰ piste $A$ on suoralla $s$, jonka suuntavektori on vektori $\vv$. Yht‰lˆ‰ $\pv{OP}=\pv{OA}+t\vv$, miss‰ $t$ on jokin reaaliluku, sanotaan suoran $s$ vektoriyht‰lˆksi.}
 
-Suoran vektoriyht‰lˆ antaa kaikkien suoran pisteiden $P$ paikkavektorit, kun kerroin $t$ k‰y l‰pi kaikki reaaliluvut.
+Suoran vektoriyht‰lˆ antaa kaikkien suoran pisteiden $P$ paikkavektorit $\pv{OP}$, kun kerroin $t$ k‰y l‰pi kaikki reaaliluvut.
 
 \begin{teht} Tutki pisteen $A=(-1,6)$ ja suuntavektorin $\vv=2\vi-3\vj$ m‰‰ritt‰m‰‰ suoraa $s$.
 \begin{aakkosta*}
@@ -496,7 +496,7 @@ Tutkitaan sitten suorien mahdollisia leikkauspisteit‰. Tasossa kaksi suoraa joko
 
 
 	\end{tikzpicture}
-	\caption{Tason kaksi suoraa $s_1$ ja $s_2$ joko leikkaavat toisensa tai ovat yhdensuuntaisia.}
+	\caption{Tason kaksi eri suoraa $s_1$ ja $s_2$ joko leikkaavat toisensa tai ovat yhdensuuntaisia.}
 	\label{kuva:suorien leikkauspiste tai yhdensuuntaisuus}
 	\end{figurehere}
 	\end{center}
@@ -580,9 +580,9 @@ Tarkastellaan asiaa viel‰ esimerkin avulla. Tutkitaan pisteen $A=(7,2)$ ja suunt
 &=\pv{OB}+r\vw.
 \end{align*}
 Sijoitetaan pisteet ja suuntavektorit yht‰lˆˆn 
-$$
+$
 \pv{OA}+t\vv=\pv{OB}+r\vw,
-$$
+$
 jolloin saadaan
 $$
 (7\vi+2\vj)+t(-3\vi-4\vj) 
@@ -631,9 +631,9 @@ N‰in ollen suorat $s_1$ ja $s_2$ leikkaavat toisensa, ja leikkauspisteen paikkav
 Suorat $s_1$ ja $s_2$ leikkaavat siis pisteess‰ $P=(5,-14)$.
 
 
-\begin{teht} Tutki pisteen $A=()$ ja suuntavektorin $\vv=$ m‰‰ritt‰m‰‰ suoraa $s_1$, ja pisteen $B=()$ ja suuntavektorin $\vw=$ m‰‰ritt‰m‰‰ suoraa $s_2$.
+\begin{teht} Tutki pisteen $A=(0,-2)$ ja suuntavektorin $\vv=4\vi-5\vj$ m‰‰ritt‰m‰‰ suoraa $s_1$, ja pisteen $B=(0,5)$ ja suuntavektorin $\vw=2\vi+\vj$ m‰‰ritt‰m‰‰ suoraa $s_2$.
 \begin{aakkosta*}
-\item Onko piste $P=()$ suorien $s_1$ ja $s_2$ leikkauspiste?
+\item Onko piste $P=(-2,1)$ suorien $s_1$ ja $s_2$ leikkauspiste?
 \item Miss‰ pisteess‰ suorat leikkaavat toisensa? 
 \end{aakkosta*}
 \end{teht}
@@ -666,20 +666,23 @@ Kahden suoran v‰list‰ kulmaa voidaan tutkia suorien suuntavektoreiden avulla. T‰
 		
 		% Vektorit
 		
-		\draw[-] (-4,-2)--(5,1);
-		\node[above left] at (-3.5,-1.7) {$s_1$};
+		\draw[-] (-1,-1)--(5,1);
+		\node[below right] at (-1.5,-1.2) {$s_1$};
 		
 		\draw[->, color=darkgreen] (2,0)--(4,0.666);
 		\node[below right] at (3.3,0.3) {\textcolor{darkgreen}{$\vv$}};
 		
-		\draw[-] (-4,2)--(5,-1);
-		\node[above right] at (-3.5,2) {$s_2$};
+		\draw[-] (-1,1)--(5,-1);
+		\node[above right] at (-1.5,1.2) {$s_2$};
 		
 		\draw[->, color=blue] (2,0)--(0,0.666);
 		\node[above left] at (0.5,-0.3) {\textcolor{blue}{$\vw$}};
+		
+		\draw[color=red, rotate around={90:(1,1/3)},=90] (1,-4.7/3) arc (-30:30:1.8);
+		\node[above] at (2,0.7) {\textcolor{red}{$\alpha$}};
 
 	\end{tikzpicture}
-	\hspace*{0cm}
+	\hspace*{0.3cm}
 	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
 
 		% Ruudukko
@@ -697,36 +700,89 @@ Kahden suoran v‰list‰ kulmaa voidaan tutkia suorien suuntavektoreiden avulla. T‰
 		
 		% Vektorit
 		
-		\draw[-] (-4,-2)--(5,1);
-		\node[above left] at (-3.5,-1.7) {$s_1$};
+		\draw[-] (-1,-1)--(5,1);
+		\node[below right] at (-1.5,-1.2) {$s_1$};
 		
 		\draw[->, color=darkgreen] (2,0)--(4,0.666);
 		\node[above left] at (3,0.3) {\textcolor{darkgreen}{$\vv$}};
 		
-		\draw[-] (-4,2)--(5,-1);
-		\node[above right] at (-3.5,2) {$s_2$};
+		\draw[-] (-1,1)--(5,-1);
+		\node[above right] at (-1.5,1.2) {$s_2$};
 		
 		\draw[->, color=blue] (2,0)--(4,-2/3);
 		\node[below left] at (2.5,-0.2) {\textcolor{blue}{$\vw$}};
+		
+		\draw[color=red] (3.5,-1/2) arc (-30:30:1);
+		\node[above] at (4.1,-0.45) {\textcolor{red}{$\beta$}};
 
 	\end{tikzpicture}
-	\caption{Suorien $s_1$ ja $s_2$ suuntavektoreiden $\vv$ ja $\vw$ v‰linen kulma.}
+	\caption{Suorien $s_1$ ja $s_2$ suuntavektoreiden $\vv$ ja $\vw$ v‰lisell‰ kulmalla tarkoitetaan kulmaa $\beta$.}
 	\label{kuva:suorien v‰linen kulma}
 	\end{figurehere}
 	\end{center}
 
 Joskus on hyˆdyllist‰ tutkia ainoastaan suoraa vasten kohtisuorassa olevia vektoreita. Tarkastellaan t‰t‰ varten suoraa $y=-2x+1$. Kyseinen suora voidaan ilmoittaa myˆs muodossa $-2x-y+1=0$. T‰llaista muotoa kutsutaan \textbf{suoran normaalimuotoiseksi yht‰lˆksi}. Normaalimuotoinen yht‰lˆ on aina muotoa $ax+by+c=0$ joillakin kertoimilla $a, b$ ja $c$. Vektoria $\vn$, joka on kohtisuorassa suoraa $s$ vasten, sanotaan suoran $s$ \textbf{normaalivektoriksi}. Suoran normaalivektorit n‰hd‰‰n suoraan sen normaalimuotoisesta yht‰lˆst‰. Suoran $ax+by+c=0$ normaalivektorit ovat vektorin $a\vi+b\vj$ monikertoja, eli muotoa $t(a\vi+b\vj)$ jollakin reaaliluvulla $t$. Suoran $-2x-y+1=0$ er‰s normaalivektori on siis $\vn=-2\vi-\vj$.
 
-\begin{teht} Tutki suoraa $ax+by+c=0$. 
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[-] (-1,3)--(2,-3);
+		\node[above right] at (2,-3) {$-2x-y+1=0$};
+
+		\draw[->, color=blue] (0,1)--(-2,0);
+		\node[above left] at (-0.8,0.8) {\textcolor{blue}{$\vn=-2\vi-\vj$}};
+		
+		\draw[-] (-0.5,3/4)--(-0.755,1.22);
+		\draw[-] (-0.25,1.5)--(-0.755,1.22);
+		
+	\end{tikzpicture}
+	\caption{Suora $-2x-y+1=0$ ja sen er‰s normaalivektori $\vn=-2\vi-\vj$.}
+	\label{kuva:suoran normaalivektori}
+	\end{figurehere}
+	\end{center}
+
+\begin{teht} Tutki suoraa $s=-6x+3y+9=0$. 
 \begin{aakkosta*}
 \item Etsi jokin suoran $s$ suuntavektori.
-\item M‰‰rit‰ suoran normaalimuodosta sille jokin normaalivektori.
+\item Esit‰ suora $s$ normaalimuodossa ja m‰‰rit‰ sille jokin normaalivektori.
 \item Osoita vektorien pistetulon avulla, ett‰ a- ja b-kohtien vektorit ovat toisiaan vasten kohtisuorassa.
 \end{aakkosta*}
 \end{teht}
 
 
-\begin{teht} Tutki pisteen $A=()$ ja suuntavektorin $\vv=$ m‰‰ritt‰m‰‰ suoraa $s$.
+\begin{teht} Tutki pisteen $A=(3,-2)$ ja suuntavektorin $\vv=\vi+\vj$ m‰‰ritt‰m‰‰ suoraa $s$.
 \begin{aakkosta*}
 \item Ilmoita suora $s$ normaalimuodossa.
 \item M‰‰rit‰ kolme suoraa $s$ vasten kohtisuorassa olevaa vektoria. 
