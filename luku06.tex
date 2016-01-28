@@ -158,7 +158,7 @@ y&=-\frac{3}{2} x-3 \\
 
 \subsection{Suora}
 
-Tutkitaan seuraavaksi suoria. Kuvassa \ref{kuva:suoran kaksi pistettä} olevien pisteiden $A$ ja $B$ kautta on mahdollista piirtää ainoastaan yksi suora $-$ pisteet $A$ ja $B$ määrittävät suoran $s$ kokonaan. Suoran määrittämiseen riittää siis kaksi pistettä.
+Tutkitaan seuraavaksi suoria. Kuvassa \ref{kuva:suoran kaksi pistettä} olevien pisteiden $A$ ja $B$ kautta on mahdollista piirtää ainoastaan yksi suora $-$ pisteet $A$ ja $B$ määrittävät suoran $s$ kokonaan. Suoran määrittämiseen riittää siis kaksi pistettä. Yksi piste ei pelkästään riitä, sillä yhden pisteen kautta voi kulkea äärettömän monta eri suoraa.
 
 	\begin{center}
 	\begin{figurehere}
@@ -195,7 +195,7 @@ Tutkitaan seuraavaksi suoria. Kuvassa \ref{kuva:suoran kaksi pistettä} olevien p
 	\end{center}
 	
 	
-Suoran määrittämisessä voidaan käyttää hyväksi myös vektoreita. Tällöin tarvitaan suoran yksi piste sekä yksi suoran suuntainen vektori. Tarkastellaan kuvaa \ref{kuva:suoran piste ja suuntavektori}. Suoran piste $A$ määrittää jonkin pisteen, jonka kautta suora kulkee. Yhden pisteen kautta voi kuitenkin kulkea äärettömän monta suoraa. Tästä syystä tarvitaan vielä vektori $\vv$, joka kertoo, mihin suuntaan suora kulkee. Tätä vektoria kutsutaan suoran \textbf{suuntavektoriksi}.
+Suoran määrittämisessä voidaan käyttää hyväksi myös vektoreita. Tällöin tarvitaan suoran yksi piste sekä yksi suoran suuntainen vektori. Tarkastellaan kuvaa \ref{kuva:suoran piste ja suuntavektori}. Suoran piste $A$ määrittää jonkin pisteen, jonka kautta suora kulkee. Yhden pisteen kautta voi kuitenkin kulkea äärettömän monta suoraa. Tästä syystä tarvitaan vielä vektori $\vv$, joka kertoo, mihin suuntaan suora kulkee. Tätä vektoria kutsutaan \textbf{suoran suuntavektoriksi}.
 
 	\begin{center}
 	\begin{figurehere}
@@ -442,7 +442,51 @@ Suoran vektoriyhtälö antaa kaikkien suoran pisteiden $P$ paikkavektorit $\pv{OP}
 \begin{teht} Tutki pisteen $A=(4,0)$ ja suuntavektorin $\vv=-5\vi+2\vj$ määrittämää suoraa $s$. Määritä kolme suoran $s$ pistettä.
 \end{teht}
 
-Tutkitaan sitten suorien mahdollisia leikkauspisteitä. Tasossa kaksi suoraa joko leikkaavat toisensa tai ne ovat yhdensuuntaiset. 
+Joskus käy niin, että kahden pisteen ja kahden suuntavektorin määrittämät suorat ovatkin täsmälleen samat. Esimerkiksi kuvan \ref{kuva:samat suorat} suora $s$ voidaan määrittää esimerkiksi pisteen $A$ ja suuntavektorin $\vv$ tai pisteen $B$ ja suuntavektorin $\vw$ avulla.
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		
+		\draw[-] (-4,3.333)--(6,0);
+		\node[below left] at (-3.3,4.1) {$s$};
+		
+		\draw[fill, color = black] (0,2) circle [radius = 1.5pt];
+		\node[above right] at (0,2) {$A$};
+		
+		\draw[fill, color = black] (3,1) circle [radius = 1.5pt];
+		\node[above right] at (3,1) {$B$};
+		
+		\draw[->, color=darkgreen] (0,2)--(-2,2.666);
+		\node[below left] at (-1,2) {\textcolor{darkgreen}{$\vv$}};
+		
+		\draw[->, color=blue] (3,1)--(5,0.333);
+		\node[below left] at (4,0.4) {\textcolor{blue}{$\vw$}};
+		
+
+	\end{tikzpicture}
+	\caption{Suora $s$ voidaan määrittää usealla eri tavalla.}
+	\label{kuva:samat suorat}
+	\end{figurehere}
+	\end{center}
+
+Tutkitaan sitten suorien mahdollisia leikkauspisteitä. Tasossa kaksi \textbf{eri} suoraa joko leikkaavat toisensa tai ne ovat yhdensuuntaiset.  
 
 	\begin{center}
 	\begin{figurehere}
@@ -500,6 +544,8 @@ Tutkitaan sitten suorien mahdollisia leikkauspisteitä. Tasossa kaksi suoraa joko
 	\label{kuva:suorien leikkauspiste tai yhdensuuntaisuus}
 	\end{figurehere}
 	\end{center}
+ 
+
  
 Suorilla on leikkauspiste, jos niillä on yksi yhteinen piste, eli on olemassa piste, joka kuuluu molemmille suorille. Tarkastellaan kuvaa \ref{kuva:suorien leikkauspiste}. Suorat $s_1$ ja $s_2$ leikkaavat toisensa pisteessä $P$. Suoran $s_1$ vektoriyhtälön perusteella vektori 
 $$
@@ -639,7 +685,6 @@ Suorat $s_1$ ja $s_2$ leikkaavat siis pisteessä $P=(5,-14)$.
 \end{teht}
 
 
-
 Kappaleessa \ref{subsection:Vektorien välinen kulma ja pistetulo} opittiin määrittämään vektorien välisiä kulmia. Teoreeman \ref{teoreema:vektorien välinen kulma} mukaan vektorien $\va$ ja $\vb$ välinen kulma saadaan kaavasta 
 $$
 \cos (\va, \vb)
@@ -721,7 +766,11 @@ Kahden suoran välistä kulmaa voidaan tutkia suorien suuntavektoreiden avulla. Tä
 	\end{figurehere}
 	\end{center}
 
-Joskus on hyödyllistä tutkia ainoastaan suoraa vasten kohtisuorassa olevia vektoreita. Tarkastellaan tätä varten suoraa $y=-2x+1$. Kyseinen suora voidaan ilmoittaa myös muodossa $-2x-y+1=0$. Tällaista muotoa kutsutaan \textbf{suoran normaalimuotoiseksi yhtälöksi}. Normaalimuotoinen yhtälö on aina muotoa $ax+by+c=0$ joillakin kertoimilla $a, b$ ja $c$. Vektoria $\vn$, joka on kohtisuorassa suoraa $s$ vasten, sanotaan suoran $s$ \textbf{normaalivektoriksi}. Suoran normaalivektorit nähdään suoraan sen normaalimuotoisesta yhtälöstä. Suoran $ax+by+c=0$ normaalivektorit ovat vektorin $a\vi+b\vj$ monikertoja, eli muotoa $t(a\vi+b\vj)$ jollakin reaaliluvulla $t$. Suoran $-2x-y+1=0$ eräs normaalivektori on siis $\vn=-2\vi-\vj$.
+Joskus on hyödyllistä tutkia ainoastaan suoraa vasten kohtisuorassa olevia vektoreita. Tarkastellaan tätä varten suoraa $y=-2x+1$. Kyseinen suora voidaan ilmoittaa myös muodossa $-2x-y+1=0$. Tällaista muotoa kutsutaan \textbf{suoran normaalimuotoiseksi yhtälöksi}. Normaalimuotoinen yhtälö on aina muotoa $ax+by+c=0$ joillakin kertoimilla $a, b$ ja $c$. 
+
+\maaritelma[Suoran normaalimuotoinen yhtälö]{Suoran normaalimuotoinen yhtälö on muotoa $ax+by+c=0$ joillakin reaaliluvuilla $a$, $b$ ja $c$.}
+
+Vektoria $\vn$, joka on kohtisuorassa suoraa $s$ vasten, sanotaan suoran $s$ \textbf{normaalivektoriksi}. Suoran normaalivektorit nähdään suoraan sen normaalimuotoisesta yhtälöstä. Suoran $ax+by+c=0$ normaalivektorit ovat vektorin $a\vi+b\vj$ monikertoja, eli muotoa $t(a\vi+b\vj)$ jollakin reaaliluvulla $t$. Suoran $-2x-y+1=0$ eräs normaalivektori on siis $\vn=-2\vi-\vj$.
 
 	\begin{center}
 	\begin{figurehere}
@@ -773,6 +822,7 @@ Joskus on hyödyllistä tutkia ainoastaan suoraa vasten kohtisuorassa olevia vekto
 	\end{figurehere}
 	\end{center}
 
+
 \begin{teht} Tutki suoraa $s=-6x+3y+9=0$. 
 \begin{aakkosta*}
 \item Etsi jokin suoran $s$ suuntavektori.
@@ -792,30 +842,70 @@ Joskus on hyödyllistä tutkia ainoastaan suoraa vasten kohtisuorassa olevia vekto
 
 
 
-
-
-
 \subsection{Suora avaruudessa}
 
-Kolmiulotteisessa koordinaatistossa suoran tntemiseen riittää edelleen joko kaksi suoran pistettä tai yksi piste ja sen suuntavektori. Pisteet ja vektori ovat nyt kuitenkin kolmiulotteisen avaruuden pisteitä ja vektoreita, joten niillä on kolme komponenttia. 
-
-Samat asiat pätee kuin kaksiulotteisessa avaruudessa.
+Edellisen kappaleen tulokset pätevät myös kolmiulotteisessa avaruudessa. Kolmiulotteisessa koordinaatistossa suoran tuntemiseen riittää edelleen joko kaksi suoran pistettä tai yksi piste ja sen suuntavektori. Pisteet ja vektori ovat nyt kuitenkin kolmiulotteisen avaruuden pisteitä ja vektoreita, joten niillä on kolme komponenttia. 
 
 Huomaa, että avaruuden suorien leikkauspisteen selvittämiseksi tarvii osata ratkaista yhtälöryhmiä.
 
-Haastavampia tehtäviä.
+Tutkitaan seuraavaksi suoran muita esitystapoja. Tähän mennessä tunnemme jo suoran vektorimuotoisen yhtälön.
 
-\begin{teht} 
+\begin{align*}
+\pv{OP}&=\pv{OA}+t\vv \\
+&=x_0\vi+y_o\vj+t(v_i\vi+v_j\vj)
+\end{align*}
+
+\maaritelma[Suoran parametrimuotoinen yhtälö]{Oletetaan, että suora $s$ kulkee pisteen $A=(x_0, y_0)$ kautta ja sen suuntavektori on vektori $\vv=v_i\vi+v_j\vj$. Tällöin suoran parametrimuotoinen yhtälö on 
+\begin{align*}
+\begin{cases}
+x=x_0+tv_i \\
+y=y_0+tv_j.
+\end{cases}
+\end{align*}}
+
+Ratkaistaan suoran parametriesityksen $x$- ja $y$-komponentit muuttujan $t$ suhteen. Tällöin saadaan
+\begin{align*}
+x &= x_0 + tv_i \\
+\Rightarrow x-x_0 &= tv_i \\
+\Rightarrow t&=\frac{x-x_0}{v_i} 
+\end{align*}
+ja
+\begin{align*}
+y&=y_0+tv_j \\
+\Rightarrow y-y_0 &= tv_j \\
+\Rightarrow t&=\frac{y-y_0}{v_j}. 
+\end{align*}
+
+Yhdistämällä nämä kaksi tietoa saadaan yhtälö
+
+\begin{align*}
+t
+=\frac{x-x_0}{v_i} 
+=\frac{y-y_0}{v_j}.
+\end{align*}
+
+Jälkimmäinen yhtäsuuruus määrittää saman suoran $s$. Tätä esitysmuotoa sanotaan suoran $s$ koordinaattimuotoiseksi yhtälöksi. 
+
+\maaritelma[Suoran koordinaattimuotoinen yhtälö]{Oletetaan, että suora $s$ kulkee pisteen $A=(x_0, y_0)$ kautta ja sen suuntavektori on vektori $\vv=v_i\vi+v_j\vj$. Tällöin suoran koordinaattimuotoinen yhtälö on 
+\begin{align*}
+\frac{x-x_0}{v_i}=\frac{y-y_0}{v_j}.
+\end{align*}}
+
+\textsc{koordinaattiesityksestä nähdään heti suoran suuntavektori ja piste, jonka kautta suora kulkee.}
+
+\begin{teht} Piste $A=()$ ja suuntavektori $\vv=$ määrittävät suoran $s$.
 \begin{aakkosta*}
-\item 
-\item 
+\item Määritä suoran vektoriyhtälö.
+\item Määritä suoran parametrimuotoinen yhtälö.
+\item Määritä suoran koordinaattimuotoinen yhtälö.
 \end{aakkosta*}
 \end{teht}
 
-\begin{teht} 
+\begin{teht} Koordinaattiesitys (tähän koordinaattiesitys) määrittää suoran $s$.
 \begin{aakkosta*}
-\item 
-\item 
+\item Tarkastele koordinaattiesitystä. Ilmoita yksi piste, jonka kautta suora $s$ kulkee.
+\item Tarkastele koordinaattiesitystä. Ilmoita suoran $s$ suuntavektori.
+\item Muodosta a- ja b-kohtien avulla suoran vektoriyhtälö.
 \end{aakkosta*}
 \end{teht}
 
@@ -825,14 +915,7 @@ Haastavampia tehtäviä.
 
 \subsection{Taso}
 
-Kolmiulotteisessa avaruudessa on tasoja. Tason voi määrittää monella eri tavalla
-
-Kolme pistettä, jotka eivät ole samalla suoralla
-
-Suora s ja piste A, joka ei ole suoralla s
-
-piste A ja tason normaalivektori n
-
+Kolmiulotteisessa avaruudessa on kaksiulotteisia tasoja. Taso voidaan määrittää monella eri tavalla. Alla olevan kuvan mukaisesti tason määrittämiseen riittää esimerkiksi kolme tason pistettä, jotka eivät ole samalla suoralla. Tilanne on vastaava kuin kaksiulotteisessa tapauksessa: kolmiulotteisessa avaruudessa kahden pisteen läpi voi kulkea äärettömän monta tasoa. Tästä syystä tason tuntemiseen tarvitaan vielä kolmas piste.
 
 	\begin{center}
 	\begin{figurehere}
@@ -873,6 +956,8 @@ piste A ja tason normaalivektori n
 	\end{figurehere}
 	\end{center}
 
+Tason määrittämiseen riittää myös jokin tason suora s ja jokin tason piste A, joka ei ole suoralla s. Tätä havainnollistetaan alla olevassa kuvassa.
+
 	\begin{center}
 	\begin{figurehere}
 	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
@@ -907,12 +992,14 @@ piste A ja tason normaalivektori n
 		\node[above right] at (3,1) {$C$};
 		
 		\draw[-] (-2.666,-2)--(0.666,3);
+		\node[left] at (-2.5,-1.5) {$s$};
 	\end{tikzpicture}
-	\caption{Pisteiden $A$ ja $B$ kautta kulkevan suoran ja pisteen $C$ määrittämä taso.}
+	\caption{Tason pisteiden $A$ ja $B$ kautta kulkevan suoran $s$ ja pisteen $C$ määrittämä taso.}
 	\label{kuva:tason piste ja suora}
 	\end{figurehere}
 	\end{center}
 
+Lisäksi taso voidaan alla olevan kuvan mukaisesti määrittää jonkin tason pisteen A ja jonkin tason normaalivektorin $\vn$ avulla. Kyseistä normaalivektoria vasten kohtisuorassa olevia tasoja on äärettömän monta, joten tason määrittämiseen tarvitaan vielä jokin tason piste $A$.
 
 	\begin{center}
 	\begin{figurehere}
@@ -959,7 +1046,7 @@ piste A ja tason normaalivektori n
 	\end{figurehere}
 	\end{center}
 
-Tason suuntaisia vektoreita sanotaan tason suuntavektoreiksi. Esimerkiksi pisteiden $A$, $B$ ja $C$ määrittämän tason suuntavektoreita ovat vektorit $\pv{AB}$ ja $\pv{AC}$.
+Taso voidaan määrittää myös vektorien avulla. Tason suuntaisia vektoreita sanotaan \textbf{tason suuntavektoreiksi}. Pisteiden $A$, $B$ ja $C$ määrittämän tason suuntavektoreita ovat esimerkiksi vektorit $\pv{AB}$ ja $\pv{AC}$. Taso voidaan siis määrittää myös yhden pisteen ja kahden tason suuntavektorin avulla, jotka eivät ole yhdensuuntaisia.
 
 	\begin{center}
 	\begin{figurehere}
@@ -1004,12 +1091,8 @@ Tason suuntaisia vektoreita sanotaan tason suuntavektoreiksi. Esimerkiksi pistei
 	\end{figurehere}
 	\end{center}
 
-Tason voi siis määrittää myös yhden pisteen ja kahden tason suuntavektorin avulla.
 
-
-\textsc{Tähän tarvitaan selitys siitä, miksi kahden erisuuntaisen vektorin avulla päästään tason joka pisteeseen. (Vektorin komponenttiesitys muilla kuin i:llä ja j:llä.)}
-
-Avaruuden piste $P=(x,y,z)$ on tasossa $ABC$, jos ja vain jos $AP=sAB+rAC$ joillakin reaaliluvuilla $s$ ja $r$. Tätä yhtälöä sanotaan tason vektoriyhtälöksi.
+Avaruuden piste $P=(x,y,z)$ on kolmen pisteen määrittämässä tasossa $ABC$, jos ja vain jos $\pv{AP}=s\pv{AB}+r\pv{AC}$ joillakin reaaliluvuilla $s$ ja $r$. Tätä yhtälöä sanotaan tason vektoriyhtälöksi.
 
 \maaritelma[Tason vektoriyhtälö]{Jos piste $A$ on tasossa ja jos $\pv{AB}$ ja $\pv{AC}$ ovat erisuuntaiset tason suuntavektorit, niin tason vektoriyhtälö on $\pv{OP}=\pv{OA}+s\pv{AB}+t\pv{AC}$.}
 
@@ -1024,9 +1107,11 @@ Avaruuden piste $P=(x,y,z)$ on tasossa $ABC$, jos ja vain jos $AP=sAB+rAC$ joill
 \begin{teht} Tarkastele pisteen $A=()$ ja suoran $s=$ määrittämää tasoa.
 \begin{aakkosta*}
 \item Muodosta tason $ABC$ vektoriyhtälö.
-\item 
+\item Kuuluuko piste $P$ tasoon $ABC$?
 \end{aakkosta*}
 \end{teht}
+
+
 
 \maaritelma[Tason normaalimuotoinen yhtälö]{$ax+by+cz+d=0$.}
 
@@ -1038,7 +1123,53 @@ Avaruuden piste $P=(x,y,z)$ on tasossa $ABC$, jos ja vain jos $AP=sAB+rAC$ joill
 
 \subsection{Suoran ja tason leikkauspiste}
 
-Suoralla ja tasolla voi olla joko nolla, yksi tai ääretön määrä leikkauspisteitä. Jos suora on tasossa, kaikki suoran pisteet, joita on ääretön määrä, ovat leikkauspisteitä. Jos suora ei ole tasossa, mutta on sen kanssa yhdensuuntainen, leikkauspisteitä ei ole. Muissa tapauksissa suoralla ja tasolla on täsmälleen yksi leikkauspiste.
+Alla olevassa kuvassa esitellään kaikki kolme mahdollisuutta suoran ja tason leikkauspisteille. Suoralla ja tasolla voi olla joko nolla, yksi tai ääretön määrä leikkauspisteitä. Jos suora on tasossa, kaikki suoran pisteet, joita on ääretön määrä, ovat leikkauspisteitä (sininen suora). Jos suora ei ole tasossa, mutta on sen kanssa yhdensuuntainen, leikkauspisteitä ei ole (vihreä suora). Muissa tapauksissa suoralla ja tasolla on täsmälleen yksi leikkauspiste (punainen suora).
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-1)--(1,-1);
+		\draw[-] (-4,-1)--(-1,1);
+		\draw[-] (-1,1)--(4,1);
+		\draw[-] (4,1)--(1,-1);
+		
+		\draw[-, color=blue] (-3,-0.5)--(3,0.5);
+		\draw[-, color=darkgreen] (-3,-3)--(3,-2);
+		\draw[-, color=red] (1,2)--(-1,0);
+		\draw[-, color=red] (-2,-1)--(-3,-2);
+		
+	\end{tikzpicture}
+	\caption{Suoran ja tason mahdolliset leikkauspisteet.}
+	\label{kuva:suoran ja tason leikkauspisteet}
+	\end{figurehere}
+	\end{center}
+
+\textsc{Esimerkki suoran ja tason leikkauspisteen löytämisestä.} 
+
+\begin{teht}
+\begin{aakkosta*}
+\item 
+\item 
+\end{aakkosta*}
+\end{teht}
+
+
 
 
 \subsection{Suoran ja tason välinen kulma}
