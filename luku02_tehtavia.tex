@@ -1,0 +1,453 @@
+\subsection*{Teht‰vi‰ 1}
+% T‰m‰n osion teht‰v‰t ovat v‰h‰n helpompia.
+
+
+
+
+% VEKTORIEN SUUNTA
+
+\begin{teht} Tarkastele alla olevassa kuvassa olevaa vektoria $\vv$. Piirr‰ koordinaatisto ja siihen kaksi vektoria, jotka ovat vektorin $\vv$ 
+\begin{aakkosta*}
+\item kanssa yhdensuuntaisia
+\item kanssa samansuuntaisia
+\item kanssa samat vektorit
+\item vastavektoreita.
+\end{aakkosta*}
+
+	\begin{figurehere}
+	\begin{center}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm] 
+	
+		%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,0,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(2.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->] (-3,-2)--(-1,2);
+		\node[above left] at (-2,0.3) {$\vv$};
+
+	\end{tikzpicture}
+	\end{center}
+	\end{figurehere}
+\end{teht}
+
+
+\begin{teht} Olkoon $A=(-5,2)$, $B=(-1,-1)$ ja $C=(2,1)$. Tiedet‰‰n, ett‰ vektorit $\pv{AB}$ ja $\pv{CD}$ ovat yht‰ pitk‰t. M‰‰rit‰ piste $D$, kun vektorit $\pv{AB}$ ja $\pv{CD}$ ovat 
+\begin{aakkosta*}
+\item samansuuntaiset
+\item vastakkaissuuntaiset.
+\end{aakkosta*}
+\end{teht}
+
+
+
+
+
+
+
+% VEKTORIEN LASKUTOIMITUKSISTA
+
+\begin{teht} Tarkastele alla olevaa kuvaa. Piirr‰ vektorien $\vv$, $\vw$ ja $\vu$ avulla vektorit
+\begin{aakkosta*}
+\item $\va=\vv+\vw$ 
+\item $\vb=\vv-\vw-\vu $ 
+\item $\vc=\vv-vw+\vu$ 
+\item $\vd=\vw-\vv$. 
+\end{aakkosta*}
+
+	\begin{figurehere}
+	\begin{center}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm] 
+	
+		%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,0,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(2.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->] (-5,-2)--(-3,2);
+		\node[above left] at (-4,0.3) {$\vv$};
+		
+		\draw[->] (-3,-2)--(-1,-3);
+		\node[above right] at (-2,-2) {$\vw$};
+		
+		\draw[->] (1,0)--(0,-1);
+		\node[below right] at (1,-0.2) {$\vu$};
+
+	\end{tikzpicture}
+	\end{center}
+	\end{figurehere}
+\end{teht}
+
+
+\begin{teht} Tarkastele alla olevaa kuvaa. Esit‰ vektori
+\begin{aakkosta*}
+\item $\pv{AC}$ vektorien $\va$ ja $\vb$ avulla
+\item $\pv{BE}$ vektorien $\vb$, $\vc$ ja $\vd$ avulla
+\item $\pv{EC}$ kahdella eri tavalla.
+\end{aakkosta*}
+
+	\begin{figurehere}
+	\begin{center}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm] 
+	
+		%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		%\foreach \x in {-5,-4,-3,-2,-1,0,1,2}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		%}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(2.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		%}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->] (-3,-3)--(-5,-2);
+		\node[below] at (-3,-3) {$A$};
+		\node[below left] at (-4,-2.5) {$\va$};
+		
+		\draw[->] (-5,-2)--(-3,1);
+		\node[left] at (-5,-2) {$B$};
+		\node[above left] at (-4,-0.5) {$\vb$};
+		
+		\draw[->] (-3,1)--(0,2);
+		\node[above left] at (-3,1) {$C$};
+		\node[above left] at (-1.5,1.5) {$\vc$};
+		
+		\draw[->] (2,-2)--(0,2);
+		\node[above] at (0,2) {$D$};
+		\node[above right] at (1,0.1) {$\vd$};
+		
+		\draw[->] (-3,-3)--(2,-2);
+		\node[right] at (2,-2) {$E$};
+		\node[below right] at (-0.8,-2.8) {$\ve$};
+
+	\end{tikzpicture}
+	\end{center}
+	\end{figurehere}
+\end{teht}
+
+
+\begin{teht} Olkoon $\vv, \vw \neq \bar{0}$. Ovatko vektorit $\vv$ ja $\vw$ yhdensuuntaiset, kun
+\begin{aakkosta*}
+\item $\vv=6\vw$
+\item $2\vv+2\vw=14\vw-\vv$?
+\end{aakkosta*}
+\end{teht}
+
+
+
+
+
+
+% VEKTORIN PITUUS
+
+
+
+\begin{teht}
+Tarkastele alla olevaa kuvaa. Mitk‰ kuvan vektoreista ovat samanpituisia vektorin $\vv$ kanssa?
+
+	\begin{figurehere}
+	\begin{center}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm] 
+	
+		%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,}
+		{
+		\draw[dashed, color= lightgray] (\x,-4.5)--(\x,4.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-4,-3,-2,-1,0,1,2,3,4}
+		{
+		\draw[dashed, color=lightgray] (-6.5,\y)--(5.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[->, color=blue] (-3,1)--(-6,-3);
+		\node[above left] at (-4.4,-1) {\textcolor{blue}{$\vv$}};
+		
+		\draw[->] (-3,-4)--(0,-2);
+		\node[above left] at (-1.2,-2.9) {$\va$};
+		
+		\draw[->] (-3,-1)--(2,-1);
+		\node[above] at (-0.3,-1) {$\vb$};
+		
+		\draw[->] (0,0)--(-4,3);
+		\node[above right] at (-1.8,1.1) {$\vc$};
+		
+		\draw[->] (1,4)--(1,0);
+		\node[right] at (1.1,1.5) {$\vd$};
+		
+		\draw[->] (2,1)--(5,-2);
+		\node[above right] at (4,-1.1) {$\ve$};
+
+	\end{tikzpicture}
+	\end{center}
+	\end{figurehere}
+\end{teht}
+
+
+\begin{teht} Kuumailmapallo nousee ylˆsp‰in nopeudella $3 ~m/s$. Tuuli puhaltaa id‰st‰ $4 ~m/s$. 
+\begin{aakkosta*}
+\item Kuinka korkealla kuumailmapallo on kahden minuutin kuluttua l‰hdˆst‰?
+\item Mik‰ on kuumailmapallon et‰isyys l‰htˆpaikasta kahden minuutin kuluttua?
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Muodosta vektorin $\vv=-5\vi+9\vj$ kanssa
+\begin{aakkosta*}
+\item samansuuntainen yksikkˆvektori 
+\item samansuuntainen vektori, jonka pituus on $4$.
+\end{aakkosta*}
+\end{teht}
+
+
+% VEKTORIEN VƒLINEN KULMA JA PISTETULO
+
+\begin{teht} Tarkastele alla olevan kuvan kolmiota. M‰‰rit‰ kulmat
+\begin{aakkosta*}
+\item $\sphericalangle(\pv{AB},\pv{AC})$
+\item $\sphericalangle(\pv{AB},\pv{CB})$
+\item $\sphericalangle(\pv{CA},\pv{CB})$
+\end{aakkosta*}
+asteen tarkkuudella.
+	\begin{figurehere}
+	\begin{center}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm] 
+	
+		%x-akseli:
+		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2}
+		{
+		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		}
+		
+		%y-akseli
+		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+
+		%tiksut ja viivat
+		\foreach \y in {-3,-2,-1,0,1,2,3}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(2.5,\y);
+		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		}
+
+		% Varsinainen kuva
+		
+		% Komponenttivektorit
+		%\draw[->] (0,0)--(1,0);
+		%\node[below] at (0.4, -0.2) {$\vi$};
+
+		%\draw[->] (0,0)--(0,1);
+		%\node[left] at (-0.2, 0.4) {$\vj$};
+
+		% Vektorit
+		\draw[-] (-5,-2)--(-3,2);
+		\node[below] at (-5,-2) {$A$};
+		
+		\draw[-] (-3,2)--(2,1);
+		\node[above] at (-3,2) {$B$};
+		
+		\draw[-] (2,1)--(-5,-2);
+		\node[below] at (2,1) {$C$};
+
+	\end{tikzpicture}
+	\end{center}
+	\end{figurehere}
+\end{teht}
+
+
+\begin{teht} Laske vektorien $\va$ ja $\vb$ pistetulo, kun
+\begin{aakkosta*}
+\item $\va=1/2\vi-3\vj$ ja $\vb=10\vi+7\vj$
+\item $\va=9\vi+11\vj$ ja $\vb=2/3\vi-2\vj$
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Tarkastele koolmiota $ABC$. Vektorin $\pv{AB}$ pituus on $4$ ja vektorin $\pv{AC}$ pituus on $6$. Kuinka pit‰ on kolmion sivuvektori $\pv{BC}$, kun
+\begin{aakkosta*}
+\item $\pv{AB} \cdot \pv{AC}=5$
+\item $\pv{AB} \cdot \pv{AC}=-5$?
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Kolmion k‰rjet ovat $A=(-4,3)$, $B=(5,2)$ ja $C=(1,-2)$. 
+\begin{aakkosta*}
+\item Muodosta vektorit $\pv{AB}$, $\pv{BC}$ ja $\pv{CA}$. 
+\item Osoita edellisen kohdan vektorien avulla, ett‰ kolmio on suorakulmainen.
+\end{aakkosta*}
+\end{teht}
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Teht‰vi‰ 2}
+% T‰m‰n osion teht‰v‰t ovat v‰h‰n haastavampia.
+
+\begin{teht} Tarkastele vektoreita $\va, \vb \neq \bar{0}$. Tiedet‰‰n, ett‰ 
+$$
+\vb-3\va=5(\va-\vb).
+$$
+\begin{aakkosta*}
+\item Osoita, ett‰ vektorit $\va$ ja $\vb$ ovat yhdensuuntaiset.
+\item Ovatko vektorit $\va$ ja $\vb$ saman- vai vastakkaissuuntaiset?
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Tarkastele vektoreita $\va, \vb \neq \bar{0}$. Oletetaan, ett‰ vektorit eiv‰t ole yhdensuuntaiset. Osoita, ett‰ vektori $3\va+\vb$ ei ole yhdensuuntainen vektorin $\va$ kanssa.
+\end{teht}
+
+\begin{teht} Tarkastele vektoreita $\va, \vb \neq \bar{0}$, $\va \nparallel \vb$. Osoita, ett‰ vektori $-2\va+15\vb$ ei ole nollavektori.
+\end{teht}
+
+\begin{teht} Mit‰ tied‰t vektorien $\va$ ja $\vb$ suunnasta ja pituudesta, kun 
+\begin{align*}
+2(2\va-3\vb)-5\va-(3\va-4\vb)=\bar{0}.
+\end{align*}
+\end{teht}
+
+
+%T‰m‰ on vaikeampi(?) versio t‰st‰ teht‰v‰st‰ (Pitk‰ sigma s. 15 t.17)
+\begin{teht} Tarkastele alla olevaa kuvaa.
+\begin{aakkosta*}
+\item Laske vektorien $\va$, $\vb$ ja $\vc$ pituudet.
+\item Laske kulma $\sphericalangle(\va,\vb)$.
+\item Laske kulma $\sphericalangle(\vb,\vc)$.
+\end{aakkosta*}
+
+KUVA
+\end{teht}
+
+\begin{teht} Jaa voima, jonka suuruus on $84 ~N$, vektorien $\vi$ ja $\vj$ suuntaisiin komponentteihin. Laske vektorin $\vj$ suuntaisen komponentin suuruus, kun vektorin $\vi$ suuntaisen komponentin suuruus on $60,2 ~N$. 
+\end{teht}
+
+
+\begin{teht} Vektorit $\pv{OA}=\va (\neq \bar{0})$ ja $\pv{OB}=\vb$ toteuttavat ehdon $\va \cdot \va = 2\va \cdot \vb$. Osoita, ett‰ kolmio $OAB$ on tasakylkinen. [S2008, 11]
+\end{teht}
+
+
+
+\begin{teht} Kolmiossa $ABC$ vektori $\pv{AB}=2,2\vi+7,3\vj$ ja vektori $\pv{AC}=5,9\vi-2,1\vj$. 
+\begin{aakkosta*}
+\item M‰‰rit‰ kolmion kolmas sivuvektori $\pv{BC}$.
+\item Osoita, ett‰ $\pv{BC}$ on kolmion pisin sivu.
+\item M‰‰rit‰ kulman $BAC$ suuruus pistetulon avulla 0,1 asteen tarkkuudella. [S2007, 3]
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Origosta alkavan vektorin $\va=2\vi+7\vj$ p‰‰tepisteest‰ $P$ alkava ja $x$-akselin pisteeseen $Q$ p‰‰ttyv‰ vektori $\vb$ on kohtisuorassa vektoria $\va$ vasten.  
+\begin{aakkosta*}
+\item M‰‰rit‰ pisteet $P$ ja $Q$.
+\item M‰‰rit‰ vektori $\vb$. [lyhyt K1989, 6a]
+\end{aakkosta*}
+\end{teht}
+
+\begin{teht} Tarkastele tason vektoria $\pv{OA}=7\vi+9\vj$. M‰‰rit‰ kaikki sellaiset vektorit $\pv{OB}$, ett‰ kulma $OAB$ on suora ja vektorin $\pv{AB}$ pituus on puolet vektorin $\pv{OA}$ pituudesta. [K2005, 4]
+\end{teht}
