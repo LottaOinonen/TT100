@@ -1,53 +1,67 @@
 \subsection*{Teht‰vi‰ 1}
 
 
-\begin{teht} Tarkastele alla olevan kuvan vektoreita. Mitk‰ niist‰ ovat vektorin $\vv$ kanssa samat vektorit?
+\begin{teht} Tarkastele alla olevan kuvan vektoreita. Mitk‰ niist‰ ovat vektorin $\vv=2\vi+\vj$ kanssa samat vektorit?
 
-	\begin{figurehere}
 	\begin{center}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm] 
-	
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
 		%x-akseli:
-		%\draw[->,color=gray] (-5.5,0) -- (5.5,0);
+		\draw[->,color=gray] (-5.5,0) -- (5.5,0);
 		%tiksut ja viivat
-		\foreach \x in {-5,-4,-3,-2,-1,0,1,2}
-		{
-		\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
-		%\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
-		%\node [below] at (5.5,0) {\textcolor{darkgray}{$x$}};
+		\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+		{\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
 		}
-		
+		\node [below] at (5.5,0) {$x$};
 		%y-akseli
-		%\draw[->,color=gray] (0,-3.5) -- (0,3.5);
+		\draw[->,color=gray] (0,-3.5) -- (0,3.5);
 
 		%tiksut ja viivat
-		\foreach \y in {-3,-2,-1,0,1,2,3}
+		\foreach \y in {-3,-2,-1,1,2,3}
 		{
-		\draw[dashed, color=lightgray] (-5.5,\y)--(2.5,\y);
-		%\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
-		%\node [left] at (0,3.5) {\textcolor{darkgray}{$y$}};
+		\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
 		}
-
+		\node [left] at (0,3.5) {$y$};
 		% Varsinainen kuva
-		
-		% Komponenttivektorit
+
+		% KOMPONENTTIVEKTORIT
+
 		%\draw[->] (0,0)--(1,0);
 		%\node[below] at (0.4, -0.2) {$\vi$};
 
 		%\draw[->] (0,0)--(0,1);
 		%\node[left] at (-0.2, 0.4) {$\vj$};
 
-		% Vektorit
-		%\draw[-] (-5,-2)--(-3,2);
-		%\node[below] at (-5,-2) {$A$};
+		\draw[->] (-5,1)--(-3,2);
+		\draw[->] (-3,-3)--(-1,-2);
+		\draw[->] (4,1)--(2,0);
+		\draw[->] (2.5,-3)--(4.5,-2);
 		
+		\draw[->] (-4,-2)--(-3,0);
+		\draw[->] (1,3)--(3,2);
+		\draw[->] (-1,2)--(0,0);
+		\draw[->] (1,-1)--(2,-3);
+
 	\end{tikzpicture}
-	\end{center}
 	\end{figurehere}
+	\end{center}
 \end{teht}
+
 
 \begin{teht} M‰‰rit‰ sellaiset reaaliluvut $r$ ja $s$, ett‰ vektorit $\vv=-r\vi+8\vj$ ja $\vw=5\vi-12s\vj$ ovat samat.
 \end{teht}
+
+
+\begin{teht} Tutki vektoria $\pv{AB}=-9\vi+5\vj$. M‰‰rit‰ pisteen $B$ paikkavektori, kun 
+\begin{aakkosta*}
+\item piste $A=(11,2)$
+\item piste $A=(-8,-7)$.
+\end{aakkosta*}
+\end{teht}
+
 
 \begin{teht} M‰‰rit‰ vektori $\pv{AB}$, kun
 \begin{aakkosta*}
@@ -56,14 +70,16 @@
 \end{aakkosta*}
 \end{teht}
 
-\begin{teht} Kuljet pisteest‰ $A=(7,3)$ viisi yksikkˆ‰ vektorin $\vv=-3\vi+5\vj$ suuntaan. Mihin pisteeseen p‰‰dyt?
-\end{teht}
 
-
-\begin{teht} M‰‰rit‰ reaaliluku $r$ siten, ett‰ vektorit $\vv=(2+3r)\vi-4\vj$ ja $\vw=5\vi+(r-5)\vj$ ovat
+\begin{teht} Tarkastele pisteit‰ $A=(-2,4)$, $B=(3,1)$ ja $C=(5,-3)$. M‰‰rit‰ piste $D$, kun 
 \begin{aakkosta*}
-\item samansuuntaiset
-\item samat.
+\item $\pv{CD}=\pv{AB}$
+\item $\pv{DC}=\pv{AB}$
+\item $\pv{AD}=-\pv{AC}$
+\item $\pv{BC}=-\pv{AD}$.
 \end{aakkosta*}
 \end{teht}
+
+
+
 
