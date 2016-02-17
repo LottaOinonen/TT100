@@ -999,7 +999,11 @@ Tason määrittämiseen riittää myös jokin tason suora s ja jokin tason piste A, jo
 	\end{figurehere}
 	\end{center}
 
-Lisäksi taso voidaan alla olevan kuvan mukaisesti määrittää jonkin tason pisteen A ja jonkin tason normaalivektorin $\vn$ avulla. Kyseistä normaalivektoria vasten kohtisuorassa olevia tasoja on äärettömän monta, joten tason määrittämiseen tarvitaan vielä jokin tason piste $A$.
+Lisäksi taso voidaan määrittää jonkin tason pisteen A ja jonkin tason normaalivektorin $\vn$ avulla. Tason normaalivektori on vektori, joka on kohtisuorassa kaikkia tasossa olevia vektoreita vasten. 
+
+\maaritelma[Tason normaalivektori]{Vektoria, joka on kohtisuorassa kaikkia tason vektoreita vasten, sanotaan tason normaalivektoriksi.}
+
+Alla olevan kuvan normaalivektoria $\vn$ vasten kohtisuorassa olevia tasoja on äärettömän monta, joten tason lopulliseen määrittämiseen tarvitaan vielä jokin tason piste $A$. 
 
 	\begin{center}
 	\begin{figurehere}
@@ -1115,7 +1119,7 @@ Avaruuden piste $P=(x,y,z)$ on kolmen pisteen määrittämässä tasossa $ABC$, jos j
 
 \maaritelma[Tason normaalimuotoinen yhtälö]{$ax+by+cz+d=0$.}
 
-\maaritelma[Tason normaalivektori]{Vektoria, joka on kohtisuorassa kaikkia tason vektoreita vasten, sanotaan tason normaalivektoriksi.}
+
 
 
 
@@ -1175,3 +1179,47 @@ Alla olevassa kuvassa esitellään kaikki kolme mahdollisuutta suoran ja tason lei
 \subsection{Suoran ja tason välinen kulma}
 
 Suoran ja tason välisen kulman selvittämiseksi suora projisoidaan ensin tasoon. Nyt haluttu kulma lasketaan suoran ja projektiosuoran suuntavektoreiden avulla.
+
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7cm,y=0.7cm]
+
+		% Ruudukko
+		%\foreach \x in {-5,-4,-3,-2,0,-1,1,2,3,4,5}
+		%{
+		%\draw[dashed, color= lightgray] (\x,-3.5)--(\x,3.5);
+		%}
+		
+		%\foreach \y in {-3,-2,-1,0,1,2,3}
+		%{
+		%\draw[dashed, color=lightgray] (-5.5,\y)--(5.5,\y);
+		%}
+
+		% Varsinainen kuva
+		
+		% Vektorit
+		
+		\draw[-] (-4,-1)--(1,-2);
+		\draw[-] (-4,-1)--(-1,1);
+		\draw[-] (-1,1)--(4,0);
+		\draw[-] (4,0)--(1,-2);
+		
+		\draw[-, color=blue] (-1,2)--(0.85,-0.75);
+		\draw[-, color=blue] (1.45,-1.7)--(2,-2.5);
+		%\draw[dashed, color=blue] (1.4,-1.75)--(0.75,-0.75);
+		
+		%\draw[-, color=darkgreen] (-1,2)--(2,-2.5);		
+		
+		\draw[-, color=darkgreen] (-2.5,-0.1)--(2,-1);
+		
+		\draw[-] (-1,-0.4)--(-0.5,1.25);
+		\draw[-] (-0.8,-0.5)--(-0.5,1.25);
+		\draw[-] (-1,-0.4)--(-0.5,1.25);
+		
+		
+	\end{tikzpicture}
+	\caption{Suoran ja tason mahdolliset leikkauspisteet.}
+	\label{kuva:suoran ja tason leikkauspisteet}
+	\end{figurehere}
+	\end{center}
