@@ -1,0 +1,169 @@
+% XYZ-KOORDINAATISTO
+
+\subsection*{Tehtäviä 1}
+
+\begin{teht} Tarkastele alla olevan kuvan suorakulmaista särmiötä. 
+\begin{aakkosta*}
+\item Määritä pisteiden koordinaatit.
+\item Piste $B$ on $xy$-tasossa. Missä tasossa pisteet $D$ ja $F$ sijaitsevat?
+\end{aakkosta*}
+
+	\begin{center}
+	\begin{figurehere}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+
+		%x-akseli:
+		\draw[->,color=gray] (0,0) -- (9.8,0);
+		%tiksut ja viivat
+		\foreach \x in {-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+		{\draw[dashed, color= lightgray] (\x,-4.5)--(\x,9.5);
+		%\draw[shift={(3*\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+		}
+		\node [below] at (9.5,0) {$x$};
+		\foreach \x in {1,2,3}
+		{%\draw[dashed, color= lightgray] (\x,-6.5)--(\x,9.5);
+		\draw[shift={(3*\x,0)},color=black, thick] (0pt,1.5pt) -- (0pt,-1.5pt);
+		%\node [below] at (9.5,0) {\textcolor{darkgray}{$x$}};
+		}
+
+		%y-akseli
+		\draw[->,color=gray] (0,0) -- (0,9.8);
+
+		%tiksut ja viivat
+		\foreach \y in {-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9}
+		{
+		\draw[dashed, color=lightgray] (-5.5,\y)--(9.5,\y);
+		%\draw[shift={(0,3*\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+		}
+		\node [left] at (0,9.5) {$y$};
+		\foreach \y in {1,2,3}
+		{
+		%\draw[dashed, color=lightgray] (-9.5,\y)--(9.5,\y);
+		\draw[shift={(0,3*\y)},color=black, thick] (1.5pt,0pt) -- (-1.5pt,0pt);
+		%\node [left] at (0,9.5) {\textcolor{darkgray}{$y$}};
+		}
+		\draw[->, color=gray] (0,0)--(-4.8,-4.8);
+		\foreach \y in {1,...,4}
+		{\begin{scope}[shift={(-\y,-\y)}]
+    	\draw (-45:1.5 pt)--(135:1.5 pt);
+  		\end{scope}
+		}
+		\node [below] at (-4,-4.5) {$z$};
+		
+		\draw[-] (0,3)--(6,3);
+		\draw[-] (0,3)--(-4,-1);
+		\draw[-] (2,-1)--(6,3);
+		\draw[-] (2,-1)--(-4,-1);
+		\draw[-] (2,-1)--(2,-4);
+		\draw[-] (2,-4)--(6,0);
+		\draw[-] (2,-4)--(-4,-4);
+		\draw[-] (-4,-4)--(-4,-1);
+		\draw[-] (6,0)--(6,3);
+		
+		\node [above right] at (0,0) {$O$};
+		\node [left] at (0,3) {$A$};
+		\node [right] at (6,3) {$B$};
+		\node [right] at (2,-1) {$C$};
+		\node [left] at (-4,-1) {$D$};
+		\node [right] at (6,0) {$E$};
+		\node [right] at (2,-4) {$F$};
+		\node [left] at (-4,-4) {$G$};
+		
+
+	\end{tikzpicture}
+	\end{figurehere}
+	\end{center}	
+\end{teht}
+
+
+
+
+\begin{teht} Kolmion kärjet sijaitsevat pisteissä $A=(1,2,4)$, $B=(2,0,1)$ ja $C=(2,-3,0)$. Laske kolmion sivujen pituudet.
+\end{teht}
+
+
+\begin{teht} Tarkastele vektoria $\vv=3\vi+6\vj-6\vk$.
+\begin{aakkosta*}
+\item Määritä vektorin $\vv$ suuntainen yksikkövektori.
+\item Määritä vektorin $\vv$ kanssa vastakkaissuuntainen vektori $\vw$, jonka pituus on 10.
+\item Siirryt pisteestä $A=(1,-5,2)$ kahdeksan koordinaatiston yksikön verran vektorin $\vv$ suuntaan. Mihin pisteeseen päädyt?
+\end{aakkosta*}
+\end{teht}
+
+
+
+\begin{teht} Lennonjohtaja tarkkailee kahden koneen sijaintia. Havaintohetkellä lentokone $A$ on lentokentästä $4,0 ~km$ länteen ja $2,0 ~km$ pohjoiseen, ja lentokone $B$ on $1,0 ~km$ itään ja $7,0 ~km$ etelään. Kuinka kaukana lentokoneet ovat toisistaan, kun lentokone $A$ lentää $5~km$ korkeudella ja lentokone $B$ $3~km$ korkeudella.   
+\end{teht}
+
+
+\begin{teht} Kuljet origosta pisteeseen $A=(6,-4,-2)$. Alkumatkan kuljet $xy$-tasossa ja loppumatkan vektorin $\vv=2\vi+2\vj-\vk$ kanssa  yhdensuuntaisesti. 
+\begin{aakkosta*}
+\item Missä pisteessä poistut $xy$-tasosta?
+\item Kuinka pitkän matkan kuljit yhteensä?
+\end{aakkosta*}
+\end{teht}
+
+
+% Tätä tehtävää ei ole muokattu. Kts. Pitkä matematiikka 5 s. 89 t. 179
+\begin{teht} Mehiläinen ja perhonen katselevat kukkaniittyä ja uskovat kumpikin olevansa origossa. Mehiläisen mielestä päivänkakkara on pisteessä $(-4,2,5)$ ja perhonen pisteessä $(-1,-4,2)$. 
+\begin{aakkosta*}
+\item Kumpi on lähempänä pääivänkakkaraa, mehiläinen vai perhonen?
+\item Missä pisteessä mehiläinen ja perhonen ovat päivänkakkaran mielestä?
+\end{aakkosta*}
+\end{teht}
+
+
+% Lähes identtinen tehtävä myös Pitkä sigma s. 73 t. 135
+\begin{teht} Neliöpohjainen suora pyramidi, jonka pohjaneliön sivun pituus on 3, asetetaan koordinaatistoon siten, että pyramidin huippu on positiivisella $y$-akselilla, pohjan keskipiste origossa ja pohjaneliön sivut $x$- ja $z$-akselien suuntaiset.
+\begin{aakkosta*}
+\item Piirrä tilanteesta kuva.
+\item Määritä pyramidin kärkien koordinaatit.
+\item Ilmaise pyrämidin huipusta lähtevät särmät vektorien $\vi$, $\vj$ ja $\vk$ avulla.
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Mitkä ovat ne $z$-akselin pisteet, josta tarkasteltuna pisteet $A=(3,-5,1)$ ja $B=(-4,7,-2)$ yhdistävä jana näkyy syorassa kulmassa?
+\end{teht}
+
+
+\begin{teht} Tarkastele vektoreita $\vv=2\vi-\vj+\vk$ ja $\vw=-\vi-\vj+2\vk$.
+\begin{aakkosta*}
+\item Määritä jokin vektoreita $\vv$ ja $\vw$ vasten kohtisuorassa oleva vektori.
+\item Määritä kaikki vektorit, jotka ovat vektoreita $\vv$ ja $\vw$ vasten kohtisuorassa.
+\item Määritä kaikki yksikkövektorit, jotka ovat vektoreita $\vv$ ja $\vw$ vasten kohtisuorassa.
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Tarkastele pisteitä $A=(7,2,-9)$ ja $B=(2,-3,6)$. 
+\begin{aakkosta*}
+\item Muodosta vektori $\pv{AB}$.
+\item Mihin pisteeseen päädyt, kun lähdet pisteestä $(-1,5,8)$ ja kuljet vektorin $\pv{AB}$?
+\end{aakkosta*}
+\end{teht}
+
+
+\begin{teht} Tarkastele vektoreita $\va=-3\vi+8\vj-4\vk$ ja $\vb=\vi-r\vj+2\vk$. Etsi sellainen reaaliluku $r$, että vektorit $\va$ ja $\vb$ ovat 
+\begin{aakkosta*}
+\item yhtä pitkät
+\item yhdensuuntaiset.
+\end{aakkosta*}
+\end{teht}
+
+
+% Tätä tehtävää ei ole muokattu. Pitkä sigma s. 73 t. 136
+\begin{teht} Lintu on oksalla pisteessä $(5,2,3)$ ja huomaa hyönteisen maanpintaa esittävällä $xz$-tasolla. Lintu lentää suoraan kohti hyönteistä pisteen $(2,-2,1)$ kautta. Missä pisteessä hyönteinen on?
+\end{teht}
+
+
+
+\begin{teht} Lentokone kiihdyttää $xz$-tasolla olevalla kiitoradalla. Kone irtoaa kiitoradasta ja nousee vektorin $\vv=2\vi+3\vj-\vk$ suuntaisesti. Hetken kuluttua kone on pisteessä $(8,7,-4)$. Missä pisteessä kone irtosi kiitoradasta? 
+\end{teht}
+
+\begin{teht} Määritä vektorine $\vv$ ja $\vw$ välinen kulma asteen tarkkuudella, kun
+\begin{aakkosta*}
+\item $\vv=-15\vi+8\vj+23\vk$ ja $\vw=11\vi+4\vj-7\vk$
+\item $\vv=6\vi-14\vj+5\vk$ ja $\vw=-13\vi+18\vj-10\vk$.
+\end{aakkosta*}
+\end{teht}
